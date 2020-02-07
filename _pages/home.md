@@ -92,3 +92,20 @@ Purpose of the association is act as gateway for students to the faculty, promot
 #### Savonlinna Youth Council
 
 ##### Jan 2014 - Dec 2015
+
+
+## Skills
+
+### Programming Languages
+
+* PHP
+* C# / .NET Core
+* Javascript
+* Angular
+* MSSQL
+
+### Software
+
+* Windows
+* Linux and Bash
+* Git and SVN
