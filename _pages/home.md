@@ -18,7 +18,7 @@ I am an Information Technology student at [University of Jyväskylä](https://ww
 <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
 <link
   rel="stylesheet"
-  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+  href="/assets/css/github-calendar-responsive.css"
 />
 
 <!-- Prepare a container for your calendar. -->
