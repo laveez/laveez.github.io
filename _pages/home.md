@@ -18,7 +18,7 @@ I am an Information Technology student at [University of Jyväskylä](https://ww
 
 ##### Jan 2019 - Current
 
-Full stack software development of supply chain management system Protacon Once® using many different technologies, e.g., PHP, .NET Core, Javascript, Angular and MSSQL.
+Full stack software development of supply chain management system [Protacon Once®](https://www.protacon.com/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular and MSSQL.
 
 ### Salesperson
 
