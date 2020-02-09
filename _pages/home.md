@@ -1,11 +1,11 @@
 ---
 title: "About Me"
 permalink: /
-excerpt: ""
+excerpt: "Laveez"
 layout: single
 author_profile: true
 sitemap: true
-modified: 2020-02-07
+modified: 2020-02-09
 ---
 
 I am an Information Technology student at [University of Jyväskylä](https://www.jyu.fi/en) and a Full Stack Software Developer currently working at [Protacon](https://www.protacon.com/en/). My professional passion is in Information security & Offensive security though in free time I also enjoy working with various techologies, Hifi equipment and cars.
@@ -93,6 +93,7 @@ Purpose of the association is act as gateway for students to the faculty, promot
 
 ##### Jan 2014 - Dec 2015
 
+Savonlinna Youth Council (Savonlinnan nuorisovaltuusto) is a politically and religiously non-partisan, municipal group that promotes the interests of local youth. The role of the Youth Council is to: Promote opportunities for participation, influence and action by young people. It works under the auspices of the Board of Education and brings the young people's perspective to the preparation and decision-making of the city.
 
 ## Skills
 
@@ -103,9 +104,22 @@ Purpose of the association is act as gateway for students to the faculty, promot
 * Javascript
 * Angular
 * MSSQL
+* Java, C, C++
+* Python
+* HTML & CSS
 
-### Software
+### Software & hardware
 
 * Windows
-* Linux and Bash
+* Linux (Arch, Debian) & Shell (Bash, Zsh)
 * Git and SVN
+* Raspberry Pi & IoT
+
+### Industry knowledge
+
+* Information Technology
+* Scrum
+* Software & Web development
+* Information security & cybersecurity
+* Power Plants
+* Waste Management
