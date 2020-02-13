@@ -77,6 +77,16 @@ Matriculation examination 2016
 
 ## Volunteering
 
+### Deputy Member of The Council of Representatives
+
+#### The Student Union of the University of Jyväskylä - Jyväskylän yliopiston ylioppilaskunta
+
+##### Jan 2020 - Dec 2021
+
+The Council of Representatives is the Parliament of the Student Union and, as such, decides on the most important issues concerning the Union and its members. The Council is comprised of 41 representatives which are elected by the student body every other year.
+
+Among other things, the Council has power over the rules, budgets, financial statements, loans and building projects of the Student Union. The Council also appoints the Board of Executives, its chair and the key staff of the Student Union, such as its Secretary General and Editor-in-Chief.
+
 ### Vice Chairman Of The Board
 
 #### Linkki Jyväskylä ry
