@@ -37,7 +37,7 @@ I am an Information Technology student at [University of Jyväskylä](https://ww
 
 #### Protacon
 
-<img src="../assets/images/protacon_logo.png" width=100>
+<img src="../assets/images/protacon_logo_scaled.png">
 
 ##### Jan 2019 - Current
 
@@ -47,7 +47,7 @@ Full stack software development of supply chain management system [Protacon Once
 
 #### Storm Motor Oy
 
-<img src="../assets/images/storm_logo.png" width=100>
+<img src="../assets/images/storm_logo_scaled.png">
 
 ##### May 2018 - Jul 2018
 
@@ -57,7 +57,7 @@ Sales of motorcycle aftermarket parts, helmets and other equipment.
 
 #### Savonlinna Works Oy, ANDRITZ group
 
-<img src="../assets/images/andritz_logo.png" width=100>
+<img src="../assets/images/andritz_logo_scaled.png">
 
 ##### Jul 2015 - Jul 2015, Jun 2016 - Jun 2016
 
@@ -69,7 +69,7 @@ Analyzed features and properties of the document management and storage system S
 
 #### University of Jyväskylä
 
-<img src="../assets/images/jyu_logo.png" width=50>
+<img src="../assets/images/jyu_logo_scaled.png">
 
 ##### Sep 2016 - Current
 
@@ -79,7 +79,7 @@ Bachelors thesis on [Cybersecurity vulnerabilities of self driving vehicles](htt
 
 #### Savonlinnan Lyseon lukio
 
-<img src="../assets/images/sll_logo.png" width=100>
+<img src="../assets/images/sll_logo_scaled.png">
 
 ##### 2013 - 2016
 
@@ -91,7 +91,7 @@ Matriculation examination 2016
 
 #### The Student Union of the University of Jyväskylä - Jyväskylän yliopiston ylioppilaskunta
 
-<img src="../assets/images/jyy_logo.png" width=50>
+<img src="../assets/images/jyy_logo_scaled.png">
 
 ##### Jan 2020 - Dec 2021
 
@@ -103,7 +103,7 @@ Among other things, the Council has power over the rules, budgets, financial sta
 
 #### Linkki Jyväskylä ry
 
-<img src="../assets/images/linkkijkl_logo.png" width=50>
+<img src="../assets/images/linkkijkl_logo_scaled.png">
 
 ##### Jan 2018 - Dec 2018
 
@@ -115,7 +115,7 @@ Purpose of the association is act as gateway for students to the faculty, promot
 
 #### Savonlinna Youth Council
 
-<img src="../assets/images/slnuva_logo.png" width=50>
+<img src="../assets/images/slnuva_logo_scaled.png">
 
 ##### Jan 2014 - Dec 2015
 
