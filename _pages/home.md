@@ -37,6 +37,8 @@ I am an Information Technology student at [University of Jyväskylä](https://ww
 
 #### Protacon
 
+<img src="../assets/images/protacon_logo.png" width=100>
+
 ##### Jan 2019 - Current
 
 Full stack software development of supply chain management system [Protacon Once®](https://www.protacon.com/en/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular and MSSQL.
@@ -45,6 +47,8 @@ Full stack software development of supply chain management system [Protacon Once
 
 #### Storm Motor Oy
 
+<img src="../assets/images/storm_logo.png" width=100>
+
 ##### May 2018 - Jul 2018
 
 Sales of motorcycle aftermarket parts, helmets and other equipment.
@@ -52,6 +56,8 @@ Sales of motorcycle aftermarket parts, helmets and other equipment.
 ### Trainee
 
 #### Savonlinna Works Oy, ANDRITZ group
+
+<img src="../assets/images/andritz_logo.png" width=100>
 
 ##### Jul 2015 - Jul 2015, Jun 2016 - Jun 2016
 
@@ -63,6 +69,8 @@ Analyzed features and properties of the document management and storage system S
 
 #### University of Jyväskylä
 
+<img src="../assets/images/jyu_logo.png" width=50>
+
 ##### Sep 2016 - Current
 
 Bachelors thesis on [Cybersecurity vulnerabilities of self driving vehicles](http://urn.fi/URN:NBN:fi:jyu-201907023532) (in Finnish).
@@ -70,6 +78,8 @@ Bachelors thesis on [Cybersecurity vulnerabilities of self driving vehicles](htt
 ### Upper secondary school
 
 #### Savonlinnan Lyseon lukio
+
+<img src="../assets/images/sll_logo.png" width=100>
 
 ##### 2013 - 2016
 
@@ -81,6 +91,8 @@ Matriculation examination 2016
 
 #### The Student Union of the University of Jyväskylä - Jyväskylän yliopiston ylioppilaskunta
 
+<img src="../assets/images/jyy_logo.png" width=50>
+
 ##### Jan 2020 - Dec 2021
 
 The Council of Representatives is the Parliament of the Student Union and, as such, decides on the most important issues concerning the Union and its members. The Council is comprised of 41 representatives which are elected by the student body every other year.
@@ -91,6 +103,8 @@ Among other things, the Council has power over the rules, budgets, financial sta
 
 #### Linkki Jyväskylä ry
 
+<img src="../assets/images/linkkijkl_logo.png" width=50>
+
 ##### Jan 2018 - Dec 2018
 
 [Linkki Jyväskylä ry](https://linkkijkl.fi/) is a sizeable student association for Mathematical Information Technology, and Educational Technology majors and minors in University of Jyväskylä. Association was founded back in 2006 and it operates Faculty of Information Technology, within the Student Union of the University of Jyväskylä.
@@ -100,6 +114,8 @@ Purpose of the association is act as gateway for students to the faculty, promot
 ### Member & Graphics Designer
 
 #### Savonlinna Youth Council
+
+<img src="../assets/images/slnuva_logo.png" width=50>
 
 ##### Jan 2014 - Dec 2015
 
