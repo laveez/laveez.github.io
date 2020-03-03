@@ -5,7 +5,9 @@ excerpt: "Laveez"
 layout: single
 author_profile: true
 sitemap: true
-modified: 2020-02-09
+modified: 2020-03-03
+toc: true
+toc_label: "Table of Contents"
 ---
 
 I am an Information Technology student at [University of Jyväskylä](https://www.jyu.fi/en) and a Full Stack Software Developer currently working at [Protacon](https://www.protacon.com/en/). My professional passion is in Information security & Offensive security though in free time I also enjoy working with various techologies, Hifi equipment and cars.
