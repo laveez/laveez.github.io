@@ -6,10 +6,6 @@ layout: single
 author_profile: true
 sitemap: true
 modified: 2020-03-03
-toc: true
-toc_label: "Table of Contents"
-toc_min_header: 1
-toc_max_header: 2
 ---
 
 I am an Information Technology student at [University of Jyväskylä](https://www.jyu.fi/en) and a Full Stack Software Developer currently working at [Protacon](https://www.protacon.com/en/). My professional passion is in Information security & Offensive security though in free time I also enjoy working with various techologies, Hifi equipment and cars.
