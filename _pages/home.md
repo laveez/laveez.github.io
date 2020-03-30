@@ -41,7 +41,7 @@ I am an Information Technology student at [University of Jyväskylä](https://ww
 
 ##### Jan 2019 - Current
 
-Full stack software development of supply chain management system [ONCE® BY PINJA](https://www.pinja.com/en/industrial-digitalization/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular and MSSQL.
+Full stack software development of supply chain management system [Once® by Pinja](https://www.pinja.com/en/industrial-digitalization/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular and MSSQL.
 
 ### Salesperson
 
