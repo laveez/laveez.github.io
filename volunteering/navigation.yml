@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "About me"
+    url: /
+  - title: "Experience"
+    url: /experience/
+  - title: "Education"
+    url: /education/
+  - title: "Volunteering"
+    url: /volunteering/
+  - title: "Skills"
+    url: /skills/

@@ -1,6 +1,6 @@
 ---
 title: "Education"
-permalink: /Education/
+permalink: /education/
 excerpt: "Education"
 layout: single
 author_profile: true
