@@ -8,9 +8,7 @@ sitemap: true
 modified: 2020-03-30
 ---
 
-# Skills
-
-## Programming Languages
+# Programming Languages
 
 * PHP
 * C# / .NET Core
@@ -21,14 +19,14 @@ modified: 2020-03-30
 * Python
 * HTML & CSS
 
-## Software & hardware
+# Software & hardware
 
 * Windows
 * Linux (Arch, Debian) & Shell (Bash, Zsh)
 * Git and SVN
 * Raspberry Pi & IoT
 
-## Industry knowledge
+# Industry knowledge
 
 * Information Technology
 * Scrum
