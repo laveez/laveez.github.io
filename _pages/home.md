@@ -8,7 +8,7 @@ sitemap: true
 modified: 2020-03-30
 ---
 
-I am an Information Technology student at [University of Jyväskylä](https://www.jyu.fi/en) and a Full Stack Software Developer currently working at [Pinja](https://www.pinja.com/en/). My professional passion is in Information security & Offensive security though in free time I also enjoy working with various technologies, Hifi equipment and cars.
+I am a Information Technology student at [University of Jyväskylä](https://www.jyu.fi/en) and a Full Stack Software Developer currently working at [Pinja](https://www.pinja.com/en/). My professional passion is in Information security & Offensive security though in free time I also enjoy working with various technologies, Hifi equipment and cars.
 
 <!-- Include the library. -->
 <script
