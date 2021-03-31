@@ -8,13 +8,23 @@ sitemap: true
 modified: 2020-03-30
 ---
 
-## Information Technology
+## Master of Science - Cyber Security
 
 ### University of Jyväskylä
 
 <img src="../assets/images/jyu_logo_scaled.png">
 
-#### Sep 2016 - Current
+#### Sep 2020 - Current
+
+Currently studying for Master of Science degree on Cyber Security.
+
+## Bachelor of Science - Information Technology
+
+### University of Jyväskylä
+
+<img src="../assets/images/jyu_logo_scaled.png">
+
+#### Sep 2016 - July 2020
 
 Bachelors thesis on [Cybersecurity vulnerabilities of self driving vehicles](http://urn.fi/URN:NBN:fi:jyu-201907023532) (in Finnish).
 
