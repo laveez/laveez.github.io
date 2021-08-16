@@ -28,7 +28,17 @@ Currently studying for Master of Science degree on Cyber Security.
 
 Bachelors thesis on [Cybersecurity vulnerabilities of self driving vehicles](http://urn.fi/URN:NBN:fi:jyu-201907023532) (in Finnish).
 
-## Upper secondary school
+## Secondary School Forest Industry Studies
+
+### LUT University
+
+<img src="../assets/images/lut_logo_scaled.png">
+
+#### 2015 - 2016
+
+University courses on electronics, energy technologies, chemistry, mathematics ja physics.
+
+## Secondary school
 
 ### Savonlinnan Lyseon lukio
 
