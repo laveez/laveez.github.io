@@ -16,7 +16,8 @@ modified: 2020-03-30
 
 #### Jan 2019 - Current
 
-Full stack software development of supply chain management system [Once® by Pinja](https://www.pinja.com/en/industrial-digitalization/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular and MSSQL.
+Full stack software development of supply chain management system [Once® by Pinja](https://www.pinja.com/en/industrial-digitalization/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins. A lot of responsibilities and experience on larger customer and in-house projects, production
+delivery optimization, quality control, testing, deployment, etc.
 
 ## Salesperson
 
@@ -36,4 +37,7 @@ Sales of motorcycle aftermarket parts, helmets and other equipment.
 
 #### Jul 2015 - Jul 2015, Jun 2016 - Jun 2016
 
-Analyzed features and properties of the document management and storage system SharePoint and the security risks of internal communications and the field of suppliers.
+Analysis of features and properties of the document management and storage system SharePoint
+and the security risks of internal communications and the field of suppliers.
+
+Computer and software installations, archiving & factory environment maintenance.
