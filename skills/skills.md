@@ -1,7 +1,7 @@
 ---
-title: "Skills"
-permalink: /skills/
-excerpt: "Skills"
+title: "Skills & Certificates"
+permalink: /skillsandcertificates/
+excerpt: "Skills & Certificates"
 layout: single
 author_profile: true
 sitemap: true
@@ -21,6 +21,7 @@ modified: 2020-03-30
 
 ## Software & hardware
 
+* OSX
 * Windows
 * Linux (Arch, Debian) & Shell (Bash, Zsh)
 * Git and SVN
@@ -34,3 +35,8 @@ modified: 2020-03-30
 * Information security & cybersecurity
 * Power Plants
 * Waste Management
+
+## Certificates
+
+* Axelos ITIL 4 Foundation (March 2020)
+* Axelos PRINCE 2 Foundation (November 2020)
