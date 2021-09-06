@@ -21,11 +21,11 @@ modified: 2021-09-06
         <textarea name="ryhma"></textarea>
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="1" name="1" style="margin: 12px">
+        <input type="checkbox" id="1" name="1">
         1. Tehtävä yksi
     </label>
         <label style="display: flex;">
-        <input type="checkbox" id="2" name="2" style="margin: 12px">
+        <input type="checkbox" id="2" name="2">
         2. Tehtävä kaksi
     </label>
     <!-- your other form fields go here -->
