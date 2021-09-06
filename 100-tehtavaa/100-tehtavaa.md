@@ -7,12 +7,14 @@ author_profile: false
 sitemap: false
 modified: 2021-09-06
 ---
+
 <script>
   function getCount()
   {
     document.getElementById('sum').value = document.querySelectorAll('input[type="checkbox"]:checked').length;
   }
 </script>
+
 <form
   action="https://formspree.io/f/myyllbej"
   method="POST"
