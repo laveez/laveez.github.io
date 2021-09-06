@@ -14,7 +14,7 @@ modified: 2021-09-06
 - [ ] Venus
 - [ ] Earth (Orbit/Moon)
 
-<form action="http://formspree.io/100tehtavaa@altmails.com">
+<form action="http://formspree.io/100tehtavaa@altmails.com" method="POST">
     <div>
         <input type="email" name="_replyto">
         <label for="_replyto">E-mail</label>
