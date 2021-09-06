@@ -18,7 +18,7 @@ modified: 2021-09-06
     </label>
     <label>
         Ryhmä:
-        <input type="text" name="ryhma"></input>
+        <input type="text" name="ryhma">
     </label>
     <label style="display: flex;">
         <input type="checkbox" id="1" name="1">
