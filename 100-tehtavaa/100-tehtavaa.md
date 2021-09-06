@@ -12,9 +12,9 @@ modified: 2021-09-06
   action="https://formspree.io/f/myyllbej"
   method="POST"
 >
-    <label>
+    <label style="display: flex;">
         Ryhmä:
-        <input type="text" name="ryhma" style="margin-bottom: 10px;">
+        <input type="text" name="ryhma" style="margin: 0px 0px 10px 10px;">
     </label>
     <label style="display: flex;">
         <input type="checkbox" id="yksi" name="yksi" style="margin-right: 10px;">
