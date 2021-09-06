@@ -16,6 +16,7 @@ modified: 2021-09-06
         Ryhmä:
         <input type="text" name="ryhma" style="margin: 0px 0px 10px 10px;">
     </label>
+    <!-- 1-10 -->
     <label style="display: flex;">
         <input type="checkbox" id="1" name="1" style="margin-right: 10px;">
         1. Juo
@@ -56,6 +57,6 @@ modified: 2021-09-06
         <input type="checkbox" id="10" name="10" style="margin-right: 10px;">
         10. Kerro vitsi
     </label>
-    <!-- your other form fields go here -->
+    <!-- 10-20 -->
     <button type="submit">Lähetä</button>
 </form>
