@@ -13,10 +13,6 @@ modified: 2021-09-06
   method="POST"
 >
     <label>
-        Sähköposti:
-        <input type="email" name="_replyto">
-    </label>
-    <label>
         Ryhmä:
         <input type="text" name="ryhma">
     </label>
