@@ -8,13 +8,6 @@ sitemap: false
 modified: 2021-09-06
 ---
 
-<script type="text/javascript">
-  function getCount()
-  {
-    document.getElementById('sum').value = document.querySelectorAll('input[type="checkbox"]:checked').length;
-  }
-</script>
-
 <form
   action="https://formspree.io/f/myyllbej"
   method="POST"
@@ -73,3 +66,10 @@ modified: 2021-09-06
     <!-- Submit -->
     <button type="submit">Lähetä</button>
 </form>
+
+<script type="text/javascript">
+  function getCount()
+  {
+    document.getElementById('sum').value = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  }
+</script>
