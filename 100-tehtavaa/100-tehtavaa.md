@@ -7,7 +7,12 @@ author_profile: false
 sitemap: false
 modified: 2021-09-06
 ---
-
+<script>
+  function getCount()
+  {
+    document.getElementById('sum').value = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  }
+</script>
 <form
   action="https://formspree.io/f/myyllbej"
   method="POST"
@@ -18,45 +23,51 @@ modified: 2021-09-06
     </label>
     <!-- 1-10 -->
     <label style="display: flex;">
-        <input type="checkbox" id="1" name="Juo" style="margin-right: 10px;">
+        <input type="checkbox" id="1" name="Juo" style="margin-right: 10px;" onclick="getCount()">
         1. Juo
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="2" name="Tee 10 punnerrusta" style="margin-right: 10px;">
+        <input type="checkbox" id="2" name="Tee 10 punnerrusta" style="margin-right: 10px;" onclick="getCount()">
         2. Tee 10 punnerrusta
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="3" name="Tee 10 vatsalihasliikettä" style="margin-right: 10px;">
+        <input type="checkbox" id="3" name="Tee 10 vatsalihasliikettä" style="margin-right: 10px;" onclick="getCount()">
         3. Tee 10 vatsalihasliikettä
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="4" name="Kerro suosikkijuomastasi" style="margin-right: 10px;">
+        <input type="checkbox" id="4" name="Kerro suosikkijuomastasi" style="margin-right: 10px;" onclick="getCount()">
         4. Kerro suosikkijuomastasi
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="5" name="Skål" style="margin-right: 10px;">
+        <input type="checkbox" id="5" name="Skål" style="margin-right: 10px;" onclick="getCount()">
         5. Skål
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="6" name="Huuda ainejärjestösi nimi (täysillä)" style="margin-right: 10px;">
+        <input type="checkbox" id="6" name="Huuda ainejärjestösi nimi (täysillä)" style="margin-right: 10px;" onclick="getCount()">
         6. Huuda ainejärjestösi nimi (täysillä)
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="7" name="Laula mikä tahansa laulu" style="margin-right: 10px;">
+        <input type="checkbox" id="7" name="Laula mikä tahansa laulu" style="margin-right: 10px;" onclick="getCount()">
         7. Laula mikä tahansa laulu
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="8" name="Soita ilmakitaraa" style="margin-right: 10px;">
+        <input type="checkbox" id="8" name="Soita ilmakitaraa" style="margin-right: 10px;" onclick="getCount()">
         8. Soita ilmakitaraa
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="9" name="Esitä sivistynyttä" style="margin-right: 10px;">
+        <input type="checkbox" id="9" name="Esitä sivistynyttä" style="margin-right: 10px;" onclick="getCount()">
         9. Esitä sivistynyttä
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="10" name="Kerro vitsi" style="margin-right: 10px;">
+        <input type="checkbox" id="10" name="Kerro vitsi" style="margin-right: 10px;" onclick="getCount()">
         10. Kerro vitsi
     </label>
     <!-- 10-20 -->
+    <!-- Sum -->
+    <label style="display: flex;">
+        Summa:
+        <input type="text" id="sum" name="sum" style="margin-right: 10px;" disabled="true">
+    </label>
+    <!-- Submit -->
     <button type="submit">Lähetä</button>
 </form>
