@@ -29,5 +29,5 @@ modified: 2021-09-06
         2. Tehtävä kaksi
     </label>
     <!-- your other form fields go here -->
-    <button type="submit">Send</button>
+    <button type="submit">Lähetä</button>
 </form>
