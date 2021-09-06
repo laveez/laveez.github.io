@@ -8,27 +8,25 @@ sitemap: false
 modified: 2021-09-06
 ---
 
-## 100 Tehtävää
-
-- [ ] Mercury
-- [ ] Venus
-- [ ] Earth (Orbit/Moon)
-
 <form
   action="https://formspree.io/f/myyllbej"
   method="POST"
 >
     <label>
-        Your email:
+        Sähköposti:
         <input type="email" name="_replyto">
     </label>
     <label>
-        Your message:
-        <textarea name="message"></textarea>
+        Ryhmä:
+        <textarea name="ryhma"></textarea>
     </label>
-    <label>
-        Test:
-        <input type="checkbox" id="scales" name="scales" checked>
+    <label style="display: flex;">
+        <input type="checkbox" id="1" name="1" checked>
+        1. Tehtävä yksi
+    </label>
+        <label style="display: flex;">
+        <input type="checkbox" id="2" name="2" checked>
+        2. Tehtävä kaksi
     </label>
     <!-- your other form fields go here -->
     <button type="submit">Send</button>
