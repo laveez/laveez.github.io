@@ -7,7 +7,6 @@ author_profile: false
 sitemap: false
 modified: 2021-09-06
 ---
-
 <form
   action="https://formspree.io/f/myyllbej"
   method="POST"
@@ -66,7 +65,6 @@ modified: 2021-09-06
     <!-- Submit -->
     <button type="submit">Lähetä</button>
 </form>
-
 <script type="text/javascript">
   function getCount()
   {
