@@ -17,12 +17,44 @@ modified: 2021-09-06
         <input type="text" name="ryhma">
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="1" name="1">
+        <input type="checkbox" id="1" name="yksi">
         1. Tehtävä yksi
     </label>
-        <label style="display: flex;">
-        <input type="checkbox" id="2" name="2">
+    <label style="display: flex;">
+        <input type="checkbox" id="2" name="kaksi">
         2. Tehtävä kaksi
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="3" name="3">
+        3. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="4" name="4">
+        4. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="5" name="5">
+        5. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="6" name="6">
+        6. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="7" name="7">
+        7. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="8" name="8">
+        8. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="9" name="9">
+        9. Tehtävä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="10" name="10">
+        10. Tehtävä
     </label>
     <!-- your other form fields go here -->
     <button type="submit">Lähetä</button>
