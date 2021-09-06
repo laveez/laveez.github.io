@@ -8,7 +8,7 @@ sitemap: false
 modified: 2021-09-06
 ---
 
-<script>
+<script type="text/javascript">>
   function getCount()
   {
     document.getElementById('sum').value = document.querySelectorAll('input[type="checkbox"]:checked').length;
