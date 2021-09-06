@@ -60,7 +60,7 @@ modified: 2021-09-06
     <!-- Sum -->
     <label style="display: flex;">
         Summa:
-        <input type="text" id="sum" name="sum" style="margin-right: 10px;" disabled="true">
+        <input type="text" id="sum" name="sum" style="margin-right: 10px;" readonly="readonly">
     </label>
     <!-- Submit -->
     <button type="submit">Lähetä</button>
