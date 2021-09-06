@@ -17,11 +17,11 @@ modified: 2021-09-06
         <input type="text" name="ryhma">
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="1" name="yksi">
+        <input type="checkbox" id="yksi" name="yksi">
         1. Tehtävä yksi
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="2" name="kaksi">
+        <input type="checkbox" id="kaksi" name="kaksi">
         2. Tehtävä kaksi
     </label>
     <label style="display: flex;">
