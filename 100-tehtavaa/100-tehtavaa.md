@@ -14,20 +14,22 @@ modified: 2021-09-06
 - [ ] Venus
 - [ ] Earth (Orbit/Moon)
 
-<form action="http://formspree.io/100tehtavaa@altmails.com" method="POST">
-    <div>
+<form
+  action="https://formspree.io/f/myyllbej"
+  method="POST"
+>
+    <label>
+        Your email:
         <input type="email" name="_replyto">
-        <label for="_replyto">E-mail</label>
-    </div>
-    <div>
-        <textarea name="body"></textarea>
-        <label for="body">Body</label>
-    </div>
-    <div>
+    </label>
+    <label>
+        Your message:
+        <textarea name="message"></textarea>
+    </label>
+    <label>
+        Test:
         <input type="checkbox" id="scales" name="scales" checked>
-        <label for="scales">Scales</label>
-    </div>
-    <div>
-        <input type="submit" value="Send">
-    </div>
+    </label>
+    <!-- your other form fields go here -->
+    <button type="submit">Send</button>
 </form>
