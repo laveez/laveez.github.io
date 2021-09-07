@@ -33,30 +33,158 @@ modified: 2021-09-06
         4. Kerro suosikkijuomastasi
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="5" name="Skål" style="margin-right: 10px;" onclick="getCount()">
-        5. Skål
+        <input type="checkbox" id="5" name="Minkä tähden?" style="margin-right: 10px;" onclick="getCount()">
+        5. Minkä tähden?
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="6" name="Huuda ainejärjestösi nimi (täysillä)" style="margin-right: 10px;" onclick="getCount()">
-        6. Huuda ainejärjestösi nimi (täysillä)
+        <input type="checkbox" id="6" name="Skål" style="margin-right: 10px;" onclick="getCount()">
+        6. Skål
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="7" name="Laula mikä tahansa laulu" style="margin-right: 10px;" onclick="getCount()">
-        7. Laula mikä tahansa laulu
+        <input type="checkbox" id="7" name="Huuda ainejärjestösi nimi (täysillä)" style="margin-right: 10px;" onclick="getCount()">
+        7. Huuda ainejärjestösi nimi (täysillä)
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="8" name="Soita ilmakitaraa" style="margin-right: 10px;" onclick="getCount()">
-        8. Soita ilmakitaraa
+        <input type="checkbox" id="8" name="Laula mikä tahansa laulu" style="margin-right: 10px;" onclick="getCount()">
+        8. Laula mikä tahansa laulu
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="9" name="Esitä sivistynyttä" style="margin-right: 10px;" onclick="getCount()">
-        9. Esitä sivistynyttä
+        <input type="checkbox" id="9" name="Soita ilmakitaraa" style="margin-right: 10px;" onclick="getCount()">
+        9. Soita ilmakitaraa
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="10" name="Kerro vitsi" style="margin-right: 10px;" onclick="getCount()">
-        10. Kerro vitsi
+        <input type="checkbox" id="10" name="Mikä biisi 1" style="margin-right: 10px;" onclick="getCount()">
+        10. Mikä biisi: ❓👨💻🤫,➡🤬🔥 
     </label>
     <!-- 10-20 -->
+    <label style="display: flex;">
+        <input type="checkbox" id="11" name="Kerro vitsi" style="margin-right: 10px;" onclick="getCount()">
+        11. Kerro vitsi
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="12" name="Tee 10 punnerrusta" style="margin-right: 10px;" onclick="getCount()">
+        12. Mee töihin
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="13" name="Imitoi norsua" style="margin-right: 10px;" onclick="getCount()">
+        13. Imitoi norsua
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="14" name="Pyydä rastinpitäjiltä anteeksi" style="margin-right: 10px;" onclick="getCount()">
+        14. Pyydä rastinpitäjiltä anteeksi
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="15" name="Kumarra rastinpitäjiä" style="margin-right: 10px;" onclick="getCount()">
+        15. Kumarra rastinpitäjiä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="16" name="Esitä fuksiaisten tunnusmusiikki" style="margin-right: 10px;" onclick="getCount()">
+        16. Esitä fuksiaisten tunnusmusiikki
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="17" name="Luettele 5 Suomen kaupunkia" style="margin-right: 10px;" onclick="getCount()">
+        17. Luettele 5 Suomen kaupunkia
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="18" name="Luettele 5 Afrikan maata" style="margin-right: 10px;" onclick="getCount()">
+        18. Luettele 5 Afrikan maata
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="19" name="Luettele 5 Suomen presidenttiä" style="margin-right: 10px;" onclick="getCount()">
+        19. Luettele 5 Suomen presidenttiä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="20" name="Kerro salaisuutesi" style="margin-right: 10px;" onclick="getCount()">
+        20. Kerro salaisuutesi 
+    </label>
+    <!-- 20-30 -->
+    <label style="display: flex;">
+        <input type="checkbox" id="21" name="Tilaa olut 4 eri kielellä" style="margin-right: 10px;" onclick="getCount()">
+        21. Tilaa olut 4 eri kielellä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="22" name="Olette risteilyllä" style="margin-right: 10px;" onclick="getCount()">
+        22. Olette risteilyllä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="23" name="Heitä ylävitoset kaverille" style="margin-right: 10px;" onclick="getCount()">
+        23. Heitä ylävitoset kaverille
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="24" name="Mikä biisi 2" style="margin-right: 10px;" onclick="getCount()">
+        24. Mikä biisi: 🙋‍♀😇🌧⬇🌍
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="25" name="Heitä ylävitoset itsellesi" style="margin-right: 10px;" onclick="getCount()">
+        25. Heitä ylävitoset itsellesi
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="26" name="Tehkää salainen handshake" style="margin-right: 10px;" onclick="getCount()">
+        26. Tehkää salainen "handshake"
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="27" name="Ota kaveri reppuselkään" style="margin-right: 10px;" onclick="getCount()">
+        27. Ota kaveri reppuselkään
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="28" name="Juokse kaveri reppuselässä rastinpitäjien ympäri" style="margin-right: 10px;" onclick="getCount()">
+        28. Juokse kaveri reppuselässä rastinpitäjien ympäri
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="29" name="Ota kaveri syliin" style="margin-right: 10px;" onclick="getCount()">
+        29. Ota kaveri syliin
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="30" name="Esitelkää itsenne rastinpitäjille" style="margin-right: 10px;" onclick="getCount()">
+        30. Esitelkää itsenne rastinpitäjille 
+    </label>
+    <!-- 30-40 -->
+        <label style="display: flex;">
+        <input type="checkbox" id="21" name="Tilaa olut 4 eri kielellä" style="margin-right: 10px;" onclick="getCount()">
+        31. Tilaa olut 4 eri kielellä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="22" name="Olette risteilyllä" style="margin-right: 10px;" onclick="getCount()">
+        32. Olette risteilyllä
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="23" name="Heitä ylävitoset kaverille" style="margin-right: 10px;" onclick="getCount()">
+        33. Heitä ylävitoset kaverille
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="24" name="Mikä biisi 2" style="margin-right: 10px;" onclick="getCount()">
+        34. Mikä biisi: 🙋‍♀😇🌧⬇🌍
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="25" name="Heitä ylävitoset itsellesi" style="margin-right: 10px;" onclick="getCount()">
+        35. Heitä ylävitoset itsellesi
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="26" name="Tehkää salainen handshake" style="margin-right: 10px;" onclick="getCount()">
+        36. Tehkää salainen "handshake"
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="27" name="Ota kaveri reppuselkään" style="margin-right: 10px;" onclick="getCount()">
+        37. Ota kaveri reppuselkään
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="28" name="Juokse kaveri reppuselässä rastinpitäjien ympäri" style="margin-right: 10px;" onclick="getCount()">
+        38. Juokse kaveri reppuselässä rastinpitäjien ympäri
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="29" name="Ota kaveri syliin" style="margin-right: 10px;" onclick="getCount()">
+        39. Ota kaveri syliin
+    </label>
+    <label style="display: flex;">
+        <input type="checkbox" id="30" name="Esitelkää itsenne rastinpitäjille" style="margin-right: 10px;" onclick="getCount()">
+        40. Esitelkää itsenne rastinpitäjille 
+    </label>
+    <!-- 40-50 -->
+    <!-- 50-60 -->
+    <!-- 60-70 -->
+    <!-- 70-80 -->
+    <!-- 80-90 -->
+    <!-- 90-100 -->
     <!-- Sum -->
     <label style="display: flex;">
         Summa:
