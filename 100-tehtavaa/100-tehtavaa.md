@@ -16,6 +16,10 @@ modified: 2021-09-06
         Ryhmä:
         <input type="text" name="ryhma" style="margin: 0px 0px 10px 10px;">
     </label>
+    <label style="display: flex;">
+        Summa:
+        <input type="text" id="sum" name="sum" style="margin-right: 10px;" readonly="readonly">
+    </label>
 </form>
 <script type="text/javascript">
   function addRows()
@@ -128,6 +132,16 @@ modified: 2021-09-06
     submit.type = 'submit';
     submit.innerHTML = 'Lähetä';
     document.getElementById('form').append(submit);
+    var sumLabel = document.createElement('label');
+    sumLabel.style.display = 'flex';
+    document.getElementById('form').append(sumLabel);
+    var sum = document.createElement('input');
+    sum.type = 'text';
+    sum.setAttribute('style', 'margin-right: 10px');
+    sum.id = 'sum';
+    sum.name = 'sum';
+    sum.readonly = 'readonly;
+    sumLabel.append(sum);
   }
   function addRow(name, index)
   {
