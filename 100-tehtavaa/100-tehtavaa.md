@@ -8,6 +8,7 @@ sitemap: false
 modified: 2021-09-06
 ---
 <form
+  id='form'
   action="https://formspree.io/f/myyllbej"
   method="POST"
 >
@@ -15,185 +16,136 @@ modified: 2021-09-06
         Ryhmä:
         <input type="text" name="ryhma" style="margin: 0px 0px 10px 10px;">
     </label>
-    <!-- 1-10 -->
-    <label style="display: flex;">
-        <input type="checkbox" id="1" name="Juo" style="margin-right: 10px;" onclick="getCount()">
-        1. Juo
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="2" name="Tee 10 punnerrusta" style="margin-right: 10px;" onclick="getCount()">
-        2. Tee 10 punnerrusta
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="3" name="Tee 10 vatsalihasliikettä" style="margin-right: 10px;" onclick="getCount()">
-        3. Tee 10 vatsalihasliikettä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="4" name="Kerro suosikkijuomastasi" style="margin-right: 10px;" onclick="getCount()">
-        4. Kerro suosikkijuomastasi
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="5" name="Minkä tähden?" style="margin-right: 10px;" onclick="getCount()">
-        5. Minkä tähden?
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="6" name="Skål" style="margin-right: 10px;" onclick="getCount()">
-        6. Skål
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="7" name="Huuda ainejärjestösi nimi (täysillä)" style="margin-right: 10px;" onclick="getCount()">
-        7. Huuda ainejärjestösi nimi (täysillä)
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="8" name="Laula mikä tahansa laulu" style="margin-right: 10px;" onclick="getCount()">
-        8. Laula mikä tahansa laulu
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="9" name="Soita ilmakitaraa" style="margin-right: 10px;" onclick="getCount()">
-        9. Soita ilmakitaraa
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="10" name="Mikä biisi 1" style="margin-right: 10px;" onclick="getCount()">
-        10. Mikä biisi: ❓👨💻🤫,➡🤬🔥 
-    </label>
-    <!-- 10-20 -->
-    <label style="display: flex;">
-        <input type="checkbox" id="11" name="Kerro vitsi" style="margin-right: 10px;" onclick="getCount()">
-        11. Kerro vitsi
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="12" name="Tee 10 punnerrusta" style="margin-right: 10px;" onclick="getCount()">
-        12. Mee töihin
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="13" name="Imitoi norsua" style="margin-right: 10px;" onclick="getCount()">
-        13. Imitoi norsua
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="14" name="Pyydä rastinpitäjiltä anteeksi" style="margin-right: 10px;" onclick="getCount()">
-        14. Pyydä rastinpitäjiltä anteeksi
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="15" name="Kumarra rastinpitäjiä" style="margin-right: 10px;" onclick="getCount()">
-        15. Kumarra rastinpitäjiä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="16" name="Esitä fuksiaisten tunnusmusiikki" style="margin-right: 10px;" onclick="getCount()">
-        16. Esitä fuksiaisten tunnusmusiikki
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="17" name="Luettele 5 Suomen kaupunkia" style="margin-right: 10px;" onclick="getCount()">
-        17. Luettele 5 Suomen kaupunkia
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="18" name="Luettele 5 Afrikan maata" style="margin-right: 10px;" onclick="getCount()">
-        18. Luettele 5 Afrikan maata
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="19" name="Luettele 5 Suomen presidenttiä" style="margin-right: 10px;" onclick="getCount()">
-        19. Luettele 5 Suomen presidenttiä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="20" name="Kerro salaisuutesi" style="margin-right: 10px;" onclick="getCount()">
-        20. Kerro salaisuutesi 
-    </label>
-    <!-- 20-30 -->
-    <label style="display: flex;">
-        <input type="checkbox" id="21" name="Tilaa olut 4 eri kielellä" style="margin-right: 10px;" onclick="getCount()">
-        21. Tilaa olut 4 eri kielellä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="22" name="Olette risteilyllä" style="margin-right: 10px;" onclick="getCount()">
-        22. Olette risteilyllä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="23" name="Heitä ylävitoset kaverille" style="margin-right: 10px;" onclick="getCount()">
-        23. Heitä ylävitoset kaverille
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="24" name="Mikä biisi 2" style="margin-right: 10px;" onclick="getCount()">
-        24. Mikä biisi: 🙋‍♀😇🌧⬇🌍
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="25" name="Heitä ylävitoset itsellesi" style="margin-right: 10px;" onclick="getCount()">
-        25. Heitä ylävitoset itsellesi
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="26" name="Tehkää salainen handshake" style="margin-right: 10px;" onclick="getCount()">
-        26. Tehkää salainen "handshake"
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="27" name="Ota kaveri reppuselkään" style="margin-right: 10px;" onclick="getCount()">
-        27. Ota kaveri reppuselkään
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="28" name="Juokse kaveri reppuselässä rastinpitäjien ympäri" style="margin-right: 10px;" onclick="getCount()">
-        28. Juokse kaveri reppuselässä rastinpitäjien ympäri
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="29" name="Ota kaveri syliin" style="margin-right: 10px;" onclick="getCount()">
-        29. Ota kaveri syliin
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="30" name="Esitelkää itsenne rastinpitäjille" style="margin-right: 10px;" onclick="getCount()">
-        30. Esitelkää itsenne rastinpitäjille 
-    </label>
-    <!-- 30-40 -->
-        <label style="display: flex;">
-        <input type="checkbox" id="31" name="Juokse kaveri sylissä rastinpitäjien ympäri" style="margin-right: 10px;" onclick="getCount()">
-        31. Juokse kaveri sylissä rastinpitäjien ympäri
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="32" name="Hae nimikirjoitus toisen ryhmän jäseneltä" style="margin-right: 10px;" onclick="getCount()">
-        32. Hae nimikirjoitus toisen ryhmän jäseneltä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="33" name="Tee kuperkeikka" style="margin-right: 10px;" onclick="getCount()">
-        33. Tee kuperkeikka
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="34" name="Tee takaperinkuperkeikka" style="margin-right: 10px;" onclick="getCount()">
-        34. Tee takaperinkuperkeikka
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="35" name="Tee kärrynpyörä" style="margin-right: 10px;" onclick="getCount()">
-        35. Tee kärrynpyörä
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="36" name="Esitä breakdance-taitosi" style="margin-right: 10px;" onclick="getCount()">
-        36. Esitä breakdance-taitosi
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="37" name="Juokse hidastetusti" style="margin-right: 10px;" onclick="getCount()">
-        37. Juokse hidastetusti
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="38" name="Juokse kuin Naruto" style="margin-right: 10px;" onclick="getCount()">
-        38. Juokse kuin Naruto
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="39" name="Tehkää ihmispyramidi" style="margin-right: 10px;" onclick="getCount()">
-        39. Tehkää ihmispyramidi
-    </label>
-    <label style="display: flex;">
-        <input type="checkbox" id="40" name="Alienit tulevat, suojautukaa" style="margin-right: 10px;" onclick="getCount()">
-        40. Alienit tulevat, suojautukaa 
-    </label>
-    <!-- 40-50 -->
-    <!-- 50-60 -->
-    <!-- 60-70 -->
-    <!-- 70-80 -->
-    <!-- 80-90 -->
-    <!-- 90-100 -->
-    <!-- Sum -->
-    <label style="display: flex;">
-        Summa:
-        <input type="text" id="sum" name="sum" style="margin-right: 10px;" readonly="readonly">
-    </label>
-    <!-- Submit -->
-    <button type="submit">Lähetä</button>
 </form>
 <script type="text/javascript">
+  function addRows()
+  {
+    var texts = ['1. Juo',
+      '2. Tee 10 punnerrusta',
+      '3. Tee 10 vatsalihasliikettä',
+      '4. Kerro suosikkijuomastasi',
+      '5. Minkä tähden? ',
+      '6. Skål',
+      '7. Huuda ainejärjestösi nimi (täysillä)',
+      '8. Laula mikä tahansa laulu',
+      '9. Soita ilmakitaraa',
+      '10. Mikä biisi: ❓👨💻🤫,➡🤬🔥  ',
+      '11. Kerro vitsi',
+      '12. Mee töihin',
+      '13. Imitoi norsua',
+      '14. Pyydä rastinpitäjiltä anteeksi',
+      '15. Kumarra rastinpitäjiä',
+      '16. Esitä fuksiaisten tunnusmusiikki',
+      '17. Luettele 5 Suomen kaupunkia',
+      '18. Luettele 5 Afrikan maata',
+      '19. Luettele 5 Suomen presidenttiä',
+      '20. Kerro salaisuutesi',
+      '21. Tilaa olut 4 eri kielellä',
+      '22. Olette risteilyllä ',
+      '23. Heitä ylävitoset kaverille',
+      '24. Mikä biisi: 🙋‍♀😇🌧⬇🌍',
+      '25. Heitä ylävitoset itsellesi',
+      '26. Tehkää salainen "handshake"',
+      '27. Ota kaveri reppuselkään',
+      '28. Juokse kaveri reppuselässä rastinpitäjien ympäri',
+      '29. Ota kaveri syliin',
+      '30. Esitelkää itsenne rastinpitäjille',
+      '31. Juokse kaveri sylissä rastinpitäjien ympäri',
+      '32. Hae nimikirjoitus toisen ryhmän jäseneltä',
+      '33. Tee kuperkeikka',
+      '34. Tee takaperinkuperkeikka',
+      '35. Tee kärrynpyörä',
+      '36. Esitä breakdance-taitosi',
+      '37. Juokse hidastetusti',
+      '38. Juokse kuin Naruto  ',
+      '39. Tehkää ihmispyramidi',
+      '40. Alienit tulevat, suojautukaa',
+      '41. Tehkää aalto, joka pyörii ainakin 2 kierrosta',
+      '42. Oispa? ',
+      '43. Laulakaa kuorossa "Let It Go"',
+      '44. Laulakaa ruotsiksi "Let It Go"',
+      '45. Peto on irti',
+      '46. Vakuuta itsellesi ääneen, miksi Cola on parempi kuin Pepsi',
+      '47. Vakuuta itsellesi ääneen, miksi Pepsi on parempi kuin Cola',
+      '48. Esittäkää oikeaoppinen puhuttelu-esittely-asia',
+      '49. Soita Linkkarille',
+      '50. Soita Humanistille',
+      '51. Laita viesti Dumpparille',
+      '52. Soita fuksille ',
+      '53. Esitä Hamletin kuuluisin kohtaus "Ollako vaiko eikö olla"',
+      '54. Esitä edellinen twistillä',
+      '55. Tee Aku Ankka -imitaatio',
+      '56. Mitä yhteistä on Joulupukilla ja Michael Jacksonilla?',
+      '57. Tunnusta rakkautesi',
+      '58. Tunnusta syntisi',
+      '59. Tule ulos kaapista',
+      '60. Tuo rastinpitäjälle oksa',
+      '61. Tuo rastinpitäjälle juoma',
+      '62. Tuo rastinpitäjälle ruokaa',
+      '63. Juo juoma ykkösellä alas',
+      '64. Galaksit räjähtää',
+      '65. Laskeudu rankaisemaan kaikkia',
+      '66. Nouse haudasta',
+      '67. Vapaudu raudoista',
+      '68. On tuomiopäivä',
+      '69. On _:n nimipäivä',
+      '70. Kuka maksaa?',
+      '71. Wanna hear the most annoying sound in the world?',
+      '72. Missä kissa istuu? ',
+      '73. Laulakaa karaokea',
+      '74. Käyttäkää mielikuvitustanne',
+      '75. Tee LinkedIn-tili..',
+      '76. .. ja connectoi rastinpitäjien kanssa ',
+      '77. Jodlaa',
+      '78. Esitä meemi',
+      '79. Sitsatkaa',
+      '80. Saunokaa',
+      '81. Kirjoittakaa binäärinä jokin sana (ja sen käännös)',
+      '82. Zumba',
+      '83. Lausu aakkoset takaperin',
+      '84. Tiputanssi',
+      '85. Tee päivitys someen',
+      '86. Hiljainen macarena',
+      '87. Esitä haiku ',
+      '88. Tarzan',
+      '89. Istukaa',
+      '90. Koodaajamies',
+      '91. Esittäkää tv-mainos',
+      '92. Kertokaa haalarimerkki-idea',
+      '93. Hypätkää ilmaan yhtäaikaa',
+      '94. Mellan sup',
+      '95. Esitä vanhaa opiskelijaa',
+      '96. Puhu savolaisittain',
+      '97. Puhu rallienglantia',
+      '98. Hurratkaa itsellenne',
+      '99. Heittäkää kenkä',
+      '100. Kiitä rastinpitäjiä',
+    ];
+    for (let i = 0; i < texts.length; i++) {
+      addRow(texts[i], i);
+    }
+    var submit = document.createElement('button');
+    submit.type = 'submit';
+    submit.innerHTML = 'Lähetä';
+    document.getElementById('form').append(submit);
+  }
+  function addRow(name, index)
+  {
+  	var label = document.createElement('label');
+    label.style.display = 'flex';
+    document.getElementById('form').append(label);
+    var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.setAttribute('style', 'margin-right: 10px');
+    checkbox.id = index;
+    checkbox.name = name;
+    checkbox.onClick = 'getCount()';
+    label.append(checkbox);
+    label.innerHTML = label.innerHTML + name;
+  }
+  document.addEventListener("DOMContentLoaded", function(){
+    addRows();
+  });
   function getCount()
   {
     document.getElementById('sum').value = document.querySelectorAll('input[type="checkbox"]:checked').length;
