@@ -16,10 +16,6 @@ modified: 2021-09-06
         Ryhmä:
         <input type="text" name="ryhma" style="margin: 0px 0px 10px 10px;">
     </label>
-    <label style="display: flex;">
-        Summa:
-        <input type="text" id="sum" name="sum" style="margin-right: 10px;" readonly="readonly">
-    </label>
 </form>
 <script type="text/javascript">
   function addRows()
