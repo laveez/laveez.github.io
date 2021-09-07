@@ -140,44 +140,44 @@ modified: 2021-09-06
     </label>
     <!-- 30-40 -->
         <label style="display: flex;">
-        <input type="checkbox" id="21" name="Tilaa olut 4 eri kielellä" style="margin-right: 10px;" onclick="getCount()">
-        31. Tilaa olut 4 eri kielellä
+        <input type="checkbox" id="31" name="Juokse kaveri sylissä rastinpitäjien ympäri" style="margin-right: 10px;" onclick="getCount()">
+        31. Juokse kaveri sylissä rastinpitäjien ympäri
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="22" name="Olette risteilyllä" style="margin-right: 10px;" onclick="getCount()">
-        32. Olette risteilyllä
+        <input type="checkbox" id="32" name="Hae nimikirjoitus toisen ryhmän jäseneltä" style="margin-right: 10px;" onclick="getCount()">
+        32. Hae nimikirjoitus toisen ryhmän jäseneltä
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="23" name="Heitä ylävitoset kaverille" style="margin-right: 10px;" onclick="getCount()">
-        33. Heitä ylävitoset kaverille
+        <input type="checkbox" id="33" name="Tee kuperkeikka" style="margin-right: 10px;" onclick="getCount()">
+        33. Tee kuperkeikka
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="24" name="Mikä biisi 2" style="margin-right: 10px;" onclick="getCount()">
-        34. Mikä biisi: 🙋‍♀😇🌧⬇🌍
+        <input type="checkbox" id="34" name="Tee takaperinkuperkeikka" style="margin-right: 10px;" onclick="getCount()">
+        34. Tee takaperinkuperkeikka
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="25" name="Heitä ylävitoset itsellesi" style="margin-right: 10px;" onclick="getCount()">
-        35. Heitä ylävitoset itsellesi
+        <input type="checkbox" id="35" name="Tee kärrynpyörä" style="margin-right: 10px;" onclick="getCount()">
+        35. Tee kärrynpyörä
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="26" name="Tehkää salainen handshake" style="margin-right: 10px;" onclick="getCount()">
-        36. Tehkää salainen "handshake"
+        <input type="checkbox" id="36" name="Esitä breakdance-taitosi" style="margin-right: 10px;" onclick="getCount()">
+        36. Esitä breakdance-taitosi
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="27" name="Ota kaveri reppuselkään" style="margin-right: 10px;" onclick="getCount()">
-        37. Ota kaveri reppuselkään
+        <input type="checkbox" id="37" name="Juokse hidastetusti" style="margin-right: 10px;" onclick="getCount()">
+        37. Juokse hidastetusti
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="28" name="Juokse kaveri reppuselässä rastinpitäjien ympäri" style="margin-right: 10px;" onclick="getCount()">
-        38. Juokse kaveri reppuselässä rastinpitäjien ympäri
+        <input type="checkbox" id="38" name="Juokse kuin Naruto" style="margin-right: 10px;" onclick="getCount()">
+        38. Juokse kuin Naruto
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="29" name="Ota kaveri syliin" style="margin-right: 10px;" onclick="getCount()">
-        39. Ota kaveri syliin
+        <input type="checkbox" id="39" name="Tehkää ihmispyramidi" style="margin-right: 10px;" onclick="getCount()">
+        39. Tehkää ihmispyramidi
     </label>
     <label style="display: flex;">
-        <input type="checkbox" id="30" name="Esitelkää itsenne rastinpitäjille" style="margin-right: 10px;" onclick="getCount()">
-        40. Esitelkää itsenne rastinpitäjille 
+        <input type="checkbox" id="40" name="Alienit tulevat, suojautukaa" style="margin-right: 10px;" onclick="getCount()">
+        40. Alienit tulevat, suojautukaa 
     </label>
     <!-- 40-50 -->
     <!-- 50-60 -->
