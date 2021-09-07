@@ -133,7 +133,7 @@ modified: 2021-09-06
     sum.setAttribute('style', 'margin-left: 10px');
     sum.id = 'sum';
     sum.name = 'sum';
-    sum.readonly = 'readonly';
+    sum.setAttribute('readonly', 'readonly');
     sumLabel.append(sum);
     var submit = document.createElement('button');
     submit.type = 'submit';
@@ -150,7 +150,7 @@ modified: 2021-09-06
     checkbox.setAttribute('style', 'margin-right: 10px');
     checkbox.id = index;
     checkbox.name = name;
-    checkbox.onClick = 'getCount()';
+    checkbox.setAttribute('onClick', 'getCount()');
     label.append(checkbox);
     label.innerHTML = label.innerHTML + name;
   }
