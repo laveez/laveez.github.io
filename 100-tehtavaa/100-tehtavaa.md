@@ -128,20 +128,21 @@ modified: 2021-09-06
     for (let i = 0; i < texts.length; i++) {
       addRow(texts[i], i);
     }
-    var submit = document.createElement('button');
-    submit.type = 'submit';
-    submit.innerHTML = 'Lähetä';
-    document.getElementById('form').append(submit);
     var sumLabel = document.createElement('label');
     sumLabel.style.display = 'flex';
+    sumLabel.innerHTML = 'Summa';
     document.getElementById('form').append(sumLabel);
     var sum = document.createElement('input');
     sum.type = 'text';
     sum.setAttribute('style', 'margin-right: 10px');
     sum.id = 'sum';
     sum.name = 'sum';
-    sum.readonly = 'readonly;
+    sum.readonly = 'readonly';
     sumLabel.append(sum);
+    var submit = document.createElement('button');
+    submit.type = 'submit';
+    submit.innerHTML = 'Lähetä';
+    document.getElementById('form').append(submit);
   }
   function addRow(name, index)
   {
