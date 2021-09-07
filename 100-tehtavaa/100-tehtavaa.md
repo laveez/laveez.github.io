@@ -134,7 +134,7 @@ modified: 2021-09-06
     document.getElementById('form').append(sumLabel);
     var sum = document.createElement('input');
     sum.type = 'text';
-    sum.setAttribute('style', 'margin-right: 10px');
+    sum.setAttribute('style', 'margin-left: 10px');
     sum.id = 'sum';
     sum.name = 'sum';
     sum.readonly = 'readonly';
