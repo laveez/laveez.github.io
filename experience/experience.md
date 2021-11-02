@@ -8,13 +8,24 @@ sitemap: true
 modified: 2020-03-30
 ---
 
+
+## Software Developer
+
+### Gofore
+
+<img src="../assets/images/gofore_logo_scaled.png">
+
+#### Nov 2021 - Current
+
+Full stack software development.
+
 ## Software Developer
 
 ### Pinja
 
 <img src="../assets/images/pinja_logo_scaled.png">
 
-#### Jan 2019 - Current
+#### Jan 2019 - Oct 2021
 
 Full stack software development of supply chain management system [Once® by Pinja](https://www.pinja.com/en/industrial-digitalization/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins. A lot of responsibilities and experience on larger customer and in-house projects, production
 delivery optimization, quality control, testing, deployment, etc.
