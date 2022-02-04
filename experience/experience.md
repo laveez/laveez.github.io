@@ -27,7 +27,7 @@ Full stack software development of an admin user interface for a parking solutio
 
 #### Jan 2019 - Oct 2021
 
-Full stack software development of supply chain management system [Once® by Pinja](https://www.pinja.com/en/industrial-digitalization/once/) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins. A lot of responsibilities and experience on larger customer and in-house projects, production
+Full stack software development of supply chain management system [Once® by Pinja](https://pinja.com/en/services/bioenergy-circular-economy/once) using many different technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins. A lot of responsibilities and experience on larger customer and in-house projects, production
 delivery optimization, quality control, testing, deployment, etc.
 
 ## Salesperson
