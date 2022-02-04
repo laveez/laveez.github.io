@@ -8,15 +8,17 @@ sitemap: true
 modified: 2020-03-30
 ---
 
-## Programming Languages
+## Software development technologies
 
-* PHP
-* C# / .NET Core
+* C#, .NET Core
 * Javascript
 * Angular
+* React
 * MSSQL
-* Java, C, C++
+* Java, Spring Boot
+* C, C++
 * Python
+* PHP
 * HTML & CSS
 
 ## Software & hardware
@@ -35,6 +37,7 @@ modified: 2020-03-30
 * Information security & cybersecurity
 * Power Plants
 * Waste Management
+* Parking services
 
 ## Certificates
 
