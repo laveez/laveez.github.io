@@ -17,7 +17,7 @@ modified: 2020-03-30
 
 #### Nov 2021 - Current
 
-Full stack software development.
+Full stack software development of an admin user interface for a parking solution to handle facilities, products, permits, pricing, sessions etc. using React, React Query, Ant Design, Java/Spring Boot & MongoDB.
 
 ## Software Developer
 
