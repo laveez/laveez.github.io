@@ -7,16 +7,7 @@ author_profile: false
 sitemap: false
 modified: 2021-09-06
 ---
-<form
-  id='form'
-  action="https://formspree.io/f/myyllbej"
-  method="POST"
->
-    <label style="display: flex;">
-        Ryhmä:
-        <input type="text" name="ryhma" style="margin: 0px 0px 10px 10px;">
-    </label>
-</form>
+<div id='form'></form>
 <script type="text/javascript">
   function addRows()
   {
