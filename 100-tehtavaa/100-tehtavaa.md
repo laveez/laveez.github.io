@@ -126,10 +126,6 @@ modified: 2021-09-06
     sum.name = 'sum';
     sum.setAttribute('readonly', 'readonly');
     sumLabel.append(sum);
-    var submit = document.createElement('button');
-    submit.type = 'submit';
-    submit.innerHTML = 'Lähetä';
-    document.getElementById('form').append(submit);
   }
   function addRow(name, index)
   {
