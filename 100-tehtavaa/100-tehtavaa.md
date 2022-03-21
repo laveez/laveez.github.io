@@ -7,7 +7,7 @@ author_profile: false
 sitemap: false
 modified: 2021-09-06
 ---
-<div id='form'></form>
+<div id='form'></div>
 <script type="text/javascript">
   function addRows()
   {
