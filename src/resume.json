@@ -9,8 +9,10 @@
     "url": "laveez.github.io",
     "summary": "Software Developer, Cyber Security Student, InfoSec & OffSec enthusiast, tech- & HiFi-geek",
     "location": {
-      "countryCode": "US",
-      "address": ""
+      "postalCode": "40100",
+      "city": "Jyväskylä",
+      "countryCode": "FI",
+      "region": "West and Inner Finland"
     },
     "profiles": [
       {
@@ -76,7 +78,7 @@
     {
       "organization": "The Student Union of the University of Jyväskylä",
       "position": "Deputy Member of The Council of Representatives",
-      "startDate": "2020-01-31",
+      "startDate": "2020-01-01",
       "endDate": "2021-12-31",
       "summary": "The Council of Representatives is the Parliament of the Student Union and, as such, decides on the most important issues concerning the Union and its members. The Council is comprised of 41 representatives which are elected by the student body every other year.\n\nAmong other things, the Council has power over the rules, budgets, financial statements, loans and building projects of the Student Union. The Council also appoints the Board of Executives, its chair and the key staff of the Student Union, such as its Secretary General and Editor-in-Chief.",
       "highlights": [],
@@ -85,7 +87,7 @@
     {
       "organization": "Linkki Jyväskylä ry",
       "position": "Vice Chairman Of The Board",
-      "startDate": "2018-01-31",
+      "startDate": "2018-01-01",
       "endDate": "2018-12-31",
       "summary": "Linkki Jyväskylä ry is a sizeable student association for Mathematical Information Technology, and Educational Technology majors and minors in University of Jyväskylä. Association was founded back in 2006 and it operates Faculty of Information Technology, within the Student Union of the University of Jyväskylä.\n\nPurpose of the association is act as gateway for students to the faculty, promote the community of its members, to provide various opportunities for hobbies and peer learning, and to support the progress of their members’ studies.",
       "highlights": [],
@@ -94,7 +96,7 @@
     {
       "organization": "Savonlinna Youth Council",
       "position": "Member, Graphics Designer",
-      "startDate": "2014-01-31",
+      "startDate": "2014-01-01",
       "endDate": "2015-12-31",
       "summary": "Savonlinna Youth Council (Savonlinnan nuorisovaltuusto) is a politically and religiously non-partisan, municipal group that promotes the interests of local youth. The role of the Youth Council is to: Promote opportunities for participation, influence and action by young people. It works under the auspices of the Board of Education and brings the young people's perspective to the preparation and decision-making of the city.",
       "highlights": [],
@@ -107,7 +109,7 @@
       "area": "Cyber Security",
       "studyType": "Master of Science - MS",
       "startDate": "2020-12-31",
-      "endDate": "2023-12-31",
+      "endDate": "",
       "score": "",
       "courses": []
     },

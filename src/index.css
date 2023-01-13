@@ -158,10 +158,10 @@ a:focus {
   box-shadow: 0 0 10px 0 var(--first-color);
 }
 
-.mobile-summary {
-  text-align: center;
+.mobile-container {
+  margin: 1em;
 }
 
-.mobile-section {
-  margin: 1em;
+.mobile-summary {
+  text-align: center;
 }
