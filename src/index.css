@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-  color: var(--first-color);
+  background-color: var(--first-color);
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: fit-content;
 }
 
 .avatar {
   border-radius: 50%;
-  max-width: 100%; /* Makes the image responsive */
+  /* max-width: 100%; */ /* Makes the image responsive */
+  max-width: 200px;
 }
 
 h1, h2, h3 {
@@ -21,6 +23,7 @@ h1, h2, h3 {
 h1 {
   font-size: 36px;
   font-weight: 700;
+  color: var(--third-color);
 }
 
 h2 {
@@ -152,5 +155,13 @@ a:focus {
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px var(--first-color);
+  box-shadow: 0 0 10px 0 var(--first-color);
+}
+
+.mobile-basics {
+  text-align: center;
+}
+
+.mobile-section {
+  margin: 1em;
 }
