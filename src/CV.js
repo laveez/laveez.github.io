@@ -21,44 +21,21 @@ const CVSection = ({ title, items, className }) => {
   )
 }
 
-const CV = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const CVSummary = ({ className }) => {
+  return (
+    <section className={className}>
+      <img src={resume.basics.image} alt={resume.basics.name} className="avatar"/>
+      <h1>{resume.basics.name}</h1>
+      <h2>{resume.basics.label}</h2>
+      <a href={resume.basics.url}>{resume.basics.url}</a>
+      <p>{resume.basics.summary}</p>
+    </section>
+  );
+};
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1480) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+const CVContent = () => {
   return (
     <>
-      {isMobile ? (
-        <MobileCV />
-      ) : (
-        <DesktopCV />
-      )}
-    </>
-  );
-}
-
-const MobileCV = () => {
-
-  return (
-    <div className="mobile-section">
-      <section className="mobile-basics">
-        <img src={resume.basics.image} alt={resume.basics.name} className="avatar"/>
-        <h1>{resume.basics.name}</h1>
-        <h2>{resume.basics.label}</h2>
-        <a href={resume.basics.url}>{resume.basics.url}</a>
-        <p>{resume.basics.summary}</p>
-      </section>
       <CVSection title="Education" items={resume.education} />
       <CVSection title="Experience" items={resume.work} />
       <CVSection title="Volunteer" items={resume.volunteer} />
@@ -80,50 +57,48 @@ const MobileCV = () => {
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
-const DesktopCV = () => {
+const CV = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1480) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   if (!resume) {
     return <p>Loading...</p>;
   }
 
   return (
-    <div className="container">
-      <div className="left-column">
-        <section>
-          <img src={resume.basics.image} alt={resume.basics.name} className="avatar"/>
-          <h1>{resume.basics.name}</h1>
-          <h2>{resume.basics.label}</h2>
-          <a href={resume.basics.url}>{resume.basics.url}</a>
-          <p>{resume.basics.summary}</p>
-        </section>
-      </div>
-      <div className="right-column">
-        <CVSection title="Education" items={resume.education} />
-        <CVSection title="Experience" items={resume.work} />
-        <CVSection title="Volunteer" items={resume.volunteer} />
-        <section>
-          <h2>Certificates</h2>
-          <ul>
-            {resume.certificates.map((cert, index) => (
-              <li key={index}>{cert.name}, {cert.issuer}, {cert.date}</li>
-            ))}
-          </ul>
-        </section>
-        <section>
-          <h2>Skills</h2>
-          <div className="skills-grid">
-            {resume.skills.map((skill, index) => (
-              <div key={index} className="skill">
-                {skill.name}
-              </div>
-            ))}
+    <>
+      {isMobile ?
+        <div className="mobile-section">
+            <CVSummary className="mobile-summary"/>
+            <CVContent />
+        </div> :
+        <div className="container">
+          <div className="left-column">
+            <CVSummary />
           </div>
-        </section>
-      </div>
-    </div>);
+          <div className="right-column">
+            <CVContent />
+          </div>
+        </div>
+      }
+    </>
+  );
 }
 
 export default CV;
