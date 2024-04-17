@@ -96,7 +96,7 @@ author:
   name             : "Niko Muukkonen"
   avatar           : "/assets/images/profile.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Developer at Gofore, Cyber Security Student, InfoSec & OffSec enthusiast, tech- & HiFi-geek"
-  location         : "Jyväskylä, Finland"
+  location         : "Helsinki, Finland"
   email            :
   links:
     - label: "Email"
