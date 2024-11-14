@@ -1,0 +1,452 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Niko Muukkonen",
+    "label": "Lead Developer at Gofore",
+    "image": "https://avatars.githubusercontent.com/u/37067069?v=4",
+    "email": "niko.muukkonen1@gmail.com",
+    "phone": "",
+    "url": "https://laveez.github.io/",
+    "summary": "Front-end focused software developer with a deep passion for full-stack development and technology-driven leading of development teams. Proven track record of working on comprehensive software solutions, ranging from database management to user interface development",
+    "location": {
+      "countryCode": "FI",
+      "city": "Helsinki",
+      "region": "Uusimaa"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "niko-muukkonen",
+        "url": "https://www.linkedin.com/in/niko-muukkonen/"
+      },
+      {
+        "network": "Github",
+        "username": "laveez",
+        "url": "https://github.com/laveez"
+      },
+      {
+        "network": "Gitlab",
+        "username": "laveez",
+        "url": "https://gitlab.com/laveez"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Gofore",
+      "position": "Lead Developer",
+      "startDate": "2024-08-01",
+      "endDate": "",
+      "highlights": [],
+      "summary": "In addition to the previous, lead responsibility of development, used processes, technical details and specifications of the front end project for the same administrative web application. Provided consultation and support to other teams and team members, aiding them in the implementation and best practices of the front end side of the web application while making sure that the quality is maintained.",
+      "url": "https://gofore.com/",
+      "location": "Helsinki, Finland"
+    },
+    {
+      "name": "Gofore",
+      "position": "Software Developer",
+      "startDate": "2021-11-01",
+      "endDate": "2024-08-31",
+      "highlights": [],
+      "summary": "Full stack development of an administrative web application for a parking solution that handles the management of facilities, products, permits, pricing, sessions etc., employing a tech stack that included React (JavaScript), React Query, Ant Design, Java with Spring Boot, and MongoDB. Additionally, contributed to the development of a publicly accessible mobile application using React Native and TypeScript.",
+      "url": "https://gofore.com/",
+      "location": "Helsinki, Finland"
+    },
+    {
+      "name": "Pinja Group",
+      "position": "Software Developer",
+      "startDate": "2019-01-01",
+      "endDate": "2021-10-31",
+      "highlights": [],
+      "summary": "Full stack software development of supply chain management system Once® By Pinja using many\ndifferent technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins.\nA lot of responsibilities and experience on larger customer and in-house projects, production\ndelivery optimization, quality control, testing, deployment, etc.",
+      "url": "https://pinja.com/",
+      "location": "Jyväskylä, Finland"
+    },
+    {
+      "name": "Storm Motor Oy",
+      "position": "Salesperson",
+      "startDate": "2018-05-01",
+      "endDate": "2018-07-31",
+      "highlights": [],
+      "summary": "Sales of motorcycle aftermarket parts, helmets and other equipment",
+      "url": "https://www.storm-motor.fi/",
+      "location": "Jyväskylä, Finland"
+    },
+    {
+      "name": "Savonlinna Works Oy, ANDRITZ Group",
+      "position": "Trainee",
+      "startDate": "2016-06-01",
+      "endDate": "2016-06-30",
+      "highlights": [],
+      "summary": "Analysis of features and properties of the document management and storage system SharePoint\nand the security risks of internal communications and the field of suppliers.",
+      "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
+      "location": "Savonlinna, Finland"
+    },
+    {
+      "name": "Savonlinna Works Oy, ANDRITZ Group",
+      "position": "Trainee",
+      "startDate": "2015-07-01",
+      "endDate": "2015-07-31",
+      "highlights": [],
+      "summary": "Computer and software installations, archiving & factory environment maintenance.",
+      "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
+      "location": "Savonlinna, Finland"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Linkki Jyväskylä ry",
+      "position": "Mentor",
+      "startDate": "2023-01-01",
+      "endDate": "2023-12-31",
+      "summary": "As a mentor for the board of the student association Linkki, I shared my past knowledge by providing guidance, advice and information of best practices, historical conventions and past experiences with the new board members. I also handled the basic introduction and education of association laws and activities to the new board members.",
+      "highlights": [],
+      "url": "https://linkkijkl.fi/"
+    },
+    {
+      "organization": "The Student Union of the University of Jyväskylä - Jyväskylän yliopiston ylioppilaskunta",
+      "position": "Deputy Member of The Council of Representatives",
+      "startDate": "2020-01-01",
+      "endDate": "2021-12-31",
+      "summary": "The Council of Representatives is the Parliament of the Student Union and, as such, decides on the most important issues concerning the Union and its members. The Council is comprised of 41 representatives which are elected by the student body every other year.\n\nAmong other things, the Council has power over the rules, budgets, financial statements, loans and building projects of the Student Union. The Council also appoints the Board of Executives, its chair and the key staff of the Student Union, such as its Secretary General and Editor-in-Chief.",
+      "highlights": [],
+      "url": "https://jyy.fi/"
+    },
+    {
+      "organization": "Linkki Jyväskylä ry",
+      "position": "Vice Chairman Of The Board",
+      "startDate": "2018-01-01",
+      "endDate": "2018-12-31",
+      "summary": "Linkki Jyväskylä ry is a sizeable student association for Mathematical Information Technology, and Educational Technology majors and minors in University of Jyväskylä. Association was founded back in 2006 and it operates Faculty of Information Technology, within the Student Union of the University of Jyväskylä.\n\nPurpose of the association is act as gateway for students to the faculty, promote the community of its members, to provide various opportunities for hobbies and peer learning, and to support the progress of their members’ studies.",
+      "highlights": [],
+      "url": "https://linkkijkl.fi/"
+    },
+    {
+      "organization": "Savonlinna Youth Council",
+      "position": "Founding member, Graphics Designer",
+      "startDate": "2014-01-01",
+      "endDate": "2015-12-31",
+      "summary": "Savonlinna Youth Council (Savonlinnan nuorisovaltuusto) is a politically and religiously non-partisan, municipal group that promotes the interests of local youth. The role of the Youth Council is to: Promote opportunities for participation, influence and action by young people. It works under the auspices of the Board of Education and brings the young people's perspective to the preparation and decision-making of the city.",
+      "highlights": [],
+      "url": "https://www.savonlinna.fi/paatoksenteko/lautakunnat-ja-muut-toimielimet/nuorisovaltuusto/"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Jyväskylä",
+      "area": "Information Technology",
+      "studyType": "Bachelor of Science - BS",
+      "startDate": "2016-12-01",
+      "endDate": "2020-12-31",
+      "url": "https://www.jyu.fi/",
+      "summary": "Bachelor's thesis on Cybersecurity vulnerabilities of self driving vehicles (in Finnish).",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "LUT University",
+      "area": "Secondary School Forest Industry Studies",
+      "studyType": "",
+      "startDate": "2015-01-01",
+      "endDate": "2016-06-30",
+      "url": "https://www.lut.fi/",
+      "summary": "University courses on electronics, energy technologies, chemistry, mathematics ja physics.",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Savonlinnan Lyseon Lukio",
+      "area": "",
+      "studyType": "Upper secondary school",
+      "startDate": "2013-12-01",
+      "endDate": "2016-12-31",
+      "url": "https://savonlinnanlyseonlukio.onedu.fi/",
+      "summary": "Matriculation examination",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "ITIL Foundation Level",
+      "issuer": "AXELOS Global Best Practice",
+      "startDate": "2020-03-01"
+    },
+    {
+      "name": "PRINCE2® Foundation Certification Training",
+      "issuer": "AXELOS Global Best Practice",
+      "startDate": "2020-11-01"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Cybersecurity vulnerabilities of self driving vehicles (in Finnish)",
+      "publisher": "University of Jyväskylä",
+      "releaseDate": "2019-05-20",
+      "url": "http://urn.fi/URN:NBN:fi:jyu-201907023532",
+      "summary": "Bachelor's thesis"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Sales",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Customer Service",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ASP.NET",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Information Technology",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Consulting",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Raspberry Pi",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Methodologies",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SharePoint",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Power Plants",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Waste Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Full-Stack Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C++",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Cascading Style Sheets (CSS)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Ant Design",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Internet of Things",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Teamwork",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": ".NET Framework",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microservices",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Angular",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML5",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MongoDB",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Yii",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Back-End Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Databases",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Project Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TypeScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MySQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microsoft SQL Server",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "IT Service Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Software Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Scrum",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Professional Working Proficiency",
+      "language": "English"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "Finnish"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Technology",
+      "keywords": [
+        "HiFi",
+        "Cars",
+        "Motorcycles",
+        "Programming"
+      ]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "React CV page",
+      "description": "You are looking at it!",
+      "highlights": [ ],
+      "keywords": [
+        "React", "Vite", "Javascript", "HTML", "CSS", "JsonResume"
+      ],
+      "startDate": "2024-11-14",
+      "endDate": "2024-11-14",
+      "url": "https://github.com/laveez/laveez.github.io",
+      "roles": [
+        "Developer", "Designer"
+      ],
+      "entity": "",
+      "type": "website"
+    }
+  ],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}

@@ -40,3 +40,55 @@
 .read-the-docs {
   color: #888;
 }
+
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333; /* Ensure text color is dark */
+}
+
+.resume h1, .resume h2, .resume h3 {
+  color: #333;
+}
+
+.resume p {
+  color: #666;
+}
+
+.resume section {
+  margin-bottom: 2rem;
+}
+
+.resume .job, .resume .education, .resume .project {
+  margin-bottom: 1rem;
+}
+
+.resume ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume ul li {
+  background: #e0e0e0;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #333; /* Ensure list item text color is dark */
+}
+
+.resume .volunteer, .resume .certificate {
+  margin-bottom: 1rem;
+}
+
+.resume .volunteer h4, .resume .certificate h4 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.resume .volunteer p, .resume .certificate p {
+  color: #666;
+}
