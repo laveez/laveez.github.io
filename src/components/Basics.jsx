@@ -1,4 +1,5 @@
 import React from 'react';
+import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -28,10 +29,9 @@ const Basics = ({ basics }) => {
         {basics.summary}
       </Typography>
       <Box>
-        <Link href={`mailto:${basics.email}`} sx={{ mr: 1 }}>
+        <EmailIcon /> <Link href={`mailto:${basics.email}`} sx={{ mr: 1 }}>
           {basics.email}
         </Link>
-        <Link href={basics.url}>{basics.url}</Link>
       </Box>
       <Typography variant="body2" fontSize="large">
         <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
