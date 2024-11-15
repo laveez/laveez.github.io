@@ -21,13 +21,13 @@ const WorkExperience = ({ work }) => {
           <Typography variant="body1" paragraph>
             {job.summary}
           </Typography>
-          <Box component="ul" sx={{ pl: 2 }}>
+          {/*          <Box component="ul" sx={{ pl: 2 }}>
             {job.highlights.map((highlight, i) => (
               <Box component="li" key={i} sx={{ display: 'list-item' }}>
                 {highlight}
               </Box>
             ))}
-          </Box>
+          </Box>*/}
         </Box>
       ))}
     </Box>

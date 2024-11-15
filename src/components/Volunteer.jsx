@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Link, List, ListItem, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import { calculateDuration } from './utils';
 
 const Volunteer = ({ volunteer }) => {
@@ -21,13 +21,13 @@ const Volunteer = ({ volunteer }) => {
           <Typography variant="body1" paragraph>
             {vol.summary}
           </Typography>
-          <List>
+          {/*          <List>
             {vol.highlights.map((highlight, i) => (
               <ListItem key={i} sx={{ display: 'list-item', pl: 0 }}>
                 {highlight}
               </ListItem>
             ))}
-          </List>
+          </List>*/}
         </Box>
       ))}
     </Box>

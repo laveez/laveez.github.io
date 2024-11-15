@@ -1,7 +1,12 @@
 import React from 'react';
-import { Avatar, Box, Link, Typography } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PlaceIcon from '@mui/icons-material/Place';
+import { Avatar, Box, Link, Typography, useTheme } from '@mui/material';
+import GitLabIcon from '../assets/GitLabIcon.jsx';
 
 const Basics = ({ basics }) => {
+  const theme = useTheme();
   if (!basics) return null;
 
   return (
@@ -19,11 +24,8 @@ const Basics = ({ basics }) => {
       <Typography variant="h6" component="h2" gutterBottom>
         {basics.label}
       </Typography>
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" gutterBottom>
         {basics.summary}
-      </Typography>
-      <Typography variant="body2" paragraph>
-        {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
       </Typography>
       <Box>
         <Link href={`mailto:${basics.email}`} sx={{ mr: 1 }}>
@@ -31,10 +33,15 @@ const Basics = ({ basics }) => {
         </Link>
         <Link href={basics.url}>{basics.url}</Link>
       </Box>
+      <Typography variant="body2" fontSize="large">
+        <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
+      </Typography>
       <Box>
         {basics.profiles.map(profile => (
-          <Link key={profile.network} href={profile.url} sx={{ mr: 1 }}>
-            {profile.network}
+          <Link key={profile.network} href={profile.url} sx={{ mr: 1, color: theme.palette.text.primary }}>
+            {profile.network === 'GitHub' ? <GitHubIcon fontSize="large" /> :
+              profile.network === 'LinkedIn' ? <LinkedInIcon fontSize="large" /> :
+                profile.network === 'GitLab' ? <GitLabIcon style={{ fontSize: 35 }} color={theme.palette.text.primary} /> : profile.network}
           </Link>
         ))}
       </Box>
