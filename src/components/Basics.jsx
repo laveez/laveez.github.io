@@ -3,7 +3,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlaceIcon from '@mui/icons-material/Place';
-import { Avatar, Box, Link, Typography, useTheme } from '@mui/material';
+import { Avatar, Box, Link, Stack, Typography, useTheme } from '@mui/material';
 import GitLabIcon from '../assets/GitLabIcon.jsx';
 
 const Basics = ({ basics }) => {
@@ -11,7 +11,7 @@ const Basics = ({ basics }) => {
   if (!basics) return null;
 
   return (
-    <Box component="section" sx={{ textAlign: 'center', p: 2 }}>
+    <Box component="section" sx={{ textAlign: 'center', p: 5 }}>
       {basics.image && (
         <Avatar
           src={basics.image}
@@ -36,14 +36,23 @@ const Basics = ({ basics }) => {
       <Typography variant="body2" fontSize="large">
         <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
       </Typography>
-      <Box>
-        {basics.profiles.map(profile => (
-          <Link key={profile.network} href={profile.url} sx={{ mr: 1, color: theme.palette.text.primary }}>
-            {profile.network === 'GitHub' ? <GitHubIcon fontSize="large" /> :
-              profile.network === 'LinkedIn' ? <LinkedInIcon fontSize="large" /> :
-                profile.network === 'GitLab' ? <GitLabIcon style={{ fontSize: 35 }} color={theme.palette.text.primary} /> : profile.network}
-          </Link>
-        ))}
+      <Box sx={{ pt: 5, display: 'inline-block' }}>
+        <Stack direction="row" spacing={2} alignItems="center">
+          {basics.profiles.map(profile => (
+            <Link
+              key={profile.network}
+              href={profile.url}
+              sx={{ color: theme.palette.text.primary }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {profile.network === 'GitHub' ? <GitHubIcon fontSize="large" /> :
+                profile.network === 'LinkedIn' ? <LinkedInIcon fontSize="large" /> :
+                  profile.network === 'GitLab' ?
+                    <GitLabIcon style={{ fontSize: 35 }} color={theme.palette.text.primary} /> : profile.network}
+            </Link>
+          ))}
+        </Stack>
       </Box>
     </Box>
   );

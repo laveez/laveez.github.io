@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Tab, Tabs } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Backdrop, Box, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Awards from './Awards.jsx';
 import Basics from './Basics.jsx';
@@ -17,6 +18,9 @@ import WorkExperience from './WorkExperience.jsx';
 
 const Resume = ({ resumeData }) => {
   const [ activeTab, setActiveTab ] = useState(0);
+  const [ menuAnchor, setMenuAnchor ] = useState(null);
+  const isLargeScreen = useMediaQuery('(min-width:900px)');
+
   const {
     basics,
     work,
@@ -32,58 +36,106 @@ const Resume = ({ resumeData }) => {
     certificates,
   } = resumeData;
 
+  const sections = [
+    {
+      label: 'Work Experience',
+      component: <WorkExperience work={work} />,
+    },
+    {
+      label: 'Education',
+      component: <>
+        <Education education={education} />
+        <Publications publications={publications} />
+      </>,
+    },
+    {
+      label: 'Volunteering',
+      component: <Volunteer volunteer={volunteer} />,
+    },
+    {
+      label: 'Skills',
+      component: <>
+        <Certificates certificates={certificates} />
+        <Languages languages={languages} /><Skills skills={skills} />
+        <Interests interests={interests} />
+      </>,
+    },
+    {
+      label: 'Projects',
+      component: <>
+        <Projects projects={projects} />
+        <References references={references} />
+        <Awards awards={awards} />
+      </>,
+    },
+  ];
+
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
 
+  const handleMenuClick = event => {
+    setMenuAnchor(event.currentTarget);
+  };
+
+  const handleMenuClose = index => {
+    if (index >= 0) setActiveTab(index);
+    setMenuAnchor(null);
+  };
+
   return (
-    <Grid container spacing={2}>
-      <Grid size={4}>
-        <Basics basics={basics} />
-      </Grid>
-      <Grid size={8}>
+    <Grid container spacing={0}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Box sx={{ p: 2, borderRadius: 2 }}>
-          <Tabs
-            value={activeTab}
-            onChange={handleTabChange}
-            variant="fullWidth"
-            scrollButtons="auto"
-            textColor="primary"
-            indicatorColor="primary"
-            sx={{ mb: 2 }}
-          >
-            <Tab label="Work Experience" />
-            <Tab label="Education" />
-            <Tab label="Volunteering" />
-            <Tab label="Skills" />
-            <Tab label="Projects" />
-            <Tools />
-          </Tabs>
-          <Box sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
-            {activeTab === 0 && <WorkExperience work={work} />}
-            {activeTab === 1 && (
-              <>
-                <Education education={education} />
-                <Publications publications={publications} />
-              </>
-            )}
-            {activeTab === 2 && <Volunteer volunteer={volunteer} />}
-            {activeTab === 3 && (
-              <>
-                <Certificates certificates={certificates} />
-                <Languages languages={languages} />
-                <Skills skills={skills} />
-                <Interests interests={interests} />
-              </>
-            )}
-            {activeTab === 4 && (
-              <>
-                <Projects projects={projects} />
-                <References references={references} />
-                <Awards awards={awards} />
-              </>
-            )}
-          </Box>
+          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
+            <Basics basics={basics} />
+          </Paper>
+        </Box>
+      </Grid>
+      <Grid size={{ xs: 12, md: 8 }}>
+        <Box sx={{ p: 2, borderRadius: 2 }}>
+          {isLargeScreen ? (
+            <Tabs
+              value={activeTab}
+              onChange={handleTabChange}
+              variant="fullWidth"
+              scrollButtons="auto"
+              textColor="primary"
+              indicatorColor="primary"
+            >
+              {sections.map((section, index) =>
+                <Tab key={index} label={section.label} />)}
+              <Tools />
+            </Tabs>
+          ) : (
+            <>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <IconButton onClick={handleMenuClick}>
+                  <MenuIcon />
+                </IconButton>
+                <Tools />
+              </Box>
+              <Menu
+                anchorEl={menuAnchor}
+                open={Boolean(menuAnchor)}
+                onClose={() => handleMenuClose(-1)}
+              >
+                {sections.map((section, index) => (
+                  <MenuItem key={index} onClick={() => handleMenuClose(index)}>
+                    {section.label}
+                  </MenuItem>
+                ))}
+              </Menu>
+              <Backdrop
+                sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
+                open={Boolean(menuAnchor)}
+                onClick={() => handleMenuClose(-1)}
+              />
+            </>
+          )}
+          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
+            {sections[activeTab].component}
+          </Paper>
         </Box>
       </Grid>
     </Grid>

@@ -13,7 +13,11 @@ const WorkExperience = ({ work }) => {
       {work.map((job, index) => (
         <Box key={index} className="job" sx={{ mb: 2 }}>
           <Typography variant="h6" component="h4">
-            {job.position} at <Link href={job.url}>{job.name}</Link>
+            {job.position} at <Link
+              href={job.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >{job.name}</Link>
           </Typography>
           <Typography variant="body2" color="textSecondary">
             {job.startDate} - {job.endDate || 'Present'} ({calculateDuration(job.startDate, job.endDate)})
@@ -21,13 +25,15 @@ const WorkExperience = ({ work }) => {
           <Typography variant="body1" paragraph>
             {job.summary}
           </Typography>
-          {/*          <Box component="ul" sx={{ pl: 2 }}>
+          {/*
+          <Box component="ul" sx={{ pl: 2 }}>
             {job.highlights.map((highlight, i) => (
               <Box component="li" key={i} sx={{ display: 'list-item' }}>
                 {highlight}
               </Box>
             ))}
-          </Box>*/}
+          </Box>
+          */}
         </Box>
       ))}
     </Box>
