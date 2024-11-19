@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import FormattedDate from './common/FormattedDate.jsx';
 
 const Awards = ({ awards }) => {
   if (!awards || awards.length === 0) return null;
@@ -16,6 +17,7 @@ const Awards = ({ awards }) => {
           </Typography>
           <Typography variant="body2" color="textSecondary">
             {award.date}
+            <FormattedDate date={award.date} />
           </Typography>
           <Typography variant="body1">
             {award.summary}

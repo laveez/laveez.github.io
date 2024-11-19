@@ -1,12 +1,14 @@
 import * as React from 'react';
 import DownloadIcon from '@mui/icons-material/Download';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import PrintIcon from '@mui/icons-material/Print';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import { Button, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/material';
 import { useColorScheme } from '@mui/material/styles';
+import PrintView from './PrintView.jsx';
 
-const Tools = () => {
+const Tools = ({ resumeData }) => {
   const { mode, setMode } = useColorScheme();
   const [ anchorEl, setAnchorEl ] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -23,6 +25,20 @@ const Tools = () => {
     setAnchorEl(null);
   };
 
+  const handleDownload = () => {
+    handleMenuClose();
+  };
+
+  const handlePrint = async () => {
+    await handleMenuClose();
+    const printContent = document.getElementById('print-view').innerHTML;
+    const originalContent = document.body.innerHTML;
+    document.body.innerHTML = printContent;
+    window.print();
+    document.body.innerHTML = originalContent;
+    window.location.reload();
+  };
+
   return (
     <Stack direction="row" alignItems="center">
       <Button
@@ -37,11 +53,17 @@ const Tools = () => {
         open={open}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleMenuClose}>
+        <MenuItem onClick={handleDownload}>
           <ListItemIcon>
             <DownloadIcon fontSize="large" />
           </ListItemIcon>
           <ListItemText>Download</ListItemText>
+        </MenuItem>
+        <MenuItem onClick={handlePrint}>
+          <ListItemIcon>
+            <PrintIcon fontSize="large" />
+          </ListItemIcon>
+          <ListItemText>Print</ListItemText>
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -55,6 +77,9 @@ const Tools = () => {
           <ListItemText>Dark mode</ListItemText>
         </MenuItem>
       </Menu>
+      <div id="print-view" style={{ display: 'none' }}>
+        <PrintView resumeData={resumeData} />
+      </div>
     </Stack>
   );
 };

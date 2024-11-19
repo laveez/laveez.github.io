@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Backdrop, Box, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+import ExperienceSection from './common/ExperienceSection.jsx';
 import Awards from './Awards.jsx';
 import Basics from './Basics.jsx';
 import Certificates from './Certificates.jsx';
-import Education from './Education.jsx';
 import Interests from './Interests.jsx';
 import Languages from './Languages.jsx';
 import Projects from './Projects.jsx';
@@ -13,8 +13,6 @@ import Publications from './Publications.jsx';
 import References from './References.jsx';
 import Skills from './Skills.jsx';
 import Tools from './Tools.jsx';
-import Volunteer from './Volunteer.jsx';
-import WorkExperience from './WorkExperience.jsx';
 
 const Resume = ({ resumeData }) => {
   const [ activeTab, setActiveTab ] = useState(0);
@@ -39,23 +37,23 @@ const Resume = ({ resumeData }) => {
   const sections = [
     {
       label: 'Work Experience',
-      component: <WorkExperience work={work} />,
+      component: <ExperienceSection title="Work Experience" experiences={work} />,
     },
     {
       label: 'Education',
       component: <>
-        <Education education={education} />
+        <ExperienceSection title="Education" experiences={education} />
         <Publications publications={publications} />
+        <Certificates certificates={certificates} />
       </>,
     },
     {
       label: 'Volunteering',
-      component: <Volunteer volunteer={volunteer} />,
+      component: <ExperienceSection title="Volunteer" experiences={volunteer} />,
     },
     {
       label: 'Skills',
       component: <>
-        <Certificates certificates={certificates} />
         <Languages languages={languages} /><Skills skills={skills} />
         <Interests interests={interests} />
       </>,
@@ -104,8 +102,8 @@ const Resume = ({ resumeData }) => {
               indicatorColor="primary"
             >
               {sections.map((section, index) =>
-                <Tab key={index} label={section.label} />)}
-              <Tools />
+                <Tab key={index} label={<Box sx={{ p: 2 }}>{section.label}</Box>} />)}
+              <Tools resumeData={resumeData} />
             </Tabs>
           ) : (
             <>
@@ -113,7 +111,7 @@ const Resume = ({ resumeData }) => {
                 <IconButton onClick={handleMenuClick}>
                   <MenuIcon />
                 </IconButton>
-                <Tools />
+                <Tools resumeData={resumeData} />
               </Box>
               <Menu
                 anchorEl={menuAnchor}

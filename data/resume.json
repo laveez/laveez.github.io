@@ -1,10 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Niko Muukkonen",
     "label": "Lead Developer at Gofore",
-    "image": "https://avatars.githubusercontent.com/u/37067069?v=4",
-    "email": "niko.muukkonen1@gmail.com",
+    "image": "src/assets/profile.png",
+    "email": "",
     "phone": "",
     "url": "https://laveez.github.io/",
     "summary": "Front-end focused software developer with a deep passion for full-stack development and technology-driven leading of development teams. Proven track record of working on comprehensive software solutions, ranging from database management to user interface development",
@@ -33,34 +32,37 @@
   },
   "work": [
     {
-      "name": "Gofore",
+      "name": "Gofore Oyj",
       "position": "Lead Developer",
       "startDate": "2024-08-01",
       "endDate": "",
       "highlights": [],
       "summary": "In addition to the previous, lead responsibility of development, used processes, technical details and specifications of the front end project for the same administrative web application. Provided consultation and support to other teams and team members, aiding them in the implementation and best practices of the front end side of the web application while making sure that the quality is maintained.",
       "url": "https://gofore.com/",
-      "location": "Helsinki, Finland"
+      "location": "Helsinki, Finland",
+      "logoUrl": "src/assets/gofore-logo.png"
     },
     {
-      "name": "Gofore",
+      "name": "Gofore Oyj",
       "position": "Software Developer",
       "startDate": "2021-11-01",
       "endDate": "2024-08-31",
       "highlights": [],
       "summary": "Full stack development of an administrative web application for a parking solution that handles the management of facilities, products, permits, pricing, sessions etc., employing a tech stack that included React (JavaScript), React Query, Ant Design, Java with Spring Boot, and MongoDB. Additionally, contributed to the development of a publicly accessible mobile application using React Native and TypeScript.",
       "url": "https://gofore.com/",
-      "location": "Helsinki, Finland"
+      "location": "Helsinki, Finland",
+      "logoUrl": "src/assets/gofore-logo.png"
     },
     {
-      "name": "Pinja Group",
+      "name": "Pinja Digital Oy",
       "position": "Software Developer",
       "startDate": "2019-01-01",
       "endDate": "2021-10-31",
       "highlights": [],
       "summary": "Full stack software development of supply chain management system Once® By Pinja using many\ndifferent technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins.\nA lot of responsibilities and experience on larger customer and in-house projects, production\ndelivery optimization, quality control, testing, deployment, etc.",
       "url": "https://pinja.com/",
-      "location": "Jyväskylä, Finland"
+      "location": "Jyväskylä, Finland",
+      "logoUrl": "src/assets/pinja-logo.png"
     },
     {
       "name": "Storm Motor Oy",
@@ -70,7 +72,8 @@
       "highlights": [],
       "summary": "Sales of motorcycle aftermarket parts, helmets and other equipment",
       "url": "https://www.storm-motor.fi/",
-      "location": "Jyväskylä, Finland"
+      "location": "Jyväskylä, Finland",
+      "logoUrl": "src/assets/storm-logo.png"
     },
     {
       "name": "Savonlinna Works Oy, ANDRITZ Group",
@@ -80,7 +83,8 @@
       "highlights": [],
       "summary": "Analysis of features and properties of the document management and storage system SharePoint\nand the security risks of internal communications and the field of suppliers.",
       "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
-      "location": "Savonlinna, Finland"
+      "location": "Savonlinna, Finland",
+      "logoUrl": "src/assets/andritz-logo.png"
     },
     {
       "name": "Savonlinna Works Oy, ANDRITZ Group",
@@ -90,7 +94,8 @@
       "highlights": [],
       "summary": "Computer and software installations, archiving & factory environment maintenance.",
       "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
-      "location": "Savonlinna, Finland"
+      "location": "Savonlinna, Finland",
+      "logoUrl": "src/assets/andritz-logo.png"
     }
   ],
   "volunteer": [
@@ -101,16 +106,18 @@
       "endDate": "2023-12-31",
       "summary": "As a mentor for the board of the student association Linkki, I shared my past knowledge by providing guidance, advice and information of best practices, historical conventions and past experiences with the new board members. I also handled the basic introduction and education of association laws and activities to the new board members.",
       "highlights": [],
-      "url": "https://linkkijkl.fi/"
+      "url": "https://linkkijkl.fi/",
+      "logoUrl": "src/assets/linkkijkl-logo.png"
     },
     {
-      "organization": "The Student Union of the University of Jyväskylä - Jyväskylän yliopiston ylioppilaskunta",
+      "organization": "The Student Union of the University of Jyväskylä",
       "position": "Deputy Member of The Council of Representatives",
       "startDate": "2020-01-01",
       "endDate": "2021-12-31",
       "summary": "The Council of Representatives is the Parliament of the Student Union and, as such, decides on the most important issues concerning the Union and its members. The Council is comprised of 41 representatives which are elected by the student body every other year.\n\nAmong other things, the Council has power over the rules, budgets, financial statements, loans and building projects of the Student Union. The Council also appoints the Board of Executives, its chair and the key staff of the Student Union, such as its Secretary General and Editor-in-Chief.",
       "highlights": [],
-      "url": "https://jyy.fi/"
+      "url": "https://jyy.fi/",
+      "logoUrl": "src/assets/jyy-logo.png"
     },
     {
       "organization": "Linkki Jyväskylä ry",
@@ -119,7 +126,8 @@
       "endDate": "2018-12-31",
       "summary": "Linkki Jyväskylä ry is a sizeable student association for Mathematical Information Technology, and Educational Technology majors and minors in University of Jyväskylä. Association was founded back in 2006 and it operates Faculty of Information Technology, within the Student Union of the University of Jyväskylä.\n\nPurpose of the association is act as gateway for students to the faculty, promote the community of its members, to provide various opportunities for hobbies and peer learning, and to support the progress of their members’ studies.",
       "highlights": [],
-      "url": "https://linkkijkl.fi/"
+      "url": "https://linkkijkl.fi/",
+      "logoUrl": "src/assets/linkkijkl-logo.png"
     },
     {
       "organization": "Savonlinna Youth Council",
@@ -128,42 +136,46 @@
       "endDate": "2015-12-31",
       "summary": "Savonlinna Youth Council (Savonlinnan nuorisovaltuusto) is a politically and religiously non-partisan, municipal group that promotes the interests of local youth. The role of the Youth Council is to: Promote opportunities for participation, influence and action by young people. It works under the auspices of the Board of Education and brings the young people's perspective to the preparation and decision-making of the city.",
       "highlights": [],
-      "url": "https://www.savonlinna.fi/paatoksenteko/lautakunnat-ja-muut-toimielimet/nuorisovaltuusto/"
+      "url": "https://www.savonlinna.fi/paatoksenteko/lautakunnat-ja-muut-toimielimet/nuorisovaltuusto/",
+      "logoUrl": "src/assets/slnuva-logo.png"
     }
   ],
   "education": [
     {
       "institution": "University of Jyväskylä",
       "area": "Information Technology",
-      "studyType": "Bachelor of Science - BS",
-      "startDate": "2016-12-01",
-      "endDate": "2020-12-31",
+      "studyType": "Bachelor of Science",
+      "startDate": "2016",
+      "endDate": "2020",
       "url": "https://www.jyu.fi/",
       "summary": "Bachelor's thesis on Cybersecurity vulnerabilities of self driving vehicles (in Finnish).",
       "score": "",
-      "courses": []
+      "courses": [],
+      "logoUrl": "src/assets/jyu-logo.png"
     },
     {
       "institution": "LUT University",
       "area": "Secondary School Forest Industry Studies",
       "studyType": "",
-      "startDate": "2015-01-01",
-      "endDate": "2016-06-30",
+      "startDate": "2015",
+      "endDate": "2016",
       "url": "https://www.lut.fi/",
       "summary": "University courses on electronics, energy technologies, chemistry, mathematics ja physics.",
       "score": "",
-      "courses": []
+      "courses": [],
+      "logoUrl": "src/assets/lut-logo.png"
     },
     {
       "institution": "Savonlinnan Lyseon Lukio",
       "area": "",
       "studyType": "Upper secondary school",
-      "startDate": "2013-12-01",
-      "endDate": "2016-12-31",
+      "startDate": "2013",
+      "endDate": "2016",
       "url": "https://savonlinnanlyseonlukio.onedu.fi/",
       "summary": "Matriculation examination",
       "score": "",
-      "courses": []
+      "courses": [],
+      "logoUrl": "src/assets/sll-logo.png"
     }
   ],
   "awards": [],
@@ -171,21 +183,25 @@
     {
       "name": "ITIL® 4 Foundation",
       "issuer": "AXELOS Global Best Practice",
-      "startDate": "2020-03-01"
+      "startDate": "2020-03-01",
+      "category": "IT Service Management",
+      "logoUrl": "src/assets/itil-logo.png"
     },
     {
       "name": "PRINCE2® Foundation ",
       "issuer": "AXELOS Global Best Practice",
-      "startDate": "2020-11-01"
+      "startDate": "2020-11-01",
+      "category": "Project Management",
+      "logoUrl": "src/assets/prince-logo.png"
     }
   ],
   "publications": [
     {
-      "name": "Cybersecurity vulnerabilities of self driving vehicles (in Finnish)",
+      "name": "Cybersecurity vulnerabilities of self driving vehicles",
       "publisher": "University of Jyväskylä",
       "releaseDate": "2019-05-20",
       "url": "http://urn.fi/URN:NBN:fi:jyu-201907023532",
-      "summary": "Bachelor's thesis"
+      "summary": "Bachelor's thesis (in Finnish)"
     }
   ],
   "skills": [
@@ -433,20 +449,43 @@
       "description": "You are looking at it!",
       "highlights": [ ],
       "keywords": [
-        "React", "Vite", "Javascript", "HTML", "CSS", "JsonResume"
+        "React",
+        "Vite",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "JsonResume",
+        "Github Pages"
       ],
-      "startDate": "2024-11-14",
-      "endDate": "2024-11-14",
+      "startDate": "2024-11-01",
+      "endDate": "2024-11-31",
       "url": "https://github.com/laveez/laveez.github.io",
       "roles": [
-        "Developer", "Designer"
+        "Developer", "Designer", "Architect"
+      ],
+      "entity": "",
+      "type": "website"
+    },
+    {
+      "name": "Event screen for student associations",
+      "description": "An event screen made to be used in the student space Kattila of Linkki Jyväskylä ry and Algo ry. Displays information about future events of both student associations, local lunch lists and logos of the sponsors of the associations. The app automatically fetches the information for the screen from multiple sources, so very little to none maintenance is needed. Frontend developed with React and a small backend with Express/Node.js.",
+      "highlights": [ ],
+      "keywords": [
+        "React",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "Express",
+        "Node.js"
+      ],
+      "startDate": "2023-01-01",
+      "endDate": "2024-05-31",
+      "url": "https://laveez.github.io/linkkijkl-event-screen/",
+      "roles": [
+        "Developer", "Designer", "Architect"
       ],
       "entity": "",
       "type": "website"
     }
-  ],
-  "meta": {
-    "version": "v1.0.0",
-    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
-  }
+  ]
 }

@@ -1,4 +1,4 @@
-export const calculateDuration = (startDate, endDate) => {
+const calculateDuration = (startDate, endDate) => {
   const start = new Date(startDate);
   const end = endDate ? new Date(endDate) : new Date(); // If no end date, assume ongoing
 
@@ -26,6 +26,18 @@ export const calculateDuration = (startDate, endDate) => {
     months = months % 12;
   }
 
-  return `${years > 0 ? `${years} yr${years > 1 ? 's' : ''} ` : ''}
-  ${months > 0 ? `${months} mo${months > 1 ? 's' : ''}` : ''}`.trim();
+  return {
+    years,
+    months,
+  };
 };
+
+const Duration = ({ startDate, endDate }) => {
+  const { years, months } = calculateDuration(startDate, endDate);
+  const formattedYears = years > 0 ? `${years} year${years > 1 ? 's' : ''}` : '';
+  const formattedMonths = months > 0 ? `${months} month${months > 1 ? 's' : ''}` : '';
+
+  return <>({`${formattedYears} ${formattedMonths}`.trim()})</>;
+};
+
+export default Duration;

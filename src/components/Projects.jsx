@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Link, List, ListItem, ListItemText, Typography } from '@mui/material';
+import Duration from './common/Duration.jsx';
+import FormattedDateRange from './common/FormattedDateRange.jsx';
 
 const Projects = ({ projects }) => {
   if (!projects || projects.length === 0) return null;
@@ -15,7 +17,9 @@ const Projects = ({ projects }) => {
             {project.name}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            {project.startDate} - {project.endDate || 'Present'}
+            <FormattedDateRange startDate={project.startDate} endDate={project.endDate}/>
+            {' '}
+            <Duration startDate={project.startDate} endDate={project.endDate}/>
           </Typography>
           <Typography variant="body1" paragraph>
             {project.description}

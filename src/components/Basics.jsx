@@ -1,5 +1,4 @@
 import React from 'react';
-import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlaceIcon from '@mui/icons-material/Place';
@@ -12,13 +11,15 @@ const Basics = ({ basics }) => {
 
   return (
     <Box component="section" sx={{ textAlign: 'center', p: 5 }}>
-      {basics.image && (
-        <Avatar
-          src={basics.image}
-          alt={`${basics.name}'s profile`}
-          sx={{ width: 200, height: 200, mx: 'auto' }}
-        />
-      )}
+      <Box sx={{ pb: 3 }}>
+        {basics.image && (
+          <Avatar
+            src={basics.image}
+            alt={`${basics.name}'s profile`}
+            sx={{ width: 112, height: 112, mx: 'auto' }}
+          />
+        )}
+      </Box>
       <Typography variant="h4" component="h1" gutterBottom>
         {basics.name}
       </Typography>
@@ -28,15 +29,12 @@ const Basics = ({ basics }) => {
       <Typography variant="body1" gutterBottom>
         {basics.summary}
       </Typography>
-      <Box>
-        <EmailIcon /> <Link href={`mailto:${basics.email}`} sx={{ mr: 1 }}>
-          {basics.email}
-        </Link>
+      <Box sx={{ pt: 2 }}>
+        <Typography fontSize="large">
+          <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
+        </Typography>
       </Box>
-      <Typography variant="body2" fontSize="large">
-        <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
-      </Typography>
-      <Box sx={{ pt: 5, display: 'inline-block' }}>
+      <Box sx={{ pt: 2, display: 'inline-block' }}>
         <Stack direction="row" spacing={2} alignItems="center">
           {basics.profiles.map(profile => (
             <Link
