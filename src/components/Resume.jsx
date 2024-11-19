@@ -3,14 +3,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Backdrop, Box, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import ExperienceSection from './common/ExperienceSection.jsx';
-import Awards from './Awards.jsx';
 import Basics from './Basics.jsx';
 import Certificates from './Certificates.jsx';
 import Interests from './Interests.jsx';
 import Languages from './Languages.jsx';
 import Projects from './Projects.jsx';
 import Publications from './Publications.jsx';
-import References from './References.jsx';
 import Skills from './Skills.jsx';
 import Tools from './Tools.jsx';
 
@@ -24,12 +22,10 @@ const Resume = ({ resumeData }) => {
     work,
     volunteer,
     education,
-    awards,
     publications,
     skills,
     languages,
     interests,
-    references,
     projects,
     certificates,
   } = resumeData;
@@ -60,11 +56,7 @@ const Resume = ({ resumeData }) => {
     },
     {
       label: 'Projects',
-      component: <>
-        <Projects projects={projects} />
-        <References references={references} />
-        <Awards awards={awards} />
-      </>,
+      component: <Projects projects={projects} />,
     },
   ];
 
@@ -84,7 +76,7 @@ const Resume = ({ resumeData }) => {
   return (
     <Grid container spacing={0}>
       <Grid size={{ xs: 12, md: 4 }}>
-        <Box sx={{ p: 2, borderRadius: 2 }}>
+        <Box sx={{ p: 2, borderRadius: 2, position: isLargeScreen ? 'sticky' : 'static', top: isLargeScreen ? 16 : 'auto' }}>
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
             <Basics basics={basics} />
           </Paper>

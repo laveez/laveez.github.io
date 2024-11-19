@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/material';
 import FormattedDate from './common/FormattedDate.jsx';
 
 const Publications = ({ publications }) => {
@@ -11,24 +11,44 @@ const Publications = ({ publications }) => {
         Publications
       </Typography>
       {publications.map((publication, index) => (
-        <Box key={index} sx={{ mb: 3 }}>
-          <Typography variant="h5" component="h3">
-            {publication.name}
-          </Typography>
-          <Typography variant="body1">
-            {publication.summary}
-          </Typography>
-          <Link href={'#'} variant="body1"> {/* TODO */}
-            {publication.publisher}
-          </Link>
-          <Typography variant="body2" color="textSecondary">
-            <FormattedDate date={publication.releaseDate} />
-          </Typography>
-          <Typography variant="body2">
-            <Link href={publication.url} target="_blank" rel="noopener noreferrer">
-              {publication.url}
-            </Link>
-          </Typography>
+        <Box key={index} className="publication" sx={{ mb: 2 }}>
+          <Card variant="outlined" sx={{ display: 'flex', width: '100%' }}>
+            <CardMedia
+              component="img"
+              sx={{ width: 120, height: 120, p: 2 }}
+              image={publication.logoUrl}
+              alt={`${publication.name} logo`}
+            />
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+              <CardContent>
+                <Typography variant="h6" component="h3">
+                  {publication.name}
+                </Typography>
+                <Link
+                  href={publication.url}
+                  variant="body1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {publication.publisher}
+                </Link>
+                <Typography variant="body2" color="textSecondary">
+                  <FormattedDate date={publication.releaseDate}/>
+                </Typography>
+                <Typography variant="body1">
+                  {publication.summary}
+                </Typography>
+                <Link
+                  href={publication.urn}
+                  variant="body1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {publication.urn}
+                </Link>
+              </CardContent>
+            </Box>
+          </Card>
         </Box>
       ))}
     </Box>

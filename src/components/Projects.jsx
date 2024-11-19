@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Link, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Link, List, ListItem, ListItemText, Typography } from '@mui/material';
 import Duration from './common/Duration.jsx';
 import FormattedDateRange from './common/FormattedDateRange.jsx';
 
@@ -12,46 +12,70 @@ const Projects = ({ projects }) => {
         Projects
       </Typography>
       {projects.map((project, index) => (
-        <Box key={index} sx={{ mb: 3 }}>
-          <Typography variant="h5" component="h3">
-            {project.name}
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
-            <FormattedDateRange startDate={project.startDate} endDate={project.endDate}/>
-            {' '}
-            <Duration startDate={project.startDate} endDate={project.endDate}/>
-          </Typography>
-          <Typography variant="body1" paragraph>
-            {project.description}
-          </Typography>
+        <Box key={index} className="project" sx={{ mb: 2 }}>
+          <Card variant="outlined" sx={{ display: 'flex', width: '100%' }}>
+            {project.logoUrl && (
+              <CardMedia
+                component="img"
+                sx={{ width: 120, height: 120, p: 2 }}
+                image={project.logoUrl}
+                alt={`${project.name} logo`}
+              />
+            )}
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+              <CardContent>
+                <Typography variant="h6" component="h3">
+                  {project.name}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  <FormattedDateRange startDate={project.startDate} endDate={project.endDate} />
+                  {' '}
+                  <Duration startDate={project.startDate} endDate={project.endDate} />
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  {project.description}
+                </Typography>
 
-          {project.highlights.length > 0 && (
-            <List>
-              {project.highlights.map((highlight, i) => (
-                <ListItem key={i} sx={{ pl: 0 }}>
-                  <ListItemText primary={highlight} />
-                </ListItem>
-              ))}
-            </List>
-          )}
+                {project.highlights.length > 0 && (
+                  <List>
+                    {project.highlights.map((highlight, i) => (
+                      <ListItem key={i} sx={{ pl: 0 }}>
+                        <ListItemText primary={highlight} />
+                      </ListItem>
+                    ))}
+                  </List>
+                )}
 
-          {project.keywords.length > 0 && (
-            <Typography variant="body2" paragraph>
-              <strong>Keywords:</strong> {project.keywords.join(', ')}
-            </Typography>
-          )}
+                {project.roles.length > 0 && (
+                  <Typography variant="body2" paragraph>
+                    <strong>Roles:</strong> {project.roles.join(', ')}
+                  </Typography>
+                )}
 
-          {project.url && (
-            <Typography variant="body2" paragraph>
-              <strong>URL:</strong> <Link href={project.url} target="_blank" rel="noopener noreferrer">{project.url}</Link>
-            </Typography>
-          )}
+                {project.keywords.length > 0 && (
+                  <Typography variant="body2" paragraph>
+                    <strong>Keywords:</strong> {project.keywords.join(', ')}
+                  </Typography>
+                )}
 
-          {project.roles.length > 0 && (
-            <Typography variant="body2" paragraph>
-              <strong>Roles:</strong> {project.roles.join(', ')}
-            </Typography>
-          )}
+                {project.urls && project.urls.length > 0 && (
+                  <Typography variant="body2" paragraph>
+                    {project.urls.map((url, i) => (
+                      <Link
+                        key={i}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{ display: 'block' }}
+                      >
+                        {url}
+                      </Link>
+                    ))}
+                  </Typography>
+                )}
+              </CardContent>
+            </Box>
+          </Card>
         </Box>
       ))}
     </Box>

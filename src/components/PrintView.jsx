@@ -12,12 +12,10 @@ const PrintView = ({ resumeData }) => {
     work,
     volunteer,
     education,
-    awards,
     publications,
     skills,
     languages,
     interests,
-    references,
     projects,
     certificates,
   } = resumeData;
@@ -40,11 +38,11 @@ const PrintView = ({ resumeData }) => {
         <Certificates certificates={certificates} />
         <ExperienceSection title="Volunteer" experiences={volunteer} />
 
-        {/*        <Languages languages={languages} />
+        {/*
+        <Languages languages={languages} />
         <Skills skills={skills} />
         <Interests interests={interests} />
-        <References references={references} />
-        <Awards awards={awards} />*/}
+        */}
       </Grid>
     </Grid>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { Box, Card, CardContent, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 
 const Skills = ({ skills }) => {
   if (!skills || skills.length === 0) return null;
@@ -9,16 +10,22 @@ const Skills = ({ skills }) => {
       <Typography variant="h4" component="h2" gutterBottom>
         Skills
       </Typography>
-      <List>
+      <Grid container spacing={2}>
         {skills.map((skill, index) => (
-          <ListItem key={index} sx={{ mb: 1 }}>
-            <ListItemText
-              primary={<Typography variant="h6">{skill.name}</Typography>}
-              secondary={skill.keywords.join(', ')}
-            />
-          </ListItem>
+          <Grid size={{ xs: 12, md: 4 }} key={index}>
+            <Card variant="outlined" sx={{ mb: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <CardContent>
+                <Typography variant="h6" component="h3">
+                  {skill.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {skill.keywords.join(', ')}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         ))}
-      </List>
+      </Grid>
     </Box>
   );
 };

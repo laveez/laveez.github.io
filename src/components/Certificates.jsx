@@ -1,43 +1,50 @@
 import React from 'react';
-import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid2';
 import FormattedDate from './common/FormattedDate.jsx';
 
 const Certificates = ({ certificates }) => {
   return (
     <Box component="section" sx={{ p: 2 }}>
       <Typography variant="h4" component="h2" gutterBottom>
-          Certificates
+        Certificates
       </Typography>
 
-      {certificates.map((certificate, index) => (
-        <Box key={index} className="certificate" sx={{ mb: 2 }}>
-          <Card variant="outlined" sx={{ display: 'flex', width: '100%' }}>
-            <CardMedia
-              component="img"
-              sx={{ width: 120, height: 120, p: 2 }}
-              image={certificate.logoUrl}
-              alt="test"
-            />
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <Grid container spacing={2}>
+        {certificates.map((certificate, index) => (
+          <Grid size={{ xs: 12, md: 6 }} key={index}>
+            <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
+              <CardMedia
+                component="img"
+                sx={{ height: 120, width: 120, p: 2 }}
+                image={certificate.logoUrl}
+                alt="test"
+              />
               <CardContent>
-                <Typography variant="h5" component="div">
+                <Typography variant="h6" component="h3">
                   {certificate.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Issuer: {certificate.issuer}
+                  <Link
+                    href={certificate.url}
+                    variant="body1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {certificate.issuer}
+                  </Link>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Date: <FormattedDate date={certificate.startDate} />
+                  <FormattedDate date={certificate.issueDate} />
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Category: {certificate.category}
                 </Typography>
               </CardContent>
-            </Box>
-          </Card>
-        </Box>
-      ))}
-
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
