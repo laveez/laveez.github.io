@@ -9,7 +9,14 @@ const ResponsiveCard = ({ variant = 'outlined', ...props }) => {
       variant={variant}
       sx={isLargeScreen ?
         { display: 'flex', width: '100%' } :
-        { display: 'inline-block', textAlign: 'center', justifyItems: 'center', width: '100%' }}
+        {
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
       {...props}
     >
       {props.children}
