@@ -47,13 +47,13 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
         open={open}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleDownload}>
+        <MenuItem onClick={handleDownload} disabled>
           <ListItemIcon>
             <DownloadIcon fontSize="large" />
           </ListItemIcon>
           <ListItemText>Download</ListItemText>
         </MenuItem>
-        <MenuItem onClick={handlePrint}>
+        <MenuItem onClick={handlePrint} disabled>
           <ListItemIcon>
             <PrintIcon fontSize="large" />
           </ListItemIcon>
