@@ -45,7 +45,7 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
         size="large"
         color="neutral"
         onClick={handleMenuClick}
-        sx={{ maxWidth: 20 }}
+        sx={{ maxWidth: 20, minWidth: 40 }}
       >
         <MoreVertIcon fontSize="medium"/>
       </Button>

@@ -84,6 +84,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
             borderRadius: 2,
             position: isLargeScreen ? 'sticky' : 'static',
             top: isLargeScreen ? 16 : 'auto',
+            mt: isLargeScreen ? 0 : 10,
           }}
         >
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
@@ -115,28 +116,44 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
             </Tabs>
           ) : (
             <>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  zIndex: 1100,
+                  p: 1.5,
+                  backgroundColor: theme => theme.palette.background.paper,
+                  boxShadow: 5,
+                }}
+              >
                 <IconButton onClick={handleMenuClick}>
                   <MenuIcon />
                 </IconButton>
                 <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
               </Box>
-              <Menu
-                anchorEl={menuAnchor}
-                open={Boolean(menuAnchor)}
-                onClose={() => handleMenuClose(-1)}
-              >
-                {sections.map((section, index) => (
-                  <MenuItem key={section.label} onClick={() => handleMenuClose(index)}>
-                    {section.label}
-                  </MenuItem>
-                ))}
-              </Menu>
-              <Backdrop
-                sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
-                open={Boolean(menuAnchor)}
-                onClick={() => handleMenuClose(-1)}
-              />
+              <Box>
+                <Menu
+                  anchorEl={menuAnchor}
+                  open={Boolean(menuAnchor)}
+                  onClose={() => handleMenuClose(-1)}
+                >
+                  {sections.map((section, index) => (
+                    <MenuItem key={section.label} onClick={() => handleMenuClose(index)}>
+                      {section.label}
+                    </MenuItem>
+                  ))}
+                </Menu>
+                <Backdrop
+                  sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
+                  open={Boolean(menuAnchor)}
+                  onClick={() => handleMenuClose(-1)}
+                />
+              </Box>
             </>
           )}
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
