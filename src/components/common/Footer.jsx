@@ -2,7 +2,7 @@ import React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Box, Link, Stack, Typography, useTheme } from '@mui/material';
-import GitLabIcon from '../../assets/GitLabIcon.jsx';
+import GitLabIcon from './GitLabIcon.jsx';
 
 const Footer = ({ profiles }) => {
   const theme = useTheme();

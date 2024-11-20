@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlaceIcon from '@mui/icons-material/Place';
 import { Avatar, Box, Link, Stack, Typography, useTheme } from '@mui/material';
-import GitLabIcon from '../assets/GitLabIcon.jsx';
+import GitLabIcon from './common/GitLabIcon.jsx';
 
 const Basics = ({ basics }) => {
   const theme = useTheme();

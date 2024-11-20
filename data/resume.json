@@ -2,7 +2,7 @@
   "basics": {
     "name": "Niko Muukkonen",
     "label": "Lead Developer at Gofore",
-    "image": "src/assets/profile.png",
+    "image": "/assets/profile.png",
     "email": "",
     "phone": "",
     "url": "https://laveez.github.io/",
@@ -40,7 +40,7 @@
       "summary": "In addition to the previous role, lead responsibility of development, used processes, technical details and specifications of the front end project for the same administrative web application. Provided consultation and support to other teams and team members, aiding them in the implementation and best practices of the front end side of the web application while making sure that the quality is maintained.",
       "url": "https://gofore.com/",
       "location": "Helsinki, Finland",
-      "logoUrl": "src/assets/gofore-logo.png"
+      "logoUrl": "/assets/gofore-logo.png"
     },
     {
       "name": "Gofore Oyj",
@@ -51,7 +51,7 @@
       "summary": "Full stack development of an administrative web application for a parking solution that handles the management of facilities, products, permits, pricing, sessions etc., employing a tech stack that included React (JavaScript), React Query, Ant Design, Java with Spring Boot, MongoDB, AWS, GitLab CI & Kubernetes. Additionally, contributed to the development of a publicly accessible mobile application using React Native & TypeScript.",
       "url": "https://gofore.com/",
       "location": "Helsinki, Finland",
-      "logoUrl": "src/assets/gofore-logo.png"
+      "logoUrl": "/assets/gofore-logo.png"
     },
     {
       "name": "Pinja Digital Oy",
@@ -62,7 +62,7 @@
       "summary": "Full stack software development of supply chain management system Once® By Pinja using many different technologies, e.g., PHP, .NET Core, Javascript, Angular, MSSQL, Docker & Jenkins. A lot of responsibilities and experience on larger customer and in-house projects, production delivery optimization, quality control, testing, deployment, etc.",
       "url": "https://pinja.com/",
       "location": "Jyväskylä, Finland",
-      "logoUrl": "src/assets/pinja-logo.png"
+      "logoUrl": "/assets/pinja-logo.png"
     },
     {
       "name": "Storm Motor Oy",
@@ -73,7 +73,7 @@
       "summary": "Sales of motorcycle aftermarket parts, helmets and other equipment",
       "url": "https://www.storm-motor.fi/",
       "location": "Jyväskylä, Finland",
-      "logoUrl": "src/assets/storm-logo.png"
+      "logoUrl": "/assets/storm-logo.png"
     },
     {
       "name": "Savonlinna Works Oy, ANDRITZ Group",
@@ -84,7 +84,7 @@
       "summary": "Analysis of features and properties of the document management and storage system SharePoint\nand the security risks of internal communications and the field of suppliers.",
       "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
       "location": "Savonlinna, Finland",
-      "logoUrl": "src/assets/andritz-logo.png"
+      "logoUrl": "/assets/andritz-logo.png"
     },
     {
       "name": "Savonlinna Works Oy, ANDRITZ Group",
@@ -95,7 +95,7 @@
       "summary": "Computer and software installations, archiving & factory environment maintenance.",
       "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
       "location": "Savonlinna, Finland",
-      "logoUrl": "src/assets/andritz-logo.png"
+      "logoUrl": "/assets/andritz-logo.png"
     }
   ],
   "volunteer": [
@@ -107,7 +107,7 @@
       "summary": "I will be volunteering at the Disobey event in 2025. See you there!",
       "highlights": [],
       "url": "https://disobey.fi/2025/",
-      "logoUrl": "src/assets/disobey-logo.png"
+      "logoUrl": "/assets/disobey-logo.png"
     },
     {
       "organization": "Linkki Jyväskylä ry",
@@ -117,7 +117,7 @@
       "summary": "As a mentor for the board of the student association Linkki, I shared my past knowledge by providing guidance, advice and information of best practices, historical conventions and past experiences with the new board members. I also handled the basic introduction and education of association laws and activities to the new board members. After  being with the association for multiple years at this point, I got a honorary mention for my work for the association at the 18th anniversary party which was held in 2024.",
       "highlights": [],
       "url": "https://linkkijkl.fi/",
-      "logoUrl": "src/assets/linkkijkl-logo.png"
+      "logoUrl": "/assets/linkkijkl-logo.png"
     },
     {
       "organization": "The Student Union of the University of Jyväskylä",
@@ -127,7 +127,7 @@
       "summary": "I was elected as a deputy member to the Council of Representatives, the governing body of the Student Union. In this role, I contributed to decision-making processes, including oversight of rules, budgets, financial statements, and large-scale projects. Collaborated in appointing the Union's Board of Executives, chairpersons, and key staff.",
       "highlights": [],
       "url": "https://jyy.fi/",
-      "logoUrl": "src/assets/jyy-logo.png"
+      "logoUrl": "/assets/jyy-logo.png"
     },
     {
       "organization": "Linkki Jyväskylä ry",
@@ -137,7 +137,7 @@
       "summary": "Served as Vice Chairman of the Board for Linkki Jyväskylä ry, a student association for Mathematical Information Technology and Educational Technology students in the University of Jyväskylä. Oversaw the association’s operations alongside the Chairman, managed continuous purchases, supported strategic decision-making, and facilitated the organization of multiple events. Played a key role in fostering community engagement and supporting members’ academic and extracurricular activities. After the year, I was also responsible for educating multiple future boards of the association about association laws and activities.",
       "highlights": [],
       "url": "https://linkkijkl.fi/",
-      "logoUrl": "src/assets/linkkijkl-logo.png"
+      "logoUrl": "/assets/linkkijkl-logo.png"
     },
     {
       "organization": "Savonlinna Youth Council",
@@ -147,7 +147,7 @@
       "summary": "I was elected as a founding member of the Savonlinna Youth Council (Savonlinnan nuorisovaltuusto), a politically and religiously non-partisan municipal group dedicated to advocating for the interests of local youth. Alongside fulfilling the typical responsibilities of a youth council member, such as promoting youth participation in municipal decision-making and contributing to city-level initiatives, I also took on some graphical design. I refined the design of the council’s logo, which was originally decided by a logo-competition, digitising its colors and graphical elements from a hand-drawn draft. In addition to that, created flyers and other graphical material to support the council’s outreach efforts.",
       "highlights": [],
       "url": "https://www.savonlinna.fi/paatoksenteko/lautakunnat-ja-muut-toimielimet/nuorisovaltuusto/",
-      "logoUrl": "src/assets/slnuva-logo.png"
+      "logoUrl": "/assets/slnuva-logo.png"
     }
   ],
   "education": [
@@ -161,7 +161,7 @@
       "summary": "Bachelor's thesis on Cybersecurity vulnerabilities of self driving vehicles (in Finnish).",
       "score": "",
       "courses": [],
-      "logoUrl": "src/assets/jyu-logo.png"
+      "logoUrl": "/assets/jyu-logo.png"
     },
     {
       "institution": "LUT University",
@@ -173,7 +173,7 @@
       "summary": "University courses on electronics, energy technologies, chemistry, mathematics ja physics.",
       "score": "",
       "courses": [],
-      "logoUrl": "src/assets/lut-logo.png"
+      "logoUrl": "/assets/lut-logo.png"
     },
     {
       "institution": "Savonlinnan Lyseon Lukio",
@@ -185,7 +185,7 @@
       "summary": "Matriculation examination",
       "score": "",
       "courses": [],
-      "logoUrl": "src/assets/sll-logo.png"
+      "logoUrl": "/assets/sll-logo.png"
     }
   ],
   "certificates": [
@@ -195,7 +195,7 @@
       "issueDate": "2020-03-01",
       "category": "IT Service Management",
       "url": "https://www.axelos.com/",
-      "logoUrl": "src/assets/itil-logo.png"
+      "logoUrl": "/assets/itil-logo.png"
     },
     {
       "name": "PRINCE2® Foundation",
@@ -203,7 +203,7 @@
       "issueDate": "2020-11-01",
       "category": "Project Management",
       "url": "https://www.axelos.com/",
-      "logoUrl": "src/assets/prince-logo.png"
+      "logoUrl": "/assets/prince-logo.png"
     }
   ],
   "publications": [
@@ -214,7 +214,7 @@
       "url": "https://www.jyu.fi/",
       "urn": "http://urn.fi/URN:NBN:fi:jyu-201907023532",
       "summary": "Bachelor's thesis, a small-scale literature review (in Finnish)",
-      "logoUrl": "src/assets/jyu-logo.png"
+      "logoUrl": "/assets/jyu-logo.png"
     }
   ],
   "skills": [
