@@ -6,6 +6,7 @@ import PrintIcon from '@mui/icons-material/Print';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import { Button, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/material';
+import Backdrop from '@mui/material/Backdrop';
 import PrintView from './PrintView.jsx';
 
 const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
@@ -79,6 +80,11 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
           </ListItemText>
         </MenuItem>
       </Menu>
+      <Backdrop
+        sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
+        open={open}
+        onClick={handleMenuClose}
+      />
       <div style={{ display: 'none' }}>
         <PrintView innerRef={contentRef} resumeData={resumeData}/>
       </div>

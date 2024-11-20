@@ -79,6 +79,8 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
         <Box
           sx={{
             p: 2,
+            pr: isLargeScreen ? 1 : 2,
+            pt: isLargeScreen ? 0 : 2,
             borderRadius: 2,
             position: isLargeScreen ? 'sticky' : 'static',
             top: isLargeScreen ? 16 : 'auto',
@@ -90,7 +92,14 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
         </Box>
       </Grid>
       <Grid size={{ xs: 12, lg: 8 }}>
-        <Box sx={{ p: 2, borderRadius: 2 }}>
+        <Box
+          sx={{
+            p: 2,
+            pl: isLargeScreen ? 1 : 2,
+            pt: isLargeScreen ? 0 : 2,
+            borderRadius: 2,
+          }}
+        >
           {isLargeScreen ? (
             <Tabs
               value={activeTab}
