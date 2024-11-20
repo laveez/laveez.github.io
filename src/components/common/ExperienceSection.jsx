@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/material';
+import { Box, CardContent, CardMedia, Link, Typography } from '@mui/material';
 import Duration from './Duration.jsx';
 import { DATE_FORMAT } from './enums.js';
 import FormattedDateRange from './FormattedDateRange.jsx';
+import ResponsiveCard from './ResponsiveCard.jsx';
 
 const ExperienceSection = ({ title, experiences }) => {
   if (!experiences || experiences.length === 0) return null;
@@ -14,7 +15,7 @@ const ExperienceSection = ({ title, experiences }) => {
       </Typography>
       {experiences.map((experience, index) => (
         <Box key={index} className="experience" sx={{ mb: 2 }}>
-          <Card variant="outlined" sx={{ display: 'flex', width: '100%' }}>
+          <ResponsiveCard>
             <CardMedia
               component="img"
               sx={{ width: 120, height: 120, p: 2 }}
@@ -52,7 +53,7 @@ const ExperienceSection = ({ title, experiences }) => {
                 </Typography>
               </CardContent>
             </Box>
-          </Card>
+          </ResponsiveCard>
         </Box>
       ))}
     </Box>

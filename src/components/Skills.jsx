@@ -12,7 +12,7 @@ const Skills = ({ skills }) => {
       </Typography>
       <Grid container spacing={2}>
         {skills.map((skill, index) => (
-          <Grid size={{ xs: 12, md: 4 }} key={index}>
+          <Grid size={{ xs: 12, lg: 4 }} key={index}>
             <Card variant="outlined" sx={{ mb: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
               <CardContent>
                 <Typography variant="h6" component="h3">

@@ -7,7 +7,8 @@ import Footer from './components/common/Footer.jsx';
 import SataTehtavaa from './components/other/SataTehtavaa.jsx';
 import PrintView from './components/PrintView.jsx';
 import Resume from './components/Resume.jsx';
-import './App.css';
+import '@fontsource/montserrat';
+import '@fontsource/open-sans';
 
 const App = () => {
   const [ darkTheme, setDarkTheme ] = useState(true);
@@ -16,6 +17,9 @@ const App = () => {
     palette: {
       mode: darkTheme ? 'dark' : 'light',
       primary: darkTheme ? orange : deepOrange,
+    },
+    typography: {
+      fontFamily: 'Montserrat, open-sans, sans-serif',
     },
   });
 

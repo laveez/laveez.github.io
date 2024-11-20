@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/material';
+import { Box, CardContent, CardMedia, Link, Typography } from '@mui/material';
 import FormattedDate from './common/FormattedDate.jsx';
+import ResponsiveCard from './common/ResponsiveCard.jsx';
 
 const Publications = ({ publications }) => {
   if (!publications || publications.length === 0) return null;
@@ -12,7 +13,7 @@ const Publications = ({ publications }) => {
       </Typography>
       {publications.map((publication, index) => (
         <Box key={index} className="publication" sx={{ mb: 2 }}>
-          <Card variant="outlined" sx={{ display: 'flex', width: '100%' }}>
+          <ResponsiveCard>
             <CardMedia
               component="img"
               sx={{ width: 120, height: 120, p: 2 }}
@@ -48,7 +49,7 @@ const Publications = ({ publications }) => {
                 </Link>
               </CardContent>
             </Box>
-          </Card>
+          </ResponsiveCard>
         </Box>
       ))}
     </Box>

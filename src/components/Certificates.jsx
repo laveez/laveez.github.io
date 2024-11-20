@@ -12,7 +12,7 @@ const Certificates = ({ certificates }) => {
 
       <Grid container spacing={2}>
         {certificates.map((certificate, index) => (
-          <Grid size={{ xs: 12, md: 6 }} key={index}>
+          <Grid size={{ xs: 12, lg: 6 }} key={index}>
             <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
               <CardMedia
                 component="img"

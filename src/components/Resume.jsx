@@ -15,7 +15,7 @@ import Tools from './Tools.jsx';
 const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ activeTab, setActiveTab ] = useState(0);
   const [ menuAnchor, setMenuAnchor ] = useState(null);
-  const isLargeScreen = useMediaQuery('(min-width:900px)');
+  const isLargeScreen = useMediaQuery('(min-width:1200px)');
 
   const {
     basics,
@@ -75,7 +75,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
 
   return (
     <Grid container spacing={0}>
-      <Grid size={{ xs: 12, md: 4 }}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <Box
           sx={{
             p: 2,
@@ -89,7 +89,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
           </Paper>
         </Box>
       </Grid>
-      <Grid size={{ xs: 12, md: 8 }}>
+      <Grid size={{ xs: 12, lg: 8 }}>
         <Box sx={{ p: 2, borderRadius: 2 }}>
           {isLargeScreen ? (
             <Tabs
