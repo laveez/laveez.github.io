@@ -12,7 +12,7 @@ import Publications from './Publications.jsx';
 import Skills from './Skills.jsx';
 import Tools from './Tools.jsx';
 
-const Resume = ({ resumeData }) => {
+const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ activeTab, setActiveTab ] = useState(0);
   const [ menuAnchor, setMenuAnchor ] = useState(null);
   const isLargeScreen = useMediaQuery('(min-width:900px)');
@@ -76,7 +76,14 @@ const Resume = ({ resumeData }) => {
   return (
     <Grid container spacing={0}>
       <Grid size={{ xs: 12, md: 4 }}>
-        <Box sx={{ p: 2, borderRadius: 2, position: isLargeScreen ? 'sticky' : 'static', top: isLargeScreen ? 16 : 'auto' }}>
+        <Box
+          sx={{
+            p: 2,
+            borderRadius: 2,
+            position: isLargeScreen ? 'sticky' : 'static',
+            top: isLargeScreen ? 16 : 'auto',
+          }}
+        >
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
             <Basics basics={basics} />
           </Paper>
@@ -94,8 +101,8 @@ const Resume = ({ resumeData }) => {
               indicatorColor="primary"
             >
               {sections.map((section, index) =>
-                <Tab key={index} label={<Box sx={{ p: 2 }}>{section.label}</Box>} />)}
-              <Tools resumeData={resumeData} />
+                <Tab key={section.label} label={<Box sx={{ p: 2 }}>{section.label}</Box>} />)}
+              <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
             </Tabs>
           ) : (
             <>
@@ -103,7 +110,7 @@ const Resume = ({ resumeData }) => {
                 <IconButton onClick={handleMenuClick}>
                   <MenuIcon />
                 </IconButton>
-                <Tools resumeData={resumeData} />
+                <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
               </Box>
               <Menu
                 anchorEl={menuAnchor}
@@ -111,7 +118,7 @@ const Resume = ({ resumeData }) => {
                 onClose={() => handleMenuClose(-1)}
               >
                 {sections.map((section, index) => (
-                  <MenuItem key={index} onClick={() => handleMenuClose(index)}>
+                  <MenuItem key={section.label} onClick={() => handleMenuClose(index)}>
                     {section.label}
                   </MenuItem>
                 ))}

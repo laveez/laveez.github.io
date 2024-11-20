@@ -5,17 +5,11 @@ import PrintIcon from '@mui/icons-material/Print';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import { Button, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/material';
-import { useColorScheme } from '@mui/material/styles';
 import PrintView from './PrintView.jsx';
 
-const Tools = ({ resumeData }) => {
-  const { mode, setMode } = useColorScheme();
+const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ anchorEl, setAnchorEl ] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  if (!mode) {
-    return null;
-  }
 
   const handleMenuClick = event => {
     setAnchorEl(event.currentTarget);
@@ -67,12 +61,12 @@ const Tools = ({ resumeData }) => {
         </MenuItem>
         <MenuItem
           onClick={() => {
-            setMode(mode === 'dark' ? 'light' : 'dark');
+            setDarkTheme(!darkTheme);
             handleMenuClose();
           }}
         >
           <ListItemIcon>
-            {mode === 'dark' ? <ToggleOnIcon fontSize="large" /> : <ToggleOffIcon fontSize="large" />}
+            {darkTheme ? <ToggleOnIcon fontSize="large" /> : <ToggleOffIcon fontSize="large" />}
           </ListItemIcon>
           <ListItemText>Dark mode</ListItemText>
         </MenuItem>
