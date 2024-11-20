@@ -80,7 +80,8 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
           sx={{
             p: 2,
             pr: isLargeScreen ? 1 : 2,
-            pt: isLargeScreen ? 0 : 2,
+            pt: 0,
+            pb: isLargeScreen ? 2 : 0,
             borderRadius: 2,
             position: isLargeScreen ? 'sticky' : 'static',
             top: isLargeScreen ? 16 : 'auto',

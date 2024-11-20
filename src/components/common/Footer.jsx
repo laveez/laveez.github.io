@@ -12,7 +12,7 @@ const Footer = ({ profiles }) => {
     <Box
       component="footer"
       className="footer"
-      sx={{ textAlign: 'center', p: 3, mt: 5, borderTop: `1px solid ${theme.palette.divider}` }}
+      sx={{ textAlign: 'center', p: 3, mt: 1, borderTop: `1px solid ${theme.palette.divider}` }}
     >
       <Typography variant="body2" color="textSecondary">
         © 2024 Niko Muukkonen / Laveez
