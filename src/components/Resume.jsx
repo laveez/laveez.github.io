@@ -45,7 +45,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
     },
     {
       label: 'Volunteering',
-      component: <ExperienceSection title="Volunteer" experiences={volunteer} />,
+      component: <ExperienceSection title="Volunteering" experiences={volunteer} />,
     },
     {
       label: 'Skills',
