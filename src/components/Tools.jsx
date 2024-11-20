@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useReactToPrint } from 'react-to-print';
 import DownloadIcon from '@mui/icons-material/Download';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PrintIcon from '@mui/icons-material/Print';
@@ -10,6 +11,8 @@ import PrintView from './PrintView.jsx';
 const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ anchorEl, setAnchorEl ] = React.useState(null);
   const open = Boolean(anchorEl);
+  const contentRef = React.useRef(null);
+  const reactToPrintFn = useReactToPrint({ contentRef });
 
   const handleMenuClick = event => {
     setAnchorEl(event.currentTarget);
@@ -23,14 +26,9 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
     handleMenuClose();
   };
 
-  const handlePrint = async () => {
-    await handleMenuClose();
-    const printContent = document.getElementById('print-view').innerHTML;
-    const originalContent = document.body.innerHTML;
-    document.body.innerHTML = printContent;
-    window.print();
-    document.body.innerHTML = originalContent;
-    window.location.reload();
+  const handlePrint = () => {
+    reactToPrintFn();
+    handleMenuClose();
   };
 
   return (
@@ -41,7 +39,7 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
         color="neutral"
         onClick={handleMenuClick}
         sx={{ maxWidth: 20 }}
-      ><MoreVertIcon fontSize="medium" /></Button>
+      ><MoreVertIcon fontSize="medium"/></Button>
       <Menu
         anchorEl={anchorEl}
         open={open}
@@ -49,13 +47,13 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
       >
         <MenuItem onClick={handleDownload} disabled>
           <ListItemIcon>
-            <DownloadIcon fontSize="large" />
+            <DownloadIcon fontSize="large"/>
           </ListItemIcon>
           <ListItemText>Download</ListItemText>
         </MenuItem>
-        <MenuItem onClick={handlePrint} disabled>
+        <MenuItem onClick={handlePrint}>
           <ListItemIcon>
-            <PrintIcon fontSize="large" />
+            <PrintIcon fontSize="large"/>
           </ListItemIcon>
           <ListItemText>Print</ListItemText>
         </MenuItem>
@@ -66,13 +64,13 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
           }}
         >
           <ListItemIcon>
-            {darkTheme ? <ToggleOnIcon fontSize="large" /> : <ToggleOffIcon fontSize="large" />}
+            {darkTheme ? <ToggleOnIcon fontSize="large"/> : <ToggleOffIcon fontSize="large"/>}
           </ListItemIcon>
           <ListItemText>Dark mode</ListItemText>
         </MenuItem>
       </Menu>
-      <div id="print-view" style={{ display: 'none' }}>
-        <PrintView resumeData={resumeData} />
+      <div style={{ display: 'none' }}>
+        <PrintView innerRef={contentRef} resumeData={resumeData}/>
       </div>
     </Stack>
   );

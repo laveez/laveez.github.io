@@ -1,4 +1,3 @@
-/* src/print.css */
 @media print {
 
     .print-container {
@@ -13,12 +12,16 @@
     .basics-print-style * {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        background-color: #fff !important;
+        color: rgba(0, 0, 0, 0.87) !important;
     }
 
     .print-style * {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         border: none !important;
+        background-color: #fff !important;
+        color: rgba(0, 0, 0, 0.87) !important;
     }
 
     .print-style .MuiBox-root {

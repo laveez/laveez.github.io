@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Grid from '@mui/material/Grid2';
 import ExperienceSection from './common/ExperienceSection.jsx';
 import Basics from './Basics.jsx';
@@ -9,7 +9,7 @@ import Projects from './Projects.jsx';
 import Publications from './Publications.jsx';
 import Skills from './Skills.jsx';
 
-const PrintView = ({ resumeData, setDarkTheme }) => {
+const PrintView = ({ resumeData, innerRef }) => {
   const {
     basics,
     work,
@@ -23,12 +23,8 @@ const PrintView = ({ resumeData, setDarkTheme }) => {
     certificates,
   } = resumeData;
 
-  useEffect(() => {
-    if (setDarkTheme) setDarkTheme(false);
-  }, [ setDarkTheme ]);
-
   return (
-    <Grid container rowSpacing={0} columnSpacing={5} className="print-container">
+    <Grid ref={innerRef} container rowSpacing={0} columnSpacing={5} className="print-container">
       <Grid size={12} className="basics-print-style">
         <Basics basics={basics} />
       </Grid>

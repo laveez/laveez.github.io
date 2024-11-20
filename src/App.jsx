@@ -37,7 +37,7 @@ const App = () => {
               setDarkTheme={setDarkTheme}
             />}
           />
-          <Route path="/print" element={<PrintView resumeData={resumeData} setDarkTheme={setDarkTheme} />} />
+          <Route path="/print" element={<PrintView resumeData={resumeData} />} />
           <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
         </Routes>
         <Footer profiles={resumeData.basics.profiles} />
