@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useRef, useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import DownloadIcon from '@mui/icons-material/Download';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -9,9 +9,9 @@ import { Button, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/
 import PrintView from './PrintView.jsx';
 
 const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
-  const [ anchorEl, setAnchorEl ] = React.useState(null);
+  const [ anchorEl, setAnchorEl ] = useState(null);
   const open = Boolean(anchorEl);
-  const contentRef = React.useRef(null);
+  const contentRef = useRef(null);
   const reactToPrintFn = useReactToPrint({ contentRef });
 
   const handleMenuClick = event => {
@@ -24,6 +24,12 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
 
   const handleDownload = () => {
     handleMenuClose();
+    const link = document.createElement('a');
+    link.href = '/niko-muukkonen-laveez-resume.pdf';
+    link.download = 'niko-muukkonen-laveez-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handlePrint = () => {
@@ -39,13 +45,15 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
         color="neutral"
         onClick={handleMenuClick}
         sx={{ maxWidth: 20 }}
-      ><MoreVertIcon fontSize="medium"/></Button>
+      >
+        <MoreVertIcon fontSize="medium"/>
+      </Button>
       <Menu
         anchorEl={anchorEl}
         open={open}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleDownload} disabled>
+        <MenuItem onClick={handleDownload}>
           <ListItemIcon>
             <DownloadIcon fontSize="large"/>
           </ListItemIcon>
@@ -66,7 +74,9 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
           <ListItemIcon>
             {darkTheme ? <ToggleOnIcon fontSize="large"/> : <ToggleOffIcon fontSize="large"/>}
           </ListItemIcon>
-          <ListItemText>Dark mode</ListItemText>
+          <ListItemText>
+            {darkTheme ? 'Light mode' : 'Dark mode'}
+          </ListItemText>
         </MenuItem>
       </Menu>
       <div style={{ display: 'none' }}>
