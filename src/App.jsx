@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { deepOrange, orange } from '@mui/material/colors';
 import resumeData from '../data/resume.json';
@@ -25,7 +25,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route
-            path="/"
+            path=""
             element={<Resume
               resumeData={resumeData}
               darkTheme={darkTheme}
