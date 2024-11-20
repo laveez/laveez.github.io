@@ -219,8 +219,9 @@
   ],
   "skills": [
     {
-      "name": "Software development technologies",
+      "name": "Software development",
       "level": "",
+      "icon": "TERMINAL",
       "keywords": [
         "React",
         "Javascript",
@@ -250,17 +251,23 @@
     {
       "name": "Software & hardware",
       "level": "",
+      "icon": "COMPUTER",
       "keywords": [
         "OSX",
         "Windows",
-        "Linux (Arch, Debian) & Shell (Bash, Zsh)",
-        "Git and SVN",
-        "Raspberry Pi & IoT"
+        "Linux (Arch, Debian)",
+        "Shell (Bash, Zsh)",
+        "Version control (Git, SVN)",
+        "IntelliJ",
+        "GIMP",
+        "Raspberry Pi",
+        "IoT"
       ]
     },
     {
       "name": "Industry knowledge",
       "level": "",
+      "icon": "FACTORY",
       "keywords": [
         "Information Technology",
         "Scrum",
@@ -268,23 +275,45 @@
         "Information security & cybersecurity",
         "Power Plants",
         "Waste Management",
-        "Parking Solutions"
+        "Parking Solutions",
+        "Consulting",
+        "Customer service"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "level": "",
+      "icon": "DIVERSITY",
+      "keywords": [
+        "Leadership",
+        "Teamwork",
+        "Problem solving",
+        "Communication",
+        "Mentoring",
+        "Onboarding",
+        "Community development",
+        "Event organization"
       ]
     }
   ],
   "languages": [
     {
-      "fluency": "Professional Working Proficiency",
+      "fluency": "Professional Working Proficiency (C1-C2)",
       "language": "English"
     },
     {
       "fluency": "Native Speaker",
       "language": "Finnish"
+    },
+    {
+      "fluency": "Basics (B1)",
+      "language": "Swedish"
     }
   ],
   "interests": [
     {
       "name": "Technology",
+      "icon": "SPEAKER",
       "keywords": [
         "HiFi",
         "Cars",
@@ -296,6 +325,7 @@
     },
     {
       "name": "Culinary",
+      "icon": "WINE_BAR",
       "keywords": [
         "Food",
         "Cooking",
