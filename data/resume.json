@@ -416,6 +416,27 @@
       "type": "website"
     },
     {
+      "name": "Jyväsmetro website",
+      "description": "Refactored and redesigned the website for a large student event Jyväsmetro, which is held annually in Jyväskylä. The website includes information about the event, the program, the location, and the sponsors.",
+      "highlights": [ ],
+      "keywords": [
+        "Javascript",
+        "HTML",
+        "CSS"
+      ],
+      "startDate": "2023-02-01",
+      "endDate": "2023-04-30",
+      "urls": [
+        "https://github.com/Linkkijkl/jyvasmetro-web",
+        "https://jyvasmetro.fi/"
+      ],
+      "roles": [
+        "Developer", "Designer"
+      ],
+      "entity": "",
+      "type": "website"
+    },
+    {
       "name": "Once® By Pinja, Oncenet® By Pinja",
       "description": "Once by Pinja is a browser-based SaaS service model system used for real-time management of the supply chains of energy companies with the help of a single system. Once distributes data created in the supply chain in real time to all stakeholders involved in the chain. The system is scalable for supply chain management in case of small individual plants and groups involving several plants alike.",
       "highlights": [ ],
