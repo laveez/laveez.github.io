@@ -1,5 +1,6 @@
 import React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import HomeIcon from '@mui/icons-material/Home';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Box, Link, Stack, Typography, useTheme } from '@mui/material';
 import GitLabIcon from './GitLabIcon.jsx';
@@ -8,12 +9,19 @@ const Footer = ({ profiles }) => {
   const theme = useTheme();
 
   return (
-    <Box component="footer" sx={{ textAlign: 'center', p: 3, mt: 5, borderTop: `1px solid ${theme.palette.divider}` }}>
+    <Box
+      component="footer"
+      className="footer"
+      sx={{ textAlign: 'center', p: 3, mt: 5, borderTop: `1px solid ${theme.palette.divider}` }}
+    >
       <Typography variant="body2" color="textSecondary">
         © 2024 Niko Muukkonen / Laveez
       </Typography>
       <Box sx={{ pt: 2, display: 'inline-block' }}>
         <Stack direction="row" spacing={2} alignItems="center">
+          <Link href="/" sx={{ color: theme.palette.text.primary }}>
+            <HomeIcon fontSize="large" />
+          </Link>
           {profiles.map(profile => (
             <Link
               key={profile.network}

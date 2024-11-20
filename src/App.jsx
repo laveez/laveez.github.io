@@ -7,6 +7,7 @@ import Footer from './components/common/Footer.jsx';
 import SataTehtavaa from './components/other/SataTehtavaa.jsx';
 import PrintView from './components/PrintView.jsx';
 import Resume from './components/Resume.jsx';
+import './print.css';
 import '@fontsource/montserrat';
 import '@fontsource/open-sans';
 
@@ -36,7 +37,7 @@ const App = () => {
               setDarkTheme={setDarkTheme}
             />}
           />
-          <Route path="/print" element={<PrintView resumeData={resumeData} />} />
+          <Route path="/print" element={<PrintView resumeData={resumeData} setDarkTheme={setDarkTheme} />} />
           <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
         </Routes>
         <Footer profiles={resumeData.basics.profiles} />

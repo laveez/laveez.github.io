@@ -1,0 +1,52 @@
+/* src/print.css */
+@media print {
+
+    .print-container {
+        margin: 2% 5% 5%;
+    }
+
+    .basics-print-style {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .basics-print-style * {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .print-style * {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        border: none !important;
+    }
+
+    .print-style .MuiBox-root {
+        padding: 0 !important;
+    }
+
+    .print-style-last {
+        margin-top: 15%;
+    }
+
+    .responsive-card {
+        display: flex !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: left !important;
+        text-align: left !important;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .link-print-style {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .typography-print-style {
+        display: block !important;
+    }
+}

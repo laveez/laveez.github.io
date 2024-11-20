@@ -40,6 +40,7 @@ const Basics = ({ basics }) => {
             <Link
               key={profile.network}
               href={profile.url}
+              className="print-style link-print-style"
               sx={{ color: theme.palette.text.primary }}
               target="_blank"
               rel="noopener noreferrer"
@@ -48,6 +49,13 @@ const Basics = ({ basics }) => {
                 profile.network === 'LinkedIn' ? <LinkedInIcon fontSize="large" /> :
                   profile.network === 'GitLab' ?
                     <GitLabIcon style={{ fontSize: 35 }} color={theme.palette.text.primary} /> : profile.network}
+              <Typography
+                variant="body1"
+                className="typography-print-style"
+                sx={{ display: 'none' }}
+              >
+                {profile.username}
+              </Typography>
             </Link>
           ))}
         </Stack>

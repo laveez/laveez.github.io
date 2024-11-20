@@ -7,6 +7,7 @@ const ResponsiveCard = ({ variant = 'outlined', ...props }) => {
   return (
     <Card
       variant={variant}
+      className="responsive-card"
       sx={isLargeScreen ?
         { display: 'flex', width: '100%' } :
         {
