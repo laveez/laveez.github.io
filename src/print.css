@@ -35,6 +35,7 @@
     .responsive-card {
         display: flex !important;
         width: 100% !important;
+        align-items: flex-start !important;
         flex-direction: row !important;
         justify-content: left !important;
         text-align: left !important;
