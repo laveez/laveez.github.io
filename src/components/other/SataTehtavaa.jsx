@@ -63,6 +63,14 @@ const SataTehtavaa = () => {
       >
         © 2024 Niko Muukkonen / Laveez
       </Typography>
+      <Typography
+        variant="body2"
+        color="textSecondary"
+        className="display-block-on-print"
+        sx={{ textAlign: 'center', display: 'none', mt: 1 }}
+      >
+        laveez.github.io
+      </Typography>
     </Box>
   );
 };
