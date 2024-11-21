@@ -1,9 +1,7 @@
 import React from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlaceIcon from '@mui/icons-material/Place';
-import { Avatar, Box, Link, Stack, Typography, useTheme } from '@mui/material';
-import GitLabIcon from './common/GitLabIcon.jsx';
+import { Avatar, Box, Typography, useTheme } from '@mui/material';
+import ProfileLinks from './common/ProfileLinks.jsx';
 
 const Basics = ({ basics }) => {
   const theme = useTheme();
@@ -35,30 +33,7 @@ const Basics = ({ basics }) => {
         </Typography>
       </Box>
       <Box sx={{ pt: 2, display: 'inline-block' }}>
-        <Stack direction="row" spacing={2} alignItems="center">
-          {basics.profiles.map(profile => (
-            <Link
-              key={profile.network}
-              href={profile.url}
-              className="print-style link-print-style"
-              sx={{ color: theme.palette.text.primary }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {profile.network === 'GitHub' ? <GitHubIcon fontSize="large" /> :
-                profile.network === 'LinkedIn' ? <LinkedInIcon fontSize="large" /> :
-                  profile.network === 'GitLab' ?
-                    <GitLabIcon style={{ fontSize: 35 }} color={theme.palette.text.primary} /> : profile.network}
-              <Typography
-                variant="body1"
-                className="typography-print-style"
-                sx={{ display: 'none' }}
-              >
-                {profile.username}
-              </Typography>
-            </Link>
-          ))}
-        </Stack>
+        <ProfileLinks profiles={basics.profiles} />
       </Box>
     </Box>
   );

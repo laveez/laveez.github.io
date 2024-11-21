@@ -50,7 +50,11 @@
         align-items: center !important;
     }
 
-    .typography-print-style {
+    .link-print-style * {
+        fill: rgba(0, 0, 0, 0.87) !important;
+    }
+
+    .profile-username-print-style {
         display: block !important;
     }
 }

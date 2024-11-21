@@ -1,9 +1,6 @@
 import React from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import HomeIcon from '@mui/icons-material/Home';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Box, Link, Stack, Typography, useTheme } from '@mui/material';
-import GitLabIcon from './GitLabIcon.jsx';
+import { Box, Typography, useTheme } from '@mui/material';
+import ProfileLinks from './ProfileLinks.jsx';
 
 const Footer = ({ profiles }) => {
   const theme = useTheme();
@@ -18,25 +15,7 @@ const Footer = ({ profiles }) => {
         © 2024 Niko Muukkonen / Laveez
       </Typography>
       <Box sx={{ pt: 2, display: 'inline-block' }}>
-        <Stack direction="row" spacing={2} alignItems="center">
-          <Link href="/" sx={{ color: theme.palette.text.primary }}>
-            <HomeIcon fontSize="large" />
-          </Link>
-          {profiles.map(profile => (
-            <Link
-              key={profile.network}
-              href={profile.url}
-              sx={{ color: theme.palette.text.primary }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {profile.network === 'GitHub' ? <GitHubIcon fontSize="large" /> :
-                profile.network === 'LinkedIn' ? <LinkedInIcon fontSize="large" /> :
-                  profile.network === 'GitLab' ?
-                    <GitLabIcon style={{ fontSize: 35 }} color={theme.palette.text.primary} /> : profile.network}
-            </Link>
-          ))}
-        </Stack>
+        <ProfileLinks profiles={profiles} showHome={true} />
       </Box>
     </Box>
   );
