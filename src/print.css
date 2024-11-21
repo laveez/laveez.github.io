@@ -41,10 +41,6 @@
         text-align: left !important;
     }
 
-    .footer {
-        display: none;
-    }
-
     .link-print-style {
         display: flex !important;
         align-items: center !important;
@@ -55,6 +51,14 @@
     }
 
     .profile-username-print-style {
+        display: block !important;
+    }
+
+    .no-display-on-print {
+        display: none !important;
+    }
+
+    .display-block-on-print {
         display: block !important;
     }
 }

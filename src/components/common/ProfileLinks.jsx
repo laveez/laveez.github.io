@@ -28,7 +28,7 @@ const ProfileLinks = ({ profiles, showHome = false }) => {
                 profile.network}
           <Typography
             variant="body1"
-            className="profile-username-print-style"
+            className="display-block-on-print"
             sx={{ display: 'none' }}
           >
             {profile.username}

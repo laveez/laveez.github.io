@@ -43,7 +43,7 @@ const SataTehtavaa = () => {
             </Grid>
           ))}
         </Grid>
-        <Box display="flex" alignItems="center" marginTop="20px">
+        <Box display="flex" alignItems="center" marginTop="20px" className="no-display-on-print">
           <Typography>Summa</Typography>
           <TextField
             value={checkedCount}
@@ -55,6 +55,14 @@ const SataTehtavaa = () => {
           />
         </Box>
       </Box>
+      <Typography
+        variant="body2"
+        color="textSecondary"
+        className="display-block-on-print"
+        sx={{ textAlign: 'center', display: 'none', mt: 4 }}
+      >
+        © 2024 Niko Muukkonen / Laveez
+      </Typography>
     </Box>
   );
 };

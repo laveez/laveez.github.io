@@ -8,7 +8,7 @@ const Footer = ({ profiles }) => {
   return (
     <Box
       component="footer"
-      className="footer"
+      className="no-display-on-print"
       sx={{ textAlign: 'center', p: 3, mt: 1, borderTop: `1px solid ${theme.palette.divider}` }}
     >
       <Typography variant="body2" color="textSecondary">

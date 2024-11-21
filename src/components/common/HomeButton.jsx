@@ -7,6 +7,7 @@ const HomeButton = ({ sx, color = 'inherit', variant = 'contained' }) => {
   const navigate = useNavigate();
 
   return <Button
+    className={'no-display-on-print'}
     variant={variant}
     color={color}
     onClick={() => navigate('/')}
