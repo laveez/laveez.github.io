@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Backdrop, Box, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Grid2';
@@ -16,6 +16,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ activeTab, setActiveTab ] = useState(0);
   const [ menuAnchor, setMenuAnchor ] = useState(null);
   const isLargeScreen = useMediaQuery('(min-width:1200px)');
+  const contentRef = useRef(null);
 
   const {
     basics,
@@ -69,7 +70,12 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   };
 
   const handleMenuClose = index => {
-    if (index >= 0) setActiveTab(index);
+    if (index >= 0) {
+      setActiveTab(index);
+      const menuBarHeight = document.querySelector('.sticky-menu-bar')?.offsetHeight || 0;
+      const scrollPosition = contentRef.current?.getBoundingClientRect().top + window.scrollY - menuBarHeight;
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }
     setMenuAnchor(null);
   };
 
@@ -95,6 +101,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
       </Grid>
       <Grid size={{ xs: 12, lg: 8 }}>
         <Box
+          ref={contentRef}
           sx={{
             p: 2,
             pl: isLargeScreen ? 1 : 2,
@@ -131,6 +138,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
                   backgroundColor: theme => theme.palette.background.paper,
                   boxShadow: 5,
                 }}
+                className="sticky-menu-bar"
               >
                 <IconButton onClick={handleMenuClick}>
                   <MenuIcon />
