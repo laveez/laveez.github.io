@@ -25,7 +25,11 @@ const PrintView = ({ resumeData }) => {
   return (
     <Grid container rowSpacing={0} columnSpacing={5} className="print-container">
       <Grid size={12} className="basics-print-style">
-        <Basics basics={basics} />
+        <Basics
+          basics={basics}
+          keySKillDirection={'row'}
+          keySkillSpacing={1}
+        />
       </Grid>
       <Grid size={6} className="print-style">
         <ExperienceSection title="Work Experience" experiences={work} />
@@ -38,7 +42,11 @@ const PrintView = ({ resumeData }) => {
         <ExperienceSection title="Volunteering" experiences={volunteer} />
       </Grid>
       <Grid size={12} className="basics-print-style print-style-last">
-        <Basics basics={basics} />
+        <Basics
+          basics={basics}
+          keySKillDirection={'row'}
+          keySkillSpacing={1}
+        />
       </Grid>
       <Grid size={12} className="print-style">
         <Skills skills={skills} sizeOverride={6} overrideMarginBottom={0} />

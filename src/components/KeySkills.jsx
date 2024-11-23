@@ -1,11 +1,16 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import TextIcon from './common/TextIcon.jsx';
 
-const KeySkills = ({ skills }) => {
+const KeySkills = ({ skills, direction = 'column', spacing = 0.25 }) => {
   if (!skills || skills.length === 0) return null;
 
   return (
-    <Box sx={{ pt: 2 }} className="no-display-on-print">
+    <Stack
+      direction={direction}
+      spacing={spacing}
+      sx={{ pt: 2, justifyContent: 'center' }}
+      // className="no-display-on-print"
+    >
       {skills.map(skill => (
         <Stack
           key={skill.text}
@@ -24,7 +29,7 @@ const KeySkills = ({ skills }) => {
           </Typography>
         </Stack>
       ))}
-    </Box>
+    </Stack>
   );
 };
 

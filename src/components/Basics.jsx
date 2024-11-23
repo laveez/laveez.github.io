@@ -3,7 +3,7 @@ import { Avatar, Box, Typography } from '@mui/material';
 import ProfileLinks from './common/ProfileLinks.jsx';
 import KeySkills from './KeySkills.jsx';
 
-const Basics = ({ basics }) => {
+const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
   if (!basics) return null;
 
   return (
@@ -26,7 +26,11 @@ const Basics = ({ basics }) => {
       <Typography variant="body1" gutterBottom>
         {basics.summary}
       </Typography>
-      <KeySkills skills={basics.keySkills} />
+      <KeySkills
+        skills={basics.keySkills}
+        direction={keySKillDirection}
+        spacing={keySkillSpacing}
+      />
       <Box sx={{ pt: 5 }}>
         <Typography fontSize="large">
           <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
