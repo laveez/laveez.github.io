@@ -1,4 +1,3 @@
-import React from 'react';
 import { SvgIcon } from '@mui/material';
 
 const GitLabIcon = ({ sx }) => <SvgIcon sx={sx}>

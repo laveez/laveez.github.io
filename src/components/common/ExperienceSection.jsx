@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, CardContent, CardMedia, Link, Typography } from '@mui/material';
 import Duration from './Duration.jsx';
 import { DATE_FORMAT } from './enums.js';

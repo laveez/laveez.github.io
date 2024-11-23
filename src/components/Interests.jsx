@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import TextIcon from './common/TextIcon.jsx';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, useMediaQuery } from '@mui/material';
 
 const ResponsiveCard = ({ variant = 'outlined', ...props }) => {

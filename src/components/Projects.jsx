@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Card, CardContent, Link, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
 import Duration from './common/Duration.jsx';
 import FormattedDateRange from './common/FormattedDateRange.jsx';

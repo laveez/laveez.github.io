@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import FormattedDate from './common/FormattedDate.jsx';

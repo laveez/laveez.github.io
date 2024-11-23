@@ -1,10 +1,9 @@
-import React from 'react';
 import PlaceIcon from '@mui/icons-material/Place';
-import { Avatar, Box, Typography, useTheme } from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import ProfileLinks from './common/ProfileLinks.jsx';
+import KeySkills from './KeySkills.jsx';
 
 const Basics = ({ basics }) => {
-  const theme = useTheme();
   if (!basics) return null;
 
   return (
@@ -27,12 +26,13 @@ const Basics = ({ basics }) => {
       <Typography variant="body1" gutterBottom>
         {basics.summary}
       </Typography>
-      <Box sx={{ pt: 2 }}>
+      <KeySkills skills={basics.keySkills} />
+      <Box sx={{ pt: 5 }}>
         <Typography fontSize="large">
           <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
         </Typography>
       </Box>
-      <Box sx={{ pt: 2, display: 'inline-block' }}>
+      <Box sx={{ pt: 5, display: 'inline-block' }}>
         <ProfileLinks profiles={basics.profiles} />
       </Box>
     </Box>

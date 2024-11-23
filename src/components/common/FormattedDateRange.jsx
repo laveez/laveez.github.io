@@ -1,4 +1,3 @@
-import React from 'react';
 import { DATE_FORMAT } from './enums.js';
 import FormattedDate from './FormattedDate.jsx';
 

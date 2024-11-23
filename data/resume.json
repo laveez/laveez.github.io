@@ -28,6 +28,24 @@
         "username": "laveez",
         "url": "https://gitlab.com/laveez"
       }
+    ],
+    "keySkills": [
+      {
+        "icon": "WEB",
+        "text": "React, Angular, JS & TS"
+      },
+      {
+        "icon": "TERMINAL",
+        "text": "Java, C#, PHP & SQL"
+      },
+      {
+        "icon": "CLOUD",
+        "text": "AWS, Docker & Kubernetes"
+      },
+      {
+        "icon": "DIVERSITY",
+        "text": "Leadership & Teamwork"
+      }
     ]
   },
   "work": [
