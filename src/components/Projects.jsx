@@ -1,7 +1,19 @@
 import React from 'react';
-import { Box, Card, CardContent, CardMedia, Link, List, ListItem, ListItemText, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Link,
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  Typography,
+} from '@mui/material';
 import Duration from './common/Duration.jsx';
 import FormattedDateRange from './common/FormattedDateRange.jsx';
+import TextIcon from './common/TextIcon.jsx';
 
 const Projects = ({ projects }) => {
   if (!projects || projects.length === 0) return null;
@@ -24,9 +36,12 @@ const Projects = ({ projects }) => {
             )}
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent>
-                <Typography variant="h6" component="h3">
-                  {project.name}
-                </Typography>
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <TextIcon name={project.icon} />
+                  <Typography variant="h6" component="h3">
+                    {project.name}
+                  </Typography>
+                </Stack>
                 <Typography variant="body2" color="textSecondary">
                   <FormattedDateRange startDate={project.startDate} endDate={project.endDate} />
                   {' '}

@@ -426,7 +426,8 @@
         "Developer", "Designer", "Architect"
       ],
       "entity": "",
-      "type": "website"
+      "type": "website",
+      "icon": "CONTACT_PAGE"
     },
     {
       "name": "Parking solution, private company",
@@ -457,7 +458,8 @@
         "Full Stack Developer"
       ],
       "entity": "",
-      "type": "Web application"
+      "type": "Web application",
+      "icon": "PARKING"
     },
     {
       "name": "Event screen for student associations",
@@ -482,7 +484,8 @@
         "Developer", "Designer", "Architect"
       ],
       "entity": "",
-      "type": "website"
+      "type": "website",
+      "icon": "TV"
     },
     {
       "name": "Jyväsmetro website",
@@ -503,7 +506,8 @@
         "Developer", "Designer"
       ],
       "entity": "",
-      "type": "website"
+      "type": "website",
+      "icon": "SUBWAY"
     },
     {
       "name": "Once® By Pinja, Oncenet® By Pinja",
@@ -528,7 +532,8 @@
         "Full Stack Developer"
       ],
       "entity": "",
-      "type": "SaaS application"
+      "type": "SaaS application",
+      "icon": "FACTORY"
     },
     {
       "name": "Home server, mail camera",
@@ -552,7 +557,8 @@
         "Developer"
       ],
       "entity": "",
-      "type": "Website"
+      "type": "Website",
+      "icon": "CAMERA"
     }
   ]
 }

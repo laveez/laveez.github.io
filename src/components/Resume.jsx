@@ -37,7 +37,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
       component: <ExperienceSection title="Work Experience" experiences={work} />,
     },
     {
-      label: 'Education',
+      label: 'Education & Certificates',
       component: <>
         <ExperienceSection title="Education" experiences={education} />
         <Publications publications={publications} />
@@ -49,7 +49,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
       component: <ExperienceSection title="Volunteering" experiences={volunteer} />,
     },
     {
-      label: 'Skills',
+      label: 'Skills & Interests',
       component: <>
         <Languages languages={languages} /><Skills skills={skills} />
         <Interests interests={interests} />
