@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 
-const Languages = ({ languages }) => {
+const Languages = ({ languages, sizeOverride = null }) => {
   if (!languages || languages.length === 0) return null;
 
   return (
@@ -12,7 +12,7 @@ const Languages = ({ languages }) => {
       </Typography>
       <Grid container spacing={2}>
         {languages.map((language, index) => (
-          <Grid size={{ xs: 12, lg: 4 }} key={index}>
+          <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 4 }} key={index}>
             <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <CardContent>
                 <Typography variant="h6" component="h3">

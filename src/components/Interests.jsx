@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import TextIcon from './common/TextIcon.jsx';
 
-const Interests = ({ interests }) => {
+const Interests = ({ interests, sizeOverride = null }) => {
   if (!interests || interests.length === 0) return null;
 
   return (
@@ -13,7 +13,7 @@ const Interests = ({ interests }) => {
       </Typography>
       <Grid container spacing={2}>
         {interests.map((interest, index) => (
-          <Grid size={{ xs: 12, lg: 6 }} key={index}>
+          <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
             <Card variant="outlined" sx={{ mb: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
               <CardContent>
                 <Stack direction="row" spacing={1} alignItems="center">

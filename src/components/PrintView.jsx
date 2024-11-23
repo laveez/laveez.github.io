@@ -30,9 +30,9 @@ const PrintView = ({ resumeData }) => {
       </Grid>
       <Grid size={6} className="print-style">
         <ExperienceSection title="Work Experience" experiences={work} />
-        <Languages languages={languages} />
-        <Skills skills={skills} />
-        <Interests interests={interests} />
+        <Languages languages={languages} sizeOverride={4} />
+        <Skills skills={skills} overrideMarginBottom={0} />
+        <Interests interests={interests} sizeOverride={6} />
       </Grid>
       <Grid size={6} className="print-style">
         <ExperienceSection title="Education" experiences={education} />
@@ -40,7 +40,10 @@ const PrintView = ({ resumeData }) => {
         <Certificates certificates={certificates} />
         <ExperienceSection title="Volunteering" experiences={volunteer} />
       </Grid>
-      <Grid size={12} className="print-style print-style-last">
+      <Grid size={12} className="basics-print-style print-style-last">
+        <Basics basics={basics} />
+      </Grid>
+      <Grid size={12} className="print-style">
         <Projects projects={projects} />
       </Grid>
     </Grid>
