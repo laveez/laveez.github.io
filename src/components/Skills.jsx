@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import TextIcon from './common/TextIcon.jsx';
 
-const Skills = ({ skills, overrideMarginBottom = null }) => {
+const Skills = ({ skills, sizeOverride = null, overrideMarginBottom = null }) => {
   if (!skills || skills.length === 0) return null;
 
   return (
@@ -13,7 +13,7 @@ const Skills = ({ skills, overrideMarginBottom = null }) => {
       </Typography>
       <Grid container spacing={2}>
         {skills.map((skill, index) => (
-          <Grid size={{ xs: 12, lg: 6 }} key={index}>
+          <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
             <Card
               variant="outlined"
               sx={{ mb: overrideMarginBottom || 2, display: 'flex', flexDirection: 'column', height: '100%' }}

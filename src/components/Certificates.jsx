@@ -3,7 +3,7 @@ import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/materi
 import Grid from '@mui/material/Grid2';
 import FormattedDate from './common/FormattedDate.jsx';
 
-const Certificates = ({ certificates }) => {
+const Certificates = ({ certificates, sizeOverride }) => {
   return (
     <Box component="section" sx={{ p: 2 }}>
       <Typography variant="h4" component="h2" gutterBottom>
@@ -12,7 +12,7 @@ const Certificates = ({ certificates }) => {
 
       <Grid container spacing={2}>
         {certificates.map((certificate, index) => (
-          <Grid size={{ xs: 12, lg: 6 }} key={index}>
+          <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
             <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
               <CardMedia
                 component="img"

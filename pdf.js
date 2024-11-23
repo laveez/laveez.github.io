@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
   await page.goto('http://localhost:5173/print', { waitUntil: 'networkidle0' });
 
   const pdfPath = path.join(__dirname, 'dist', 'niko-muukkonen-laveez-resume.pdf');
-  await page.pdf({ path: pdfPath, format: 'A4', scale: 0.4 });
+  await page.pdf({ path: pdfPath, format: 'A4', scale: 0.45 });
 
   await browser.close();
   console.log(`PDF saved to ${pdfPath}`);
