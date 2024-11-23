@@ -37,17 +37,21 @@ const ExperienceSection = ({ title, experiences }) => {
                 >
                   {experience.name || experience.organization || experience.institution}
                 </Link>
-                <Typography variant="body2" color="textSecondary">
-                  {!experience.institution ? <>
-                    <FormattedDateRange startDate={experience.startDate} endDate={experience.endDate}/>
-                    {' '}
-                    <Duration startDate={experience.startDate} endDate={experience.endDate}/>
-                  </> : <FormattedDateRange
-                    startDate={experience.startDate}
-                    endDate={experience.endDate}
-                    format={DATE_FORMAT.YEAR}
-                  />}
-                </Typography>
+                {experience.dateStringOverride ?
+                  <Typography variant="body2" color="textSecondary">
+                    {experience.dateStringOverride}
+                  </Typography> :
+                  <Typography variant="body2" color="textSecondary">
+                    {!experience.institution ? <>
+                      <FormattedDateRange startDate={experience.startDate} endDate={experience.endDate}/>
+                      {' '}
+                      <Duration startDate={experience.startDate} endDate={experience.endDate}/>
+                    </> : <FormattedDateRange
+                      startDate={experience.startDate}
+                      endDate={experience.endDate}
+                      format={DATE_FORMAT.YEAR}
+                    />}
+                  </Typography>}
                 <Typography variant="body1">
                   {experience.summary}
                 </Typography>

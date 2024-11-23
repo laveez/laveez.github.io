@@ -33,7 +33,6 @@ const PrintView = ({ resumeData }) => {
         <Publications publications={publications} />
         <Certificates certificates={certificates} sizeOverride={6} />
         <Languages languages={languages} sizeOverride={4} />
-        <Interests interests={interests} sizeOverride={6} />
       </Grid>
       <Grid size={6} className="print-style">
         <ExperienceSection title="Education" experiences={education} />
@@ -44,6 +43,7 @@ const PrintView = ({ resumeData }) => {
       </Grid>
       <Grid size={12} className="print-style">
         <Skills skills={skills} sizeOverride={6} overrideMarginBottom={0} />
+        <Interests interests={interests} sizeOverride={6} />
         <Projects projects={projects} />
       </Grid>
     </Grid>

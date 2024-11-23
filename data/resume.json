@@ -65,6 +65,18 @@
       "logoUrl": "/assets/pinja-logo.png"
     },
     {
+      "name": "University of Jyväskylä",
+      "position": "Exhibition Presenter at Assembly Summer",
+      "startDate": "2018-05-01",
+      "endDate": "2018-07-31",
+      "highlights": [],
+      "summary": "Represented the University of Jyväskylä and promoted its study programs to potential students at the Assembly Summer event, the largest computer festival in Finland.",
+      "url": "https://www.jyu.fi/",
+      "location": "Jyväskylä, Finland",
+      "logoUrl": "/assets/jyu-logo.png",
+      "dateStringOverride": "08/2018, 08/2019"
+    },
+    {
       "name": "Storm Motor Oy",
       "position": "Salesperson",
       "startDate": "2018-05-01",
@@ -78,24 +90,14 @@
     {
       "name": "Savonlinna Works Oy, ANDRITZ Group",
       "position": "Trainee",
-      "startDate": "2016-06-01",
-      "endDate": "2016-06-30",
+      "startDate": "",
+      "endDate": "",
       "highlights": [],
-      "summary": "Analysis of features and properties of the document management and storage system SharePoint\nand the security risks of internal communications and the field of suppliers.",
+      "summary": "Analysis of features and properties of the document management and storage system SharePoint\nand the security risks of internal communications and the field of suppliers. Computer and software installations, archiving & factory environment maintenance.",
       "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
       "location": "Savonlinna, Finland",
-      "logoUrl": "/assets/andritz-logo.png"
-    },
-    {
-      "name": "Savonlinna Works Oy, ANDRITZ Group",
-      "position": "Trainee",
-      "startDate": "2015-07-01",
-      "endDate": "2015-07-31",
-      "highlights": [],
-      "summary": "Computer and software installations, archiving & factory environment maintenance.",
-      "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
-      "location": "Savonlinna, Finland",
-      "logoUrl": "/assets/andritz-logo.png"
+      "logoUrl": "/assets/andritz-logo.png",
+      "dateStringOverride": "06/2016 - 06/2016, 07/2015 - 07/2015 (2 months)"
     }
   ],
   "volunteer": [
