@@ -1,5 +1,4 @@
-import { useRef, useState } from 'react';
-import { useReactToPrint } from 'react-to-print';
+import { useState } from 'react';
 import DownloadIcon from '@mui/icons-material/Download';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PrintIcon from '@mui/icons-material/Print';
@@ -12,8 +11,6 @@ import PrintView from './PrintView.jsx';
 const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ anchorEl, setAnchorEl ] = useState(null);
   const open = Boolean(anchorEl);
-  const contentRef = useRef(null);
-  const reactToPrintFn = useReactToPrint({ contentRef });
 
   const handleMenuClick = event => {
     setAnchorEl(event.currentTarget);
@@ -34,7 +31,7 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   };
 
   const handlePrint = () => {
-    reactToPrintFn();
+    window.open('/niko-muukkonen-laveez-resume.pdf', '_blank').print();
     handleMenuClose();
   };
 
@@ -86,7 +83,7 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
         onClick={handleMenuClose}
       />
       <div style={{ display: 'none' }}>
-        <PrintView innerRef={contentRef} resumeData={resumeData}/>
+        <PrintView resumeData={resumeData}/>
       </div>
     </Stack>
   );

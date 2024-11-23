@@ -9,7 +9,7 @@ import Projects from './Projects.jsx';
 import Publications from './Publications.jsx';
 import Skills from './Skills.jsx';
 
-const PrintView = ({ resumeData, innerRef }) => {
+const PrintView = ({ resumeData }) => {
   const {
     basics,
     work,
@@ -24,7 +24,7 @@ const PrintView = ({ resumeData, innerRef }) => {
   } = resumeData;
 
   return (
-    <Grid ref={innerRef} container rowSpacing={0} columnSpacing={5} className="print-container">
+    <Grid container rowSpacing={0} columnSpacing={5} className="print-container">
       <Grid size={12} className="basics-print-style">
         <Basics basics={basics} />
       </Grid>
