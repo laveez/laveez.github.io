@@ -14,7 +14,16 @@ const Interests = ({ interests, sizeOverride = null }) => {
       <Grid container spacing={2}>
         {interests.map((interest, index) => (
           <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
-            <Card variant="outlined" sx={{ mb: 2, display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <Card
+              variant="outlined"
+              sx={{
+                mb: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                borderRadius: 2,
+              }}
+            >
               <CardContent>
                 <Stack direction="row" spacing={1} alignItems="center">
                   <TextIcon name={interest.icon} />

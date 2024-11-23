@@ -13,7 +13,15 @@ const Languages = ({ languages, sizeOverride = null }) => {
       <Grid container spacing={2}>
         {languages.map((language, index) => (
           <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 4 }} key={index}>
-            <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <Card
+              variant="outlined"
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                borderRadius: 2,
+              }}
+            >
               <CardContent>
                 <Typography variant="h6" component="h3">
                   {language.language}

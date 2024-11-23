@@ -18,7 +18,7 @@ const ExperienceSection = ({ title, experiences }) => {
           <ResponsiveCard>
             <CardMedia
               component="img"
-              sx={{ width: 120, height: 120, p: 2 }}
+              sx={{ width: 120, height: 120, p: 2, borderRadius: 6 }}
               image={experience.logoUrl}
               alt={`${experience.name || experience.organization || experience.institution} logo`}
             />

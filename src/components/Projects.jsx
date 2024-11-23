@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Box, Card, CardContent, Link, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
 import Duration from './common/Duration.jsx';
 import FormattedDateRange from './common/FormattedDateRange.jsx';
 import TextIcon from './common/TextIcon.jsx';
@@ -25,15 +14,7 @@ const Projects = ({ projects }) => {
       </Typography>
       {projects.map((project, index) => (
         <Box key={index} className="project" sx={{ mb: 2 }}>
-          <Card variant="outlined" sx={{ display: 'flex', width: '100%' }}>
-            {project.logoUrl && (
-              <CardMedia
-                component="img"
-                sx={{ width: 120, height: 120, p: 2 }}
-                image={project.logoUrl}
-                alt={`${project.name} logo`}
-              />
-            )}
+          <Card variant="outlined" sx={{ display: 'flex', width: '100%', borderRadius: 2 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent>
                 <Stack direction="row" spacing={1} alignItems="center">

@@ -13,7 +13,15 @@ const Certificates = ({ certificates, sizeOverride }) => {
       <Grid container spacing={2}>
         {certificates.map((certificate, index) => (
           <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
-            <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
+            <Card
+              variant="outlined"
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                height: '100%',
+                borderRadius: 2,
+              }}
+            >
               <CardMedia
                 component="img"
                 sx={{ height: 120, width: 120, p: 2 }}

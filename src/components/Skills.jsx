@@ -16,7 +16,13 @@ const Skills = ({ skills, sizeOverride = null, overrideMarginBottom = null }) =>
           <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
             <Card
               variant="outlined"
-              sx={{ mb: overrideMarginBottom || 2, display: 'flex', flexDirection: 'column', height: '100%' }}
+              sx={{
+                mb: overrideMarginBottom || 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                borderRadius: 2,
+              }}
             >
               <CardContent>
                 <Stack direction="row" spacing={1} alignItems="center">

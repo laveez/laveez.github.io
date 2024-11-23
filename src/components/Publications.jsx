@@ -16,7 +16,7 @@ const Publications = ({ publications }) => {
           <ResponsiveCard>
             <CardMedia
               component="img"
-              sx={{ width: 120, height: 120, p: 2 }}
+              sx={{ width: 120, height: 120, p: 2, borderRadius: 6 }}
               image={publication.logoUrl}
               alt={`${publication.name} logo`}
             />
