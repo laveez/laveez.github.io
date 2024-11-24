@@ -10,7 +10,8 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "preview": "vite preview",
-    "pdf": "node pdf.js"
+    "pdf": "node pdf.js",
+    "pdf:cover": "URL=http://localhost:5173/print-cover node pdf.js"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.1.0",
