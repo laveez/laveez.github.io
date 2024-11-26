@@ -73,8 +73,10 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
     if (index >= 0) {
       setActiveTab(index);
       const menuBarHeight = document.querySelector('.sticky-menu-bar')?.offsetHeight || 0;
-      const scrollPosition = contentRef.current?.getBoundingClientRect().top + window.scrollY - menuBarHeight;
-      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      const scrollPosition = contentRef.current?.offsetTop - menuBarHeight;
+      setTimeout(() => {
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      }, 10);
     }
     setMenuAnchor(null);
   };
