@@ -61,7 +61,7 @@ const SataTehtavaa = () => {
         className="display-block-on-print"
         sx={{ textAlign: 'center', display: 'none', mt: 4 }}
       >
-        © 2024 Niko Muukkonen / Laveez
+        © {new Date().getFullYear()} Niko Muukkonen / Laveez
       </Typography>
       <Typography
         variant="body2"

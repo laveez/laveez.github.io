@@ -11,7 +11,7 @@ const Footer = ({ profiles }) => {
       sx={{ textAlign: 'center', p: 3, mt: 1, borderTop: `1px solid ${theme.palette.divider}` }}
     >
       <Typography variant="body2" color="textSecondary">
-        © 2024 Niko Muukkonen / Laveez
+        © {new Date().getFullYear()} Niko Muukkonen / Laveez
       </Typography>
       <Box sx={{ pt: 2, display: 'inline-block' }}>
         <ProfileLinks profiles={profiles} showHome={true} />
