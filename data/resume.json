@@ -50,26 +50,27 @@
   },
   "work": [
     {
-      "name": "Gofore Oyj",
-      "position": "Lead Developer",
-      "startDate": "2024-08-01",
+      "name": "Reaktor Innovations Oy",
+      "position": "Full Stack Developer",
+      "startDate": "2025-03-01",
       "endDate": "",
       "highlights": [],
-      "summary": "In addition to my previous role as a full stack developer, lead responsibility of development, used processes, technical details and specifications of the front end project for the same administrative web application. Provided consultation and support to other teams and team members, aiding them in the implementation and best practices of the front end side of the web application while making sure that the quality is maintained.",
-      "url": "https://gofore.com/",
+      "summary": "",
+      "url": "https://www.reaktor.com/",
       "location": "Helsinki, Finland",
-      "logoUrl": "/assets/gofore-logo.png"
+      "logoUrl": "/assets/reaktor-logo-colored.png"
     },
     {
       "name": "Gofore Oyj",
-      "position": "Software Developer",
+      "position": "Software Developer, Lead Developer",
       "startDate": "2021-11-01",
-      "endDate": "2024-08-31",
+      "endDate": "2025-02-28",
       "highlights": [],
-      "summary": "Full stack development of an administrative web application for a parking solution that handles the management of facilities, products, permits, pricing, sessions etc., employing a tech stack that included React (JavaScript), React Query, Ant Design, Java with Spring Boot, MongoDB, AWS, GitLab CI & Kubernetes. Additionally, contributed to the development of a publicly accessible mobile application using React Native & TypeScript.",
+      "summary": "Full stack development of an administrative web application for a parking solution that handles the management of facilities, products, permits, pricing, sessions etc., employing a tech stack that included React (JavaScript), React Query, Ant Design, Java with Spring Boot, MongoDB, AWS, GitLab CI & Kubernetes. Additionally, contributed to the development of a publicly accessible mobile application using React Native & TypeScript. Later I got the lead responsibility of development, used processes, technical details and specifications of the front end project for the same administrative web application. Provided consultation and support to other teams and team members, aiding them in the implementation and best practices of the front end side of the web application while making sure that the quality is maintained.",
       "url": "https://gofore.com/",
       "location": "Helsinki, Finland",
-      "logoUrl": "/assets/gofore-logo.png"
+      "logoUrl": "/assets/gofore-logo.png",
+      "dateStringOverride": "11/2021 - 08/2024, 08/2024 - 02/2025 (3 years, 4 months)"
     },
     {
       "name": "Pinja Digital Oy",
@@ -122,12 +123,13 @@
     {
       "organization": "Disobey - The Nordic security event",
       "position": "Volunteer",
-      "startDate": "2025-01-01",
+      "startDate": "2025-02-01",
       "endDate": "2025-02-28",
-      "summary": "I will be volunteering at the Disobey event in 2025. See you there!",
+      "summary": "I volunteered at the Disobey event in 2025. I was responsible for e.g. providing other volunteers with supplies during the event and participated in the destruction of the event after it ended.",
       "highlights": [],
       "url": "https://disobey.fi/2025/",
-      "logoUrl": "/assets/disobey-logo.png"
+      "logoUrl": "/assets/disobey-logo.png",
+      "dateStringOverride": "02/2025 (1 month)"
     },
     {
       "organization": "Linkki Jyväskylä ry",
@@ -471,7 +473,7 @@
         "Vite"
       ],
       "startDate": "2021-11-01",
-      "endDate": "",
+      "endDate": "2025-02-28",
       "urls": [ ],
       "roles": [
         "Lead Developer",
@@ -498,8 +500,6 @@
       "urls": [
         "https://event.linkkijkl.fi/",
         "https://github.com/Linkkijkl/linkkijkl-event-screen",
-        "https://github.com/Linkkijkl/linkkijkl-event-screen-api",
-        "https://laveez.github.io/linkkijkl-event-screen/",
         "https://github.com/laveez/linkkijkl-event-screen",
         "https://github.com/laveez/linkkijkl-event-screen-api"
       ],
@@ -560,7 +560,7 @@
     },
     {
       "name": "Home server, mail camera",
-      "description": "Installation of a web server at home on an old computer with configurations to implement a public website (with restricted access). In this context, the server acted as a webcam for the mailbox of your home, which, upon detecting movement, took a picture of the incoming mail and sent a notification to a mobile phone. Being away from home for the summer, this allowed to check to see if any important mail had arrived at the door that would require visiting home. Training in the design and implementation of web pages, and later the implementation of other features, including automatic data retrieval (internet usage, quota) from the intranet side, so that it could also be seen from a mobile phone, away from home. Later, when the computer was retired, the transfer of these features to the RaspberryPi, which also included configurations for the home \"information display\", which showed news, weather and time.",
+      "description": "Home web server setup on an old computer to host a restricted-access public website. The server functioned as a mailbox webcam, detecting motion, capturing incoming mail, and notifying a mobile phone—useful for checking important mail while away for the summer. Also developed web pages and features like automatic data retrieval (internet usage, quota) for remote access. Later, migrated these functions to a Raspberry Pi, adding a home \"information display\" with news, weather, and time.",
       "highlights": [ ],
       "keywords": [
         "HTML",
