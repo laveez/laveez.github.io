@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
-import { deepOrange, orange } from '@mui/material/colors';
 import resumeData from '../data/resume.json';
 import { PRINT_TYPE } from './components/common/enums.js';
 import Footer from './components/common/Footer.jsx';
@@ -18,7 +17,7 @@ const App = () => {
   const theme = createTheme({
     palette: {
       mode: darkTheme ? 'dark' : 'light',
-      primary: darkTheme ? orange : deepOrange,
+      primary: darkTheme ? { main: '#E7FE4D' } : { main: '#9BB201' },
     },
     typography: {
       fontFamily: 'Montserrat, open-sans, sans-serif',

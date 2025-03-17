@@ -4,6 +4,7 @@ import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import FactoryIcon from '@mui/icons-material/Factory';
+import FlightIcon from '@mui/icons-material/Flight';
 import LinkedCameraIcon from '@mui/icons-material/LinkedCamera';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import SpeakerIcon from '@mui/icons-material/Speaker';
@@ -14,16 +15,17 @@ import WineBarIcon from '@mui/icons-material/WineBar';
 
 const TEXT_TO_ICON_MAP = {
   'CLOUD': <CloudIcon />,
-  'COMPUTER': <ComputerIcon />,
-  'TV': <ConnectedTvIcon />,
-  'CONTACT_PAGE': <ContactPageIcon />,
   'DIVERSITY': <Diversity1Icon />,
-  'FACTORY': <FactoryIcon />,
   'CAMERA': <LinkedCameraIcon />,
+  'COMPUTER': <ComputerIcon />,
+  'CONTACT_PAGE': <ContactPageIcon />,
+  'FACTORY': <FactoryIcon />,
+  'FLIGHT': <FlightIcon />,
   'PARKING': <LocalParkingIcon />,
   'SPEAKER': <SpeakerIcon />,
   'SUBWAY': <SubwayIcon />,
   'TERMINAL': <TerminalIcon />,
+  'TV': <ConnectedTvIcon />,
   'WEB': <WebIcon />,
   'WINE_BAR': <WineBarIcon />,
 };

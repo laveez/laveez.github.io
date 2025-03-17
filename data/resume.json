@@ -55,7 +55,7 @@
       "startDate": "2025-03-01",
       "endDate": "",
       "highlights": [],
-      "summary": "",
+      "summary": "Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Utilized multiple techonolgies, e.g. Android, Kotlin, XML, python, TypeScript and React to implement and test the IFE on resource-constrained hardware running legacy Android versions. Management of a shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
       "url": "https://www.reaktor.com/",
       "location": "Helsinki, Finland",
       "logoUrl": "/assets/reaktor-logo-colored.png"
@@ -424,6 +424,26 @@
     }
   ],
   "projects": [
+    {
+      "name": "In-Flight Entertainment (IFE) system",
+      "description": "In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Resource-constrained hardware running legacy Android versions. Shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
+      "highlights": [],
+      "keywords": [
+        "Android",
+        "Kotlin",
+        "XML",
+        "Python",
+        "TypeScript",
+        "React"
+      ],
+      "startDate": "2025-03-01",
+      "endDate": "",
+      "urls": [],
+      "roles": [ "Developer" ],
+      "entity": "",
+      "type": "IFE system",
+      "icon": "FLIGHT"
+    },
     {
       "name": "React resume",
       "description": "You are looking at it! A React application that takes a (modified schema) JSON resume and displays it in a visually appealing way. The application also creates a downloadable PDF version of the resume on the GitHub pages deployment pipelines. The application is responsive and works on all devices wíth a custom mobile layout.",

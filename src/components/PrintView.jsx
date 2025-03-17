@@ -59,7 +59,6 @@ const PrintView = ({ resumeData, type = PRINT_TYPE.RESUME }) => {
         <ExperienceSection title="Work Experience" experiences={work} />
         <Publications publications={publications} />
         <Certificates certificates={certificates} sizeOverride={6} />
-        <Languages languages={languages} sizeOverride={4} />
       </Grid>
       <Grid size={6} className="print-style">
         <ExperienceSection title="Education" experiences={education} />
@@ -73,9 +72,10 @@ const PrintView = ({ resumeData, type = PRINT_TYPE.RESUME }) => {
         />
       </Grid>
       <Grid size={12} className="print-style">
+        <Languages languages={languages} sizeOverride={4} />
         <Skills skills={skills} sizeOverride={6} overrideMarginBottom={0} />
         <Interests interests={interests} sizeOverride={6} />
-        <Projects projects={projects} />
+        <Projects projects={projects} dualColumns={true} />
       </Grid>
     </Grid>
   );
