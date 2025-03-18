@@ -445,7 +445,7 @@
     },
     {
       "name": "React resume",
-      "description": "You are looking at it! A React application that takes a (modified schema) JSON resume and displays it in a visually appealing way. The application also creates a downloadable PDF version of the resume on the GitHub pages deployment pipelines. The application is responsive and works on all devices wíth a custom mobile layout.",
+      "description": "You are looking at it! A React application that takes a (modified schema) JSON resume and displays it in a visually appealing way. The application also creates a downloadable PDF version of the resume on the GitHub pages deployment pipelines. The application is responsive and works on all devices with a custom mobile layout.",
       "highlights": [ ],
       "keywords": [
         "React",
