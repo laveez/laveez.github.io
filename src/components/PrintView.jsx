@@ -1,5 +1,4 @@
-import { Typography } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Grid, Typography } from '@mui/material';
 import { PRINT_TYPE } from './common/enums.js';
 import ExperienceSection from './common/ExperienceSection.jsx';
 import Basics from './Basics.jsx';

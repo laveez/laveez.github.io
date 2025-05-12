@@ -1,5 +1,4 @@
-import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Box, Card, CardContent, Grid, Stack, Typography } from '@mui/material';
 import TextIcon from './common/TextIcon.jsx';
 
 const Skills = ({ skills, sizeOverride = null, overrideMarginBottom = null }) => {

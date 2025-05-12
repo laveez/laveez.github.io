@@ -1,5 +1,4 @@
-import { Box, Card, CardContent, Link, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Box, Card, CardContent, Grid, Link, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
 import Duration from './common/Duration.jsx';
 import FormattedDateRange from './common/FormattedDateRange.jsx';
 import TextIcon from './common/TextIcon.jsx';

@@ -1,5 +1,4 @@
-import { Box, Card, CardContent, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
 
 const Languages = ({ languages, sizeOverride = null }) => {
   if (!languages || languages.length === 0) return null;

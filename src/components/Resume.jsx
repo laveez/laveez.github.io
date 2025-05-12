@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Backdrop, Box, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Backdrop, Box, Grid, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
 import ExperienceSection from './common/ExperienceSection.jsx';
 import Basics from './Basics.jsx';
 import Certificates from './Certificates.jsx';

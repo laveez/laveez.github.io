@@ -1,5 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Link, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Box, Card, CardContent, CardMedia, Grid, Link, Typography } from '@mui/material';
 import FormattedDate from './common/FormattedDate.jsx';
 
 const Certificates = ({ certificates, sizeOverride }) => {
