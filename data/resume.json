@@ -212,12 +212,12 @@
   ],
   "certificates": [
     {
-      "name": "ITIL® 4 Foundation",
-      "issuer": "Axelos",
-      "issueDate": "2020-03-01",
-      "category": "IT Service Management",
-      "url": "https://www.axelos.com/",
-      "logoUrl": "/assets/itil-logo.png"
+      "name": "Certified Scrum Master®",
+      "issuer": "Scrum Alliance",
+      "issueDate": "2025-05-01",
+      "category": "Scrum & Agile",
+      "url": "https://bcert.me/sjgtjtvgp",
+      "logoUrl": "/assets/csm-logo.png"
     },
     {
       "name": "PRINCE2® Foundation",
@@ -226,6 +226,14 @@
       "category": "Project Management",
       "url": "https://www.axelos.com/",
       "logoUrl": "/assets/prince-logo.png"
+    },
+    {
+      "name": "ITIL® 4 Foundation",
+      "issuer": "Axelos",
+      "issueDate": "2020-03-01",
+      "category": "IT Service Management",
+      "url": "https://www.axelos.com/",
+      "logoUrl": "/assets/itil-logo.png"
     }
   ],
   "publications": [
