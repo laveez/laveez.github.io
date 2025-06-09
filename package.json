@@ -14,7 +14,7 @@
     "pdf:cover": "URL=http://localhost:5173/print-cover node pdf.js"
   },
   "dependencies": {
-    "@fontsource/montserrat": "^5.2.5",
+    "@fontsource/montserrat": "^5.2.6",
     "@fontsource/open-sans": "^5.2.5",
     "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.1.1",
