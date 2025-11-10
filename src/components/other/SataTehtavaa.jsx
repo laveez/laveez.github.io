@@ -1,16 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Box, Checkbox, FormControlLabel, Grid, TextField, Typography } from '@mui/material';
 import tasksData from '../../../data/100-tehtavaa.json';
 import HomeButton from '../common/HomeButton.jsx';
 
 const SataTehtavaa = () => {
   const [ checkedTasks, setCheckedTasks ] = useState({});
-  const [ checkedCount, setCheckedCount ] = useState(0);
 
-  useEffect(() => {
-    const count = Object.values(checkedTasks).filter(Boolean).length;
-    setCheckedCount(count);
-  }, [ checkedTasks ]);
+  const checkedCount = Object.values(checkedTasks).filter(Boolean).length;
 
   const handleCheckboxClick = index => {
     setCheckedTasks(prev => ({
