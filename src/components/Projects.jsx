@@ -6,7 +6,19 @@ import TextIcon from './common/TextIcon.jsx';
 const ProjectCard = ({ project }) => {
   return (
     <Box className="project" sx={{ mb: 2 }}>
-      <Card variant="outlined" sx={{ display: 'flex', width: '100%', borderRadius: 2 }}>
+      <Card
+        variant="outlined"
+        sx={{
+          'display': 'flex',
+          'width': '100%',
+          'borderRadius': 2,
+          'transition': 'transform 0.2s ease, box-shadow 0.2s ease',
+          '&:hover': {
+            transform: 'translateY(-4px)',
+            boxShadow: 8,
+          },
+        }}
+      >
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent>
             <Stack direction="row" spacing={1} alignItems="center">
