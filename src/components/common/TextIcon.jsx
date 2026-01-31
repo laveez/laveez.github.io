@@ -1,3 +1,4 @@
+import BugReportIcon from '@mui/icons-material/BugReport';
 import CloudIcon from '@mui/icons-material/Cloud';
 import ComputerIcon from '@mui/icons-material/Computer';
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
@@ -14,6 +15,7 @@ import WebIcon from '@mui/icons-material/Web';
 import WineBarIcon from '@mui/icons-material/WineBar';
 
 const TEXT_TO_ICON_MAP = {
+  'BUG_REPORT': <BugReportIcon />,
   'CLOUD': <CloudIcon />,
   'DIVERSITY': <Diversity1Icon />,
   'CAMERA': <LinkedCameraIcon />,

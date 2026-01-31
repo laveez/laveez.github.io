@@ -122,14 +122,14 @@
   "volunteer": [
     {
       "organization": "Disobey - The Nordic security event",
-      "position": "Volunteer",
+      "position": "Volunteer, Web Developer",
       "startDate": "2025-02-01",
-      "endDate": "2025-02-28",
-      "summary": "I volunteered at the Disobey event in 2025. I was responsible for e.g. providing other volunteers with supplies during the event and participated in the destruction of the event after it ended.",
+      "endDate": "",
+      "summary": "I volunteered at the Disobey 2025 event at Kaapelitehdas, Helsinki, providing other volunteers with supplies during the event and participating in the teardown afterwards. Following the event, I joined the organizers of Disobey 2026 as a web developer, contributing to the open-source development and ongoing maintenance of disobey.fi. The website features speaker profiles, workshop and program schedules, CTF competition information, ticket sales, and community resources for one of the largest hacker conferences in the Nordics.",
       "highlights": [],
-      "url": "https://disobey.fi/2025/",
+      "url": "https://disobey.fi/",
       "logoUrl": "/assets/disobey-logo.png",
-      "dateStringOverride": "02/2025 (1 month)"
+      "dateStringOverride": "02/2025 - present"
     },
     {
       "organization": "Linkki Jyväskylä ry",
@@ -302,7 +302,7 @@
       ]
     },
     {
-      "name": "Cloud, Infra & DevOps",
+      "name": "DevOps & Infrastructure",
       "level": "",
       "icon": "CLOUD",
       "keywords": [
@@ -312,33 +312,38 @@
         "Docker",
         "Compose",
         "GitLab CI",
+        "Jenkins",
+        "GitHub Actions",
+        "Continuous Integration",
+        "Continuous Delivery/Deployment",
         "Static Code Analysis",
         "SonarQube",
         "SonarCloud",
-        "Continuous Integration",
-        "Continuous Delivery/Deployment",
-        "Jenkins",
         "Apache HTTP Server",
-        "Nginx"
+        "Nginx",
+        "Ubuntu Server"
       ]
     },
     {
-      "name": "Software & Hardware",
+      "name": "Tools & Platforms",
       "level": "",
       "icon": "COMPUTER",
       "keywords": [
         "Linux (Ubuntu, Arch, Debian, Kali)",
-        "Ubuntu Server",
         "MacOS",
         "Windows",
         "Shell scripting (Bash, Zsh)",
-        "Git (GitHub, GitLab, GitFlow, GitHub Actions)",
+        "Git (GitHub, GitLab, GitFlow)",
         "IntelliJ (IDEA, Webstorm, Rider, PhpStorm, DataGrip)",
         "Visual Studio Code",
+        "Claude Code",
+        "GitHub Copilot",
+        "ChatGPT",
+        "Agentic AI",
+        "Postman",
+        "SQL Server Management Studio",
         "Raspberry Pi",
         "IoT",
-        "SQL Server Management Studio",
-        "Postman",
         "Gimp",
         "Adobe Photoshop"
       ]
@@ -450,6 +455,22 @@
       "entity": "",
       "type": "IFE system",
       "icon": "FLIGHT"
+    },
+    {
+      "name": "Disobey.fi Website",
+      "description": "Open-source website for Disobey, one of the largest hacker and cybersecurity conferences in the Nordics, held annually at Kaapelitehdas in Helsinki. The site features speaker profiles, workshop schedules, CTF competition information, and ticket sales. Contributions include development environment setup, PHP refactoring, responsive UI/UX improvements, and styling updates.",
+      "highlights": [],
+      "keywords": ["PHP", "HTML", "JavaScript", "CSS", "SCSS", "Open Source"],
+      "startDate": "2025-03-01",
+      "endDate": "",
+      "urls": [
+        "https://disobey.fi/",
+        "https://github.com/disobeyfi/public-www"
+      ],
+      "roles": ["Developer", "Maintainer"],
+      "entity": "",
+      "type": "website",
+      "icon": "BUG_REPORT"
     },
     {
       "name": "React resume",
