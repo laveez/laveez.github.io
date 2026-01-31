@@ -1,3 +1,4 @@
+import fs from 'node:fs/promises';
 import path, { dirname } from 'path';
 import puppeteer from 'puppeteer';
 import { fileURLToPath } from 'url';
@@ -13,7 +14,10 @@ const url = process.env.URL || 'http://localhost:5173/print';
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle0' });
 
-  const pdfPath = path.join(__dirname, 'dist', 'niko-muukkonen-laveez-resume.pdf');
+  const distDir = path.join(__dirname, 'dist');
+  await fs.mkdir(distDir, { recursive: true });
+
+  const pdfPath = path.join(distDir, 'niko-muukkonen-laveez-resume.pdf');
   await page.pdf({ path: pdfPath, format: 'A4', scale: 0.45 });
 
   await browser.close();

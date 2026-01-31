@@ -52,8 +52,8 @@ const main = async () => {
   // 2) ncu -u
   await run('npx', ['--yes', 'npm-check-updates', '-u']);
 
-  // 3) npm ci
-  await run('npm', ['ci']);
+  // 3) npm install
+  await run('npm', ['install']);
 
   // 4) npm run dev (background)
   const dev = spawn('npm', ['run', 'dev'], {
