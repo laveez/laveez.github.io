@@ -95,7 +95,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
             mt: isLargeScreen ? 0 : 10,
           }}
         >
-          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
+          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 10 }}>
             <Basics basics={basics} />
           </Paper>
         </Box>
@@ -166,7 +166,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
               </Box>
             </>
           )}
-          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 5 }}>
+          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 6 }}>
             {sections[activeTab].component}
           </Paper>
         </Box>
