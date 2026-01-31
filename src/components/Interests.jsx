@@ -15,11 +15,16 @@ const Interests = ({ interests, sizeOverride = null }) => {
             <Card
               variant="outlined"
               sx={{
-                mb: 2,
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%',
-                borderRadius: 2,
+                'mb': 2,
+                'display': 'flex',
+                'flexDirection': 'column',
+                'height': '100%',
+                'borderRadius': 2,
+                'transition': 'transform 0.2s ease, box-shadow 0.2s ease',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  boxShadow: 8,
+                },
               }}
             >
               <CardContent>

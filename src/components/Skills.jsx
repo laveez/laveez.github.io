@@ -15,11 +15,16 @@ const Skills = ({ skills, sizeOverride = null, overrideMarginBottom = null }) =>
             <Card
               variant="outlined"
               sx={{
-                mb: overrideMarginBottom || 2,
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%',
-                borderRadius: 2,
+                'mb': overrideMarginBottom || 2,
+                'display': 'flex',
+                'flexDirection': 'column',
+                'height': '100%',
+                'borderRadius': 2,
+                'transition': 'transform 0.2s ease, box-shadow 0.2s ease',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  boxShadow: 8,
+                },
               }}
             >
               <CardContent>
