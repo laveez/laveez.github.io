@@ -276,7 +276,9 @@
         "UI Testing",
         "E2E Testing",
         "Playwright",
-        "Vitest"
+        "Vitest",
+        "Framer Motion",
+        "Puppeteer"
       ]
     },
     {
@@ -321,7 +323,8 @@
         "SonarCloud",
         "Apache HTTP Server",
         "Nginx",
-        "Ubuntu Server"
+        "Ubuntu Server",
+        "GitHub Pages"
       ]
     },
     {
@@ -371,7 +374,8 @@
         "Customer Service",
         "Power Plants",
         "Waste Management",
-        "Parking Solutions"
+        "Parking Solutions",
+        "Open Source"
       ]
     },
     {
@@ -437,6 +441,70 @@
     }
   ],
   "projects": [
+    {
+      "name": "Ammus",
+      "description": "Ammunition price comparison tool for Finnish online retailers. Scrapes prices from 25 stores across 5 calibers using Playwright, detects non-toxic ammunition, and displays results in a filterable, sortable table. Prices are updated automatically via GitHub Actions.",
+      "highlights": [],
+      "keywords": ["React", "TypeScript", "Vite", "Playwright", "GitHub Actions", "GitHub Pages"],
+      "startDate": "2026-02-01",
+      "endDate": "",
+      "urls": [
+        "https://laveez.github.io/ammus/",
+        "https://github.com/laveez/ammus"
+      ],
+      "roles": ["Developer", "Designer"],
+      "entity": "",
+      "type": "Web application",
+      "icon": "GPS_FIXED"
+    },
+    {
+      "name": "Splitr",
+      "description": "Receipt splitting web app with a Tinder-like swipe interface. Upload a receipt image or PDF, extract items via client-side OCR (Tesseract.js) or PDF text extraction (pdfjs-dist), edit detected items, then swipe to categorize each item between two people. Optimized for Finnish K-Ruoka grocery receipts.",
+      "highlights": [],
+      "keywords": ["React", "TypeScript", "Vite", "Tailwind CSS", "Tesseract.js", "Playwright"],
+      "startDate": "2026-02-01",
+      "endDate": "",
+      "urls": [
+        "https://laveez.github.io/splitr/",
+        "https://github.com/laveez/splitr"
+      ],
+      "roles": ["Developer", "Designer"],
+      "entity": "",
+      "type": "Web application",
+      "icon": "CONTENT_CUT"
+    },
+    {
+      "name": "Claude Code Telegram Gate (cctg)",
+      "description": "Approve or deny Claude Code tool calls from your phone via Telegram. Hooks into Claude Code's permission system, sends tool call details to a Telegram bot, and waits for approval before proceeding. Published as an npm package.",
+      "highlights": [],
+      "keywords": ["TypeScript", "Node.js", "Telegram Bot API", "npm", "Claude Code"],
+      "startDate": "2026-02-01",
+      "endDate": "",
+      "urls": [
+        "https://www.npmjs.com/package/cctg",
+        "https://github.com/laveez/cctg"
+      ],
+      "roles": ["Developer"],
+      "entity": "",
+      "type": "CLI tool",
+      "icon": "SMART_TOY"
+    },
+    {
+      "name": "Claude Code Statusline (ccsl)",
+      "description": "A rich, information-dense statusline for Claude Code terminal sessions. Displays real-time session metrics, token usage, model info, and task status in a compact terminal bar. Published as an npm package.",
+      "highlights": [],
+      "keywords": ["TypeScript", "Node.js", "npm", "Claude Code", "Terminal UI"],
+      "startDate": "2026-02-01",
+      "endDate": "",
+      "urls": [
+        "https://www.npmjs.com/package/ccsl",
+        "https://github.com/laveez/ccsl"
+      ],
+      "roles": ["Developer"],
+      "entity": "",
+      "type": "CLI tool",
+      "icon": "TERMINAL"
+    },
     {
       "name": "In-Flight Entertainment (IFE) system",
       "description": "In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Resource-constrained hardware running legacy Android versions. Shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
