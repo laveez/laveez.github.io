@@ -1,9 +1,27 @@
 {
   "name": "laveez.github.io",
+  "version": "1.0.0",
+  "description": "Personal website and resume — laveez.github.io",
+  "author": "laveez",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.1",
   "type": "module",
   "homepage": "https://laveez.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laveez/laveez.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "resume",
+    "react",
+    "vite",
+    "mui",
+    "github-pages"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp dist/index.html dist/404.html",
@@ -19,6 +37,7 @@
     "@fontsource/open-sans": "^5.2.7",
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
+    "framer-motion": "^12.29.2",
     "puppeteer": "^24.36.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
