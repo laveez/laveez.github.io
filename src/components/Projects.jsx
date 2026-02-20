@@ -4,15 +4,16 @@ import Duration from './common/Duration.jsx';
 import FormattedDateRange from './common/FormattedDateRange.jsx';
 import TextIcon from './common/TextIcon.jsx';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, stretch = false }) => {
+  const full = stretch ? '100%' : undefined;
   return (
-    <AnimatedItem style={{ height: '100%' }}>
-      <Box className="project" sx={{ height: '100%' }}>
+    <AnimatedItem style={{ height: full }}>
+      <Box className="project" sx={{ height: full }}>
         <MotionCard
           sx={{
             display: 'flex',
             width: '100%',
-            height: '100%',
+            height: full,
           }}
         >
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -105,7 +106,7 @@ const Projects = ({ projects, dualColumns = false }) => {
           <Grid container spacing={2}>
             {projects.map((project, index) => (
               <Grid key={project.name || index} size={{ xs: 12, sm: 6 }}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} stretch />
               </Grid>
             ))}
           </Grid>
