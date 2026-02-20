@@ -1,6 +1,6 @@
 @media print {
 
-    @page { margin: 10mm 0 0; }
+    @page { margin: 5mm 0 0; }
 
     .print-container {
         margin: 0 5% 5%;

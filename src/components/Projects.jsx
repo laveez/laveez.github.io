@@ -100,10 +100,15 @@ const Projects = ({ projects, dualColumns = false }) => {
                 <ProjectCard key={project.name || index} project={project} />)}
             </Grid>
           </Grid>
-        ) :
-          projects.map((project, index) =>
-            <ProjectCard key={project.name || index} project={project} />)
-        }
+        ) : (
+          <Grid container spacing={2}>
+            {projects.map((project, index) => (
+              <Grid key={project.name || index} size={{ xs: 12, sm: 6 }}>
+                <ProjectCard project={project} />
+              </Grid>
+            ))}
+          </Grid>
+        )}
       </StaggerContainer>
     </AnimatedSection>
   );
