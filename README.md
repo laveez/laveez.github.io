@@ -1,70 +1,42 @@
 # laveez.github.io
 
-This is the source code for my personal website / resume.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/Node-20%2B-green.svg)](https://nodejs.org)
+[![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev)
+[![MUI](https://img.shields.io/badge/MUI-7-007FFF.svg)](https://mui.com)
 
-## Table of Contents
+Personal website and resume built with React and Material-UI.
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-
-## Introduction
-
-This project is a personal website that showcases my resume and portfolio. 
-It is built using React and Material-UI, and it includes various sections such as work experience, education, skills, projects, and more.
+**Live:** https://laveez.github.io
 
 ## Features
 
-- Responsive design
-- Dark and light theme toggle
-- Dynamic resume data
-- Print view for resume
-- Generation of a PDF resume in GitHub Actions
+- Responsive design with dark/light theme toggle
+- Dynamic resume data from JSON
+- Print view and automated PDF generation via Puppeteer
+- Deployed to GitHub Pages with CI/CD
 
-## Technologies Used
+## Tech Stack
 
-- JavaScript
-- React
-- Material-UI
-- Vite
+- React 19 + Vite
+- Material-UI v7
+- Framer Motion
+- Puppeteer (PDF generation)
 - ESLint
-- Puppeteer
-- See [package.json](./package.json) for more details
 
-## Installation
+## Development
 
-To get a local copy up and running, follow these steps:
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/laveez/laveez.github.io.git
-    ```
-   
-2. Navigate to the project directory:
-    ```sh
-    cd laveez.github.io
-    ```
-   
-3. Install the dependencies:
-    ```sh
-    npm install
-    ```
-
-## Usage
-
-To start the development server, run:
 ```sh
+npm install
 npm run dev
 ```
 
-To build the project for production, run:
+## Building
+
 ```sh
 npm run build
 ```
 
-To preview the production build, run:
-```sh
-npm run preview
-```
+## License
+
+MIT
