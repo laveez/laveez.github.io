@@ -1,42 +1,65 @@
+<div align="center">
+
 # laveez.github.io
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Node](https://img.shields.io/badge/Node-20%2B-green.svg)](https://nodejs.org)
-[![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev)
-[![MUI](https://img.shields.io/badge/MUI-7-007FFF.svg)](https://mui.com)
+**Personal website & resume**
 
-Personal website and resume built with React and Material-UI.
+React + Material-UI resume with animated sections, dark/light theme, and automated PDF generation.
 
-**Live:** https://laveez.github.io
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-brightgreen?style=flat-square)](https://nodejs.org)
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)](https://react.dev)
+[![MUI 7](https://img.shields.io/badge/MUI-7-007FFF?style=flat-square)](https://mui.com)
+
+</div>
+
+---
+
+### Contents
+
+[Features](#features) · [Quick Start](#quick-start) · [Scripts](#scripts) · [How It Works](#how-it-works)
+
+---
 
 ## Features
 
-- Responsive design with dark/light theme toggle
-- Dynamic resume data from JSON
-- Print view and automated PDF generation via Puppeteer
-- Deployed to GitHub Pages with CI/CD
+- **Responsive design** — dark/light theme toggle, custom mobile layout
+- **Animated sections** — Framer Motion entrance animations and hover effects
+- **Dynamic data** — resume content driven by a single JSON file
+- **PDF generation** — Puppeteer renders a print-optimized view to PDF
+- **CI/CD** — GitHub Actions lint, build, and deploy to GitHub Pages
 
-## Tech Stack
+## Quick Start
 
-- React 19 + Vite
-- Material-UI v7
-- Framer Motion
-- Puppeteer (PDF generation)
-- ESLint
-
-## Development
-
-```sh
+```bash
+git clone https://github.com/laveez/laveez.github.io.git
+cd laveez.github.io
 npm install
 npm run dev
 ```
 
-## Building
+Opens at [localhost:5173](http://localhost:5173).
 
-```sh
-npm run build
-```
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build (copies 404.html for SPA routing) |
+| `npm run lint` | Run ESLint |
+| `npm run lint:fix` | Run ESLint with auto-fix |
+| `npm run pdf` | Generate resume PDF via Puppeteer |
+| `npm run pdf:cover` | Generate cover-page PDF |
+| `npm run preview` | Preview production build |
+
+## How It Works
+
+Resume data lives in `data/resume.json` (modified JSON Resume schema). The React app reads this file and renders each section — basics, experience, skills, projects, etc. — as Material-UI components wrapped in Framer Motion animations.
+
+A dedicated print view strips animations and applies a clean layout. Puppeteer navigates to the print route, waits for render, and saves the output as a downloadable PDF. Print CSS overrides ensure correct rendering regardless of animation state.
+
+GitHub Actions deploys on push to main: lint, build, generate PDF, and publish to GitHub Pages.
 
 ## License
 
-MIT
+[MIT](LICENSE)
