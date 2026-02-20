@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Backdrop, Box, Grid, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
+import { hoverButton, menuItem, PageTransition, staggerContainerFast } from './animations/index.js';
 import ExperienceSection from './common/ExperienceSection.jsx';
 import Basics from './Basics.jsx';
 import Certificates from './Certificates.jsx';
@@ -10,6 +12,9 @@ import Projects from './Projects.jsx';
 import Publications from './Publications.jsx';
 import Skills from './Skills.jsx';
 import Tools from './Tools.jsx';
+
+const MotionIconButton = motion.create(IconButton);
+const MotionMenuItem = motion.create(MenuItem);
 
 const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ activeTab, setActiveTab ] = useState(0);
@@ -119,7 +124,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
               textColor="primary"
               indicatorColor="primary"
             >
-              {sections.map((section, index) =>
+              {sections.map(section =>
                 <Tab key={section.label} label={<Box sx={{ p: 2 }}>{section.label}</Box>} />)}
               <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
             </Tabs>
@@ -141,9 +146,15 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
                 }}
                 className="sticky-menu-bar"
               >
-                <IconButton onClick={handleMenuClick}>
+                <MotionIconButton
+                  onClick={handleMenuClick}
+                  variants={hoverButton}
+                  initial="rest"
+                  whileHover="hover"
+                  whileTap="tap"
+                >
                   <MenuIcon />
-                </IconButton>
+                </MotionIconButton>
                 <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
               </Box>
               <Box>
@@ -151,11 +162,24 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
                   anchorEl={menuAnchor}
                   open={Boolean(menuAnchor)}
                   onClose={() => handleMenuClose(-1)}
+                  slotProps={{
+                    paper: {
+                      component: motion.div,
+                      variants: staggerContainerFast,
+                      initial: 'hidden',
+                      animate: 'visible',
+                    },
+                  }}
                 >
                   {sections.map((section, index) => (
-                    <MenuItem key={section.label} onClick={() => handleMenuClose(index)}>
+                    <MotionMenuItem
+                      key={section.label}
+                      onClick={() => handleMenuClose(index)}
+                      variants={menuItem}
+                      whileHover={{ x: 4, backgroundColor: 'rgba(0,0,0,0.04)' }}
+                    >
                       {section.label}
-                    </MenuItem>
+                    </MotionMenuItem>
                   ))}
                 </Menu>
                 <Backdrop
@@ -167,7 +191,9 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
             </>
           )}
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 6 }}>
-            {sections[activeTab].component}
+            <PageTransition transitionKey={activeTab}>
+              {sections[activeTab].component}
+            </PageTransition>
           </Paper>
         </Box>
       </Grid>

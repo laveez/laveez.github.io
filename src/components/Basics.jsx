@@ -1,7 +1,13 @@
+import { motion } from 'framer-motion';
 import PlaceIcon from '@mui/icons-material/Place';
 import { Avatar, Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { avatarReveal, staggerContainer, textReveal } from './animations/variants.js';
 import ProfileLinks from './common/ProfileLinks.jsx';
 import KeySkills from './KeySkills.jsx';
+
+const MotionAvatar = motion.create(Avatar);
+const MotionBox = motion.create(Box);
+const MotionTypography = motion.create(Typography);
 
 const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
   const theme = useTheme();
@@ -12,50 +18,71 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
   const avatarSize = isLargeScreen ? 160 : 120;
 
   return (
-    <Box component="section" sx={{ textAlign: 'center', p: 5 }}>
+    <MotionBox
+      component="section"
+      variants={staggerContainer}
+      initial="hidden"
+      animate="visible"
+      sx={{ textAlign: 'center', p: 5 }}
+    >
       <Box sx={{ pb: 3 }}>
         {basics.image && (
-          <Avatar
+          <MotionAvatar
             src={basics.image}
             alt={`${basics.name}'s profile`}
+            variants={avatarReveal}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: `0 0 40px ${theme.palette.primary.main}80`,
+            }}
             sx={{
-              'width': avatarSize,
-              'height': avatarSize,
-              'mx': 'auto',
-              'border': `4px solid ${theme.palette.primary.main}`,
-              'boxShadow': `0 0 20px ${theme.palette.primary.main}40`,
-              'transition': 'box-shadow 0.3s ease, transform 0.3s ease',
-              '&:hover': {
-                boxShadow: `0 0 30px ${theme.palette.primary.main}60`,
-                transform: 'scale(1.02)',
-              },
+              width: avatarSize,
+              height: avatarSize,
+              mx: 'auto',
+              border: `4px solid ${theme.palette.primary.main}`,
+              boxShadow: `0 0 20px ${theme.palette.primary.main}40`,
+              cursor: 'pointer',
             }}
           />
         )}
       </Box>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <MotionTypography
+        variant="h4"
+        component="h1"
+        gutterBottom
+        variants={textReveal}
+      >
         {basics.name}
-      </Typography>
-      <Typography variant="h6" component="h2" gutterBottom>
+      </MotionTypography>
+      <MotionTypography
+        variant="h6"
+        component="h2"
+        gutterBottom
+        variants={textReveal}
+      >
         {basics.label}
-      </Typography>
-      <Typography variant="body1" gutterBottom>
+      </MotionTypography>
+      <MotionTypography
+        variant="body1"
+        gutterBottom
+        variants={textReveal}
+      >
         {basics.summary}
-      </Typography>
+      </MotionTypography>
       <KeySkills
         skills={basics.keySkills}
         direction={keySKillDirection}
         spacing={keySkillSpacing}
       />
-      <Box sx={{ pt: 5 }}>
+      <MotionBox sx={{ pt: 5 }} variants={textReveal}>
         <Typography fontSize="large">
           <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
         </Typography>
-      </Box>
-      <Box sx={{ pt: 5, display: 'inline-block' }}>
+      </MotionBox>
+      <MotionBox sx={{ pt: 5, display: 'inline-block' }} variants={textReveal}>
         <ProfileLinks profiles={basics.profiles} />
-      </Box>
-    </Box>
+      </MotionBox>
+    </MotionBox>
   );
 };
 
