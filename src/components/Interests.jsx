@@ -1,48 +1,44 @@
-import { Box, Card, CardContent, Grid, Stack, Typography } from '@mui/material';
+import { CardContent, Grid, Stack, Typography } from '@mui/material';
+import { AnimatedSection, MotionCard, StaggerContainer } from './animations/index.js';
 import TextIcon from './common/TextIcon.jsx';
 
 const Interests = ({ interests, sizeOverride = null }) => {
   if (!interests || interests.length === 0) return null;
 
   return (
-    <Box component="section" sx={{ p: 2 }}>
+    <AnimatedSection sx={{ p: 2 }}>
       <Typography variant="h4" component="h2" gutterBottom>
         Interests
       </Typography>
-      <Grid container spacing={2}>
-        {interests.map((interest, index) => (
-          <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={index}>
-            <Card
-              variant="outlined"
-              sx={{
-                'mb': 2,
-                'display': 'flex',
-                'flexDirection': 'column',
-                'height': '100%',
-                'borderRadius': 2,
-                'transition': 'transform 0.2s ease, box-shadow 0.2s ease',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: 8,
-                },
-              }}
-            >
-              <CardContent>
-                <Stack direction="row" spacing={1} alignItems="center">
-                  <TextIcon name={interest.icon} />
-                  <Typography variant="h6" component="h3">
-                    {interest.name}
+      <StaggerContainer>
+        <Grid container spacing={2}>
+          {interests.map((interest, index) => (
+            <Grid size={sizeOverride ? sizeOverride : { xs: 12, lg: 6 }} key={interest.name || index}>
+              <MotionCard
+                sx={{
+                  mb: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                }}
+              >
+                <CardContent>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <TextIcon name={interest.icon} />
+                    <Typography variant="h6" component="h3">
+                      {interest.name}
+                    </Typography>
+                  </Stack>
+                  <Typography variant="body2" color="text.secondary">
+                    {interest.keywords.join(', ')}
                   </Typography>
-                </Stack>
-                <Typography variant="body2" color="text.secondary">
-                  {interest.keywords.join(', ')}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                </CardContent>
+              </MotionCard>
+            </Grid>
+          ))}
+        </Grid>
+      </StaggerContainer>
+    </AnimatedSection>
   );
 };
 

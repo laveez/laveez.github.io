@@ -14,6 +14,8 @@
         padding-bottom: 0 !important;
         background-color: #fff !important;
         color: rgba(0, 0, 0, 0.87) !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .print-style * {
@@ -22,6 +24,8 @@
         border: none !important;
         background-color: #fff !important;
         color: rgba(0, 0, 0, 0.87) !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .print-style .MuiBox-root {
