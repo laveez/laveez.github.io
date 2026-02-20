@@ -74,6 +74,15 @@ const PrintView = ({ resumeData, type = PRINT_TYPE.RESUME }) => {
         <Languages languages={languages} sizeOverride={4} />
         <Skills skills={skills} sizeOverride={6} overrideMarginBottom={0} />
         <Interests interests={interests} sizeOverride={6} />
+      </Grid>
+      <Grid size={12} className="basics-print-style print-style-last">
+        <Basics
+          basics={basics}
+          keySKillDirection={'row'}
+          keySkillSpacing={1}
+        />
+      </Grid>
+      <Grid size={12} className="print-style">
         <Projects projects={projects} dualColumns={true} />
       </Grid>
     </Grid>

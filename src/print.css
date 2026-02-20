@@ -1,7 +1,22 @@
 @media print {
 
+    @page { margin: 10mm 0 0; }
+
     .print-container {
-        margin: 2% 5% 5%;
+        margin: 0 5% 5%;
+    }
+
+    .print-container,
+    .print-container *,
+    .print-container *::before,
+    .print-container *::after {
+        background-color: #fff !important;
+        background-image: none !important;
+        color: rgba(0, 0, 0, 0.87) !important;
+        opacity: 1 !important;
+        transform: none !important;
+        box-shadow: none !important;
+        text-decoration: none !important;
     }
 
     .basics-print-style {
@@ -12,20 +27,12 @@
     .basics-print-style * {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
-        background-color: #fff !important;
-        color: rgba(0, 0, 0, 0.87) !important;
-        opacity: 1 !important;
-        transform: none !important;
     }
 
     .print-style * {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         border: none !important;
-        background-color: #fff !important;
-        color: rgba(0, 0, 0, 0.87) !important;
-        opacity: 1 !important;
-        transform: none !important;
     }
 
     .print-style .MuiBox-root {
@@ -33,7 +40,9 @@
     }
 
     .print-style-last {
-        margin-top: 12.15%;
+        break-before: page;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
     .responsive-card {

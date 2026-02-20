@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Backdrop, Box, Grid, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
-import { hoverButton, menuItem, PageTransition, staggerContainerFast } from './animations/index.js';
+import { Box, Grid, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
+import { hoverButton, PageTransition } from './animations/index.js';
 import ExperienceSection from './common/ExperienceSection.jsx';
 import Basics from './Basics.jsx';
 import Certificates from './Certificates.jsx';
@@ -14,11 +14,69 @@ import Skills from './Skills.jsx';
 import Tools from './Tools.jsx';
 
 const MotionIconButton = motion.create(IconButton);
-const MotionMenuItem = motion.create(MenuItem);
+
+const MobileMenuBar = ({ sectionLabels, onSelectSection, resumeData, darkTheme, setDarkTheme }) => {
+  const [ menuAnchor, setMenuAnchor ] = useState(null);
+
+  const handleMenuClick = event => {
+    setMenuAnchor(event.currentTarget);
+  };
+
+  const handleMenuClose = index => {
+    if (index >= 0) onSelectSection(index);
+    setMenuAnchor(null);
+  };
+
+  return (
+    <>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1100,
+          p: 1.5,
+          backgroundColor: theme => theme.palette.background.paper,
+          boxShadow: 5,
+        }}
+        className="sticky-menu-bar"
+      >
+        <MotionIconButton
+          onClick={handleMenuClick}
+          variants={hoverButton}
+          initial="rest"
+          whileHover="hover"
+          whileTap="tap"
+        >
+          <MenuIcon />
+        </MotionIconButton>
+        <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      </Box>
+      <Menu
+        anchorEl={menuAnchor}
+        open={Boolean(menuAnchor)}
+        onClose={() => handleMenuClose(-1)}
+        transitionDuration={0}
+      >
+        {sectionLabels.map((label, index) => (
+          <MenuItem
+            key={label}
+            onClick={() => handleMenuClose(index)}
+          >
+            {label}
+          </MenuItem>
+        ))}
+      </Menu>
+    </>
+  );
+};
 
 const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ activeTab, setActiveTab ] = useState(0);
-  const [ menuAnchor, setMenuAnchor ] = useState(null);
   const isLargeScreen = useMediaQuery('(min-width:1200px)');
   const contentRef = useRef(null);
 
@@ -69,20 +127,13 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
     setActiveTab(newValue);
   };
 
-  const handleMenuClick = event => {
-    setMenuAnchor(event.currentTarget);
-  };
-
-  const handleMenuClose = index => {
-    if (index >= 0) {
-      setActiveTab(index);
-      const menuBarHeight = document.querySelector('.sticky-menu-bar')?.offsetHeight || 0;
-      const scrollPosition = contentRef.current?.offsetTop - menuBarHeight;
-      setTimeout(() => {
-        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-      }, 10);
-    }
-    setMenuAnchor(null);
+  const handleSelectSection = index => {
+    setActiveTab(index);
+    const menuBarHeight = document.querySelector('.sticky-menu-bar')?.offsetHeight || 0;
+    const scrollPosition = contentRef.current?.offsetTop - menuBarHeight;
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }, 10);
   };
 
   return (
@@ -129,66 +180,13 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
               <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
             </Tabs>
           ) : (
-            <>
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  position: 'fixed',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  zIndex: 1100,
-                  p: 1.5,
-                  backgroundColor: theme => theme.palette.background.paper,
-                  boxShadow: 5,
-                }}
-                className="sticky-menu-bar"
-              >
-                <MotionIconButton
-                  onClick={handleMenuClick}
-                  variants={hoverButton}
-                  initial="rest"
-                  whileHover="hover"
-                  whileTap="tap"
-                >
-                  <MenuIcon />
-                </MotionIconButton>
-                <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-              </Box>
-              <Box>
-                <Menu
-                  anchorEl={menuAnchor}
-                  open={Boolean(menuAnchor)}
-                  onClose={() => handleMenuClose(-1)}
-                  slotProps={{
-                    paper: {
-                      component: motion.div,
-                      variants: staggerContainerFast,
-                      initial: 'hidden',
-                      animate: 'visible',
-                    },
-                  }}
-                >
-                  {sections.map((section, index) => (
-                    <MotionMenuItem
-                      key={section.label}
-                      onClick={() => handleMenuClose(index)}
-                      variants={menuItem}
-                      whileHover={{ x: 4, backgroundColor: 'rgba(0,0,0,0.04)' }}
-                    >
-                      {section.label}
-                    </MotionMenuItem>
-                  ))}
-                </Menu>
-                <Backdrop
-                  sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
-                  open={Boolean(menuAnchor)}
-                  onClick={() => handleMenuClose(-1)}
-                />
-              </Box>
-            </>
+            <MobileMenuBar
+              sectionLabels={sections.map(s => s.label)}
+              onSelectSection={handleSelectSection}
+              resumeData={resumeData}
+              darkTheme={darkTheme}
+              setDarkTheme={setDarkTheme}
+            />
           )}
           <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 6 }}>
             <PageTransition transitionKey={activeTab}>

@@ -15,7 +15,7 @@ const ExperienceSection = ({ title, experiences }) => {
       </Typography>
       <StaggerContainer>
         {experiences.map((experience, index) => (
-          <AnimatedItem key={experience.name || experience.organization || experience.institution || index}>
+          <AnimatedItem key={`${experience.name || experience.organization || experience.institution}-${index}`}>
             <Box className="experience" sx={{ mb: 2 }}>
               <ResponsiveCard>
                 <CardMedia
