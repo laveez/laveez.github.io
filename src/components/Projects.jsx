@@ -6,12 +6,13 @@ import TextIcon from './common/TextIcon.jsx';
 
 const ProjectCard = ({ project }) => {
   return (
-    <AnimatedItem>
-      <Box className="project" sx={{ mb: 2 }}>
+    <AnimatedItem style={{ height: '100%' }}>
+      <Box className="project" sx={{ height: '100%' }}>
         <MotionCard
           sx={{
             display: 'flex',
             width: '100%',
+            height: '100%',
           }}
         >
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
