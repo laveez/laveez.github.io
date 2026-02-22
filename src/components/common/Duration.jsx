@@ -38,7 +38,9 @@ const Duration = ({ startDate, endDate }) => {
   const formattedYears = years > 0 ? `${years} year${years > 1 ? 's' : ''}` : '';
   const formattedMonths = months > 0 ? `${months} month${months > 1 ? 's' : ''}` : '';
 
-  return <>({`${formattedYears} ${formattedMonths}`.trim()})</>;
+  const text = `${formattedYears} ${formattedMonths}`.trim();
+  if (!text) return null;
+  return <>({text})</>;
 };
 
 export default Duration;

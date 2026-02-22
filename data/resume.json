@@ -442,8 +442,8 @@
   ],
   "projects": [
     {
-      "name": "olsvr",
-      "description": "OLED screensaver for Wayland that prevents burn-in by displaying a fade-animated clock on a pure black background. Features GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live temperature data from FMI Open Data, quadrant-aware repositioning, and an interactive setup wizard with systemd integration.",
+      "name": "OLED Screensaver (olsvr)",
+      "description": "Wayland screensaver that prevents OLED burn-in by displaying a fade-animated clock on a pure black background. Features GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live temperature data from FMI Open Data, quadrant-aware repositioning, and an interactive setup wizard with systemd integration.",
       "highlights": [],
       "keywords": ["Rust", "Wayland", "wgpu", "glyphon", "D-Bus", "GitHub Actions"],
       "startDate": "2026-02-21",
