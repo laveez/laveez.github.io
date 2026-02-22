@@ -443,7 +443,7 @@
   "projects": [
     {
       "name": "OLED Screensaver (olsvr)",
-      "description": "Wayland screensaver that prevents OLED burn-in by displaying a fade-animated clock on a pure black background. Features GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live temperature data from FMI Open Data, quadrant-aware repositioning, and an interactive setup wizard with systemd integration.",
+      "description": "Wayland screensaver that prevents OLED burn-in with a fade-animated clock on pure black. GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live FMI Open Data, quadrant-aware repositioning, an interactive setup wizard, and systemd integration.",
       "highlights": [],
       "keywords": ["Rust", "Wayland", "wgpu", "glyphon", "D-Bus", "GitHub Actions"],
       "startDate": "2026-02-21",
@@ -474,7 +474,7 @@
     },
     {
       "name": "Splitr",
-      "description": "Receipt splitting web app with a Tinder-like swipe interface. Upload a receipt image or PDF, extract items via client-side OCR (Tesseract.js) or PDF text extraction (pdfjs-dist), edit detected items, then swipe to categorize each item between two people. Optimized for Finnish K-Ruoka grocery receipts.",
+      "description": "Receipt splitting web app with a Tinder-like swipe interface. Upload a receipt image or PDF, extract items via client-side OCR (Tesseract.js) or PDF text extraction, then swipe to categorize items between two people. Optimized for Finnish grocery receipts with automatic item detection.",
       "highlights": [],
       "keywords": ["React", "TypeScript", "Vite", "Tailwind CSS", "Tesseract.js", "Playwright"],
       "startDate": "2026-02-01",
@@ -490,7 +490,7 @@
     },
     {
       "name": "Claude Code Telegram Gate (cctg)",
-      "description": "Approve or deny Claude Code tool calls from your phone via Telegram. Hooks into Claude Code's permission system, sends tool call details to a Telegram bot, and waits for approval before proceeding. Published as an npm package.",
+      "description": "Remote approval gateway for Claude Code tool calls via Telegram. Hooks into the permission system, forwarding each tool invocation with full context to a Telegram bot with inline approve/deny buttons. Enables mobile oversight of autonomous coding sessions. Published as an npm package.",
       "highlights": [],
       "keywords": ["TypeScript", "Node.js", "Telegram Bot API", "npm", "Claude Code"],
       "startDate": "2026-02-01",
@@ -506,7 +506,7 @@
     },
     {
       "name": "Claude Code Statusline (ccsl)",
-      "description": "A rich, information-dense statusline for Claude Code terminal sessions. Displays real-time session metrics, token usage, model info, and task status in a compact terminal bar. Published as an npm package.",
+      "description": "A rich, information-dense statusline for Claude Code terminal sessions. Renders real-time session metrics including token usage, cost tracking, model info, and task progress in a compact, color-coded terminal bar. Adapts to terminal width automatically. Published as an npm package.",
       "highlights": [],
       "keywords": ["TypeScript", "Node.js", "npm", "Claude Code", "Terminal UI"],
       "startDate": "2026-02-01",
@@ -541,7 +541,7 @@
     },
     {
       "name": "Disobey.fi Website",
-      "description": "Open-source website for Disobey, one of the largest hacker and cybersecurity conferences in the Nordics, held annually at Kaapelitehdas in Helsinki. The site features speaker profiles, workshop schedules, CTF competition information, and ticket sales. Contributions include development environment setup, PHP refactoring, responsive UI/UX improvements, and styling updates.",
+      "description": "Open-source website for Disobey, one of the largest hacker and cybersecurity conferences in the Nordics, held annually in Helsinki. Features speaker profiles, workshop schedules, CTF competition details, and ticket integration. Contributions include development environment setup, PHP refactoring, and responsive UI/UX improvements.",
       "highlights": [],
       "keywords": ["PHP", "HTML", "JavaScript", "CSS", "SCSS", "Open Source"],
       "startDate": "2025-03-01",
@@ -557,7 +557,7 @@
     },
     {
       "name": "React resume",
-      "description": "You are looking at it! A React application that takes a (modified schema) JSON resume and displays it in a visually appealing way. The application also creates a downloadable PDF version of the resume on the GitHub pages deployment pipelines. The application is responsive and works on all devices with a custom mobile layout.",
+      "description": "You are looking at it! A React application that renders a JSON Resume into a polished, responsive portfolio with custom layouts for desktop and mobile. Automatically generates a downloadable PDF via Puppeteer in the GitHub Pages deployment pipeline. Built with Vite for fast development.",
       "highlights": [ ],
       "keywords": [
         "React",
@@ -584,7 +584,7 @@
     },
     {
       "name": "Parking solution, private company",
-      "description": "Parking solution for mobile, web, and kiosks, automatic, semi-automatic or manual parking for consumers, and customers, such as, household companies and parking facility landlords. ",
+      "description": "Full-stack parking platform spanning mobile apps, web dashboards, and on-site kiosks. Supports automatic license plate recognition, semi-automatic, and manual parking flows for consumers, housing companies, and facility landlords. React frontends, Spring Boot microservices, deployed on AWS with Kubernetes.",
       "highlights": [ ],
       "keywords": [
         "React",
@@ -616,7 +616,7 @@
     },
     {
       "name": "Event screen for student associations",
-      "description": "An event screen made to be used in the student space Kattila of the student associations Linkki Jyväskylä ry and Algo ry. Displays information about future events of both student associations, local lunch lists and logos of the sponsors of the associations. The app automatically fetches the information for the screen from multiple sources, so very little to none maintenance is needed. Frontend developed with React and a small backend with Express/Node.js.",
+      "description": "Digital signage for the student space Kattila, shared by student associations Linkki Jyväskylä ry and Algo ry. Displays upcoming events, daily lunch menus, and sponsor logos. Automatically aggregates data from multiple sources requiring zero ongoing maintenance. React frontend with an Express/Node.js backend.",
       "highlights": [ ],
       "keywords": [
         "React",
