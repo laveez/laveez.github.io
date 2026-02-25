@@ -489,22 +489,6 @@
       "icon": "CONTENT_CUT"
     },
     {
-      "name": "Claude Code Telegram Gate (cctg)",
-      "description": "Remote approval gateway for Claude Code tool calls via Telegram. Hooks into the permission system, forwarding each tool invocation with full context to a Telegram bot with inline approve/deny buttons. Enables mobile oversight of autonomous coding sessions. Published as an npm package.",
-      "highlights": [],
-      "keywords": ["TypeScript", "Node.js", "Telegram Bot API", "npm", "Claude Code"],
-      "startDate": "2026-02-01",
-      "endDate": "",
-      "urls": [
-        "https://www.npmjs.com/package/cctg",
-        "https://github.com/laveez/cctg"
-      ],
-      "roles": ["Developer"],
-      "entity": "",
-      "type": "CLI tool",
-      "icon": "SMART_TOY"
-    },
-    {
       "name": "Claude Code Statusline (ccsl)",
       "description": "A rich, information-dense statusline for Claude Code terminal sessions. Renders real-time session metrics including token usage, cost tracking, model info, and task progress in a compact, color-coded terminal bar. Adapts to terminal width automatically. Published as an npm package.",
       "highlights": [],
@@ -518,7 +502,7 @@
       "roles": ["Developer"],
       "entity": "",
       "type": "CLI tool",
-      "icon": "TERMINAL"
+      "icon": "SMART_TOY"
     },
     {
       "name": "In-Flight Entertainment (IFE) system",
