@@ -9,7 +9,7 @@ React + Material-UI resume with animated sections, dark/light theme, and automat
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-brightgreen?style=flat-square)](https://nodejs.org)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB?style=flat-square)](https://react.dev)
-[![MUI 7](https://img.shields.io/badge/MUI-7-007FFF?style=flat-square)](https://mui.com)
+[![MUI 9](https://img.shields.io/badge/MUI-9-007FFF?style=flat-square)](https://mui.com)
 
 </div>
 
