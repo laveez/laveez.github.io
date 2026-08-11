@@ -29,7 +29,7 @@ const ProfileLinks = ({ profiles, showHome = false }) => (
   <StaggerContainer fast>
     <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
       {showHome && (
-        <MotionLink href="/" target="_self" sx={linkSx}>
+        <MotionLink href="/" target="_self" aria-label="Home" sx={linkSx}>
           <HomeIcon sx={{ fontSize: 20 }} />
         </MotionLink>
       )}
@@ -38,6 +38,8 @@ const ProfileLinks = ({ profiles, showHome = false }) => (
           key={profile.network}
           href={profile.url}
           className="print-style link-print-style"
+          // The username below is display:none on screen, so it never reaches the a11y tree
+          aria-label={`${profile.network}: ${profile.username}`}
           sx={linkSx}
         >
           {NETWORK_ICONS[profile.network] ?? profile.network}

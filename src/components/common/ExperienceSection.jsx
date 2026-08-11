@@ -14,6 +14,8 @@ const ExperienceSection = ({ title, experiences, icon, hideHeading = false }) =>
             key={`${experience.name || experience.organization || experience.institution}-${index}`}
             experience={experience}
             isLast={index === experiences.length - 1}
+            // Without the section's own h3, the row title has to take that level
+            titleComponent={hideHeading ? 'h3' : 'h4'}
           />
         ))}
       </StaggerContainer>

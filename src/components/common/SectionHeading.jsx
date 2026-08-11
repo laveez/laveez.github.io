@@ -29,7 +29,7 @@ const DisplayHeading = ({ title }) => {
       >
         <Box component="span" sx={{ display: 'block' }}>{head}</Box>
         {tail && (
-          <Box component="span" className="heading-ghost" sx={{ display: 'block', color: 'ghost' }}>
+          <Box component="span" className="heading-ghost" sx={{ display: 'block', color: 'accentText' }}>
             {tail}
           </Box>
         )}

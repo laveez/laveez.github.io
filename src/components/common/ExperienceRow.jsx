@@ -31,7 +31,7 @@ const DateLine = ({ experience }) => {
   );
 };
 
-const ExperienceRow = ({ experience, isLast }) => {
+const ExperienceRow = ({ experience, isLast, titleComponent = 'h4' }) => {
   const name = entityName(experience);
 
   return (
@@ -66,7 +66,7 @@ const ExperienceRow = ({ experience, isLast }) => {
           }}
         />
         <Box sx={{ flex: 1, minWidth: 0 }}>
-          <Typography variant="h6" component="h4" sx={{ fontSize: { xs: '1rem', lg: '1.15rem' } }}>
+          <Typography variant="h6" component={titleComponent} sx={{ fontSize: { xs: '1rem', lg: '1.15rem' } }}>
             {experience.position || experience.studyType}
             {experience.area && experience.studyType ? ' in ' : ''}
             {experience.area}

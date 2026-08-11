@@ -1,6 +1,9 @@
 import { createTheme } from '@mui/material';
 
 // Neutral greys throughout - no warm/brown cast in the greyscale ramp.
+// Both ink alphas carry body-sized text, so they are set at the weakest value that
+// still clears 4.5:1 against the lightest (dark mode) / darkest (light mode) surface
+// they sit on, then separated far enough to stay readable as two distinct levels.
 const DARK = {
   primary: '#E7FE4D',
   // Same accent, darkened only where it carries text: #9BB201 on white is 2.4:1
@@ -9,11 +12,10 @@ const DARK = {
   surface: '#1C1C1C',
   surfaceRaised: '#232323',
   ink: '#F4F4F4',
-  inkMuted: 'rgba(244, 244, 244, 0.60)',
-  inkFaint: 'rgba(244, 244, 244, 0.38)',
+  inkMuted: 'rgba(244, 244, 244, 0.70)',
+  inkFaint: 'rgba(244, 244, 244, 0.50)',
   line: 'rgba(244, 244, 244, 0.09)',
   lineStrong: 'rgba(244, 244, 244, 0.18)',
-  ghost: '#E7FE4D',
 };
 
 const LIGHT = {
@@ -23,11 +25,10 @@ const LIGHT = {
   surface: '#FFFFFF',
   surfaceRaised: '#F0F0F0',
   ink: '#141414',
-  inkMuted: 'rgba(20, 20, 20, 0.62)',
-  inkFaint: 'rgba(20, 20, 20, 0.40)',
+  inkMuted: 'rgba(20, 20, 20, 0.80)',
+  inkFaint: 'rgba(20, 20, 20, 0.60)',
   line: 'rgba(20, 20, 20, 0.12)',
   lineStrong: 'rgba(20, 20, 20, 0.24)',
-  ghost: '#9BB201',
 };
 
 export const RADIUS = { card: 16, tile: 12, pill: 999 };
@@ -52,7 +53,6 @@ const createAppTheme = darkTheme => {
       divider: t.line,
       accentText: t.accentText,
       surfaceRaised: t.surfaceRaised,
-      ghost: t.ghost,
       line: t.line,
       lineStrong: t.lineStrong,
       inkFaint: t.inkFaint,
@@ -71,7 +71,8 @@ const createAppTheme = darkTheme => {
       MuiCssBaseline: {
         styleOverrides: {
           'body': { backgroundColor: t.page },
-          '::selection': { background: t.primary, color: darkTheme ? '#141414' : '#FFFFFF' },
+          // Dark text on both accent fills; white on the light-mode green is 2.4:1
+          '::selection': { background: t.primary, color: '#141414' },
         },
       },
       MuiCard: {
