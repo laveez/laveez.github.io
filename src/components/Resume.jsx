@@ -1,9 +1,11 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Box, Grid, IconButton, Menu, MenuItem, Paper, Tab, Tabs, useMediaQuery } from '@mui/material';
+import { Box, Grid, IconButton, Menu, MenuItem, Paper, useMediaQuery } from '@mui/material';
 import { hoverButton, PageTransition } from './animations/index.js';
 import ExperienceSection from './common/ExperienceSection.jsx';
+import SectionHeading from './common/SectionHeading.jsx';
+import SectionNav from './common/SectionNav.jsx';
 import Basics from './Basics.jsx';
 import Certificates from './Certificates.jsx';
 import Interests from './Interests.jsx';
@@ -39,14 +41,16 @@ const MobileMenuBar = ({ sectionLabels, onSelectSection, resumeData, darkTheme, 
           left: 0,
           right: 0,
           zIndex: 1100,
-          p: 1.5,
-          backgroundColor: theme => theme.palette.background.paper,
-          boxShadow: 5,
+          px: 1.5,
+          py: 1,
+          backgroundColor: 'background.default',
+          borderBottom: theme => `1px solid ${theme.palette.line}`,
         }}
         className="sticky-menu-bar"
       >
         <MotionIconButton
           onClick={handleMenuClick}
+          aria-label="Open section menu"
           variants={hoverButton}
           initial="rest"
           whileHover="hover"
@@ -96,36 +100,38 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const sections = [
     {
       label: 'Work Experience',
-      component: <ExperienceSection title="Work Experience" experiences={work} />,
+      icon: 'WORK',
+      component: <ExperienceSection title="Work Experience" experiences={work} hideHeading />,
     },
     {
       label: 'Education & Certificates',
+      icon: 'SCHOOL',
       component: <>
-        <ExperienceSection title="Education" experiences={education} />
+        <ExperienceSection title="Education" experiences={education} icon="SCHOOL" />
         <Publications publications={publications} />
         <Certificates certificates={certificates} />
       </>,
     },
     {
       label: 'Volunteering',
-      component: <ExperienceSection title="Volunteering" experiences={volunteer} />,
+      icon: 'VOLUNTEER',
+      component: <ExperienceSection title="Volunteering" experiences={volunteer} hideHeading />,
     },
     {
       label: 'Skills & Interests',
+      icon: 'DIVERSITY',
       component: <>
-        <Languages languages={languages} /><Skills skills={skills} />
+        <Languages languages={languages} />
+        <Skills skills={skills} />
         <Interests interests={interests} />
       </>,
     },
     {
       label: 'Projects',
-      component: <Projects projects={projects} />,
+      icon: 'FOLDER',
+      component: <Projects projects={projects} hideHeading />,
     },
   ];
-
-  const handleTabChange = (event, newValue) => {
-    setActiveTab(newValue);
-  };
 
   const handleSelectSection = index => {
     setActiveTab(index);
@@ -137,21 +143,23 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   };
 
   return (
-    <Grid container spacing={0}>
+    <Grid container spacing={0} sx={{ maxWidth: 1600, mx: 'auto' }}>
       <Grid size={{ xs: 12, lg: 4 }}>
         <Box
           sx={{
-            p: 2,
-            pr: isLargeScreen ? 1 : 2,
-            pt: 0,
-            pb: isLargeScreen ? 2 : 0,
-            borderRadius: 2,
+            p: { xs: 2, lg: 3 },
+            pr: { lg: 1.5 },
+            pt: { xs: 9, lg: 3 },
             position: isLargeScreen ? 'sticky' : 'static',
-            top: isLargeScreen ? 16 : 'auto',
-            mt: isLargeScreen ? 0 : 10,
+            top: 0,
           }}
         >
-          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 10 }}>
+          <Paper
+            sx={{
+              borderRadius: theme => `${theme.shape.borderRadius}px`,
+              border: theme => `1px solid ${theme.palette.line}`,
+            }}
+          >
             <Basics basics={basics} />
           </Paper>
         </Box>
@@ -160,25 +168,15 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
         <Box
           ref={contentRef}
           sx={{
-            p: 2,
-            pl: isLargeScreen ? 1 : 2,
-            pt: isLargeScreen ? 0 : 2,
-            borderRadius: 2,
+            p: { xs: 2, lg: 3 },
+            pl: { lg: 1.5 },
+            pt: { xs: 0, lg: 3 },
           }}
         >
           {isLargeScreen ? (
-            <Tabs
-              value={activeTab}
-              onChange={handleTabChange}
-              variant="fullWidth"
-              scrollButtons="auto"
-              textColor="primary"
-              indicatorColor="primary"
-            >
-              {sections.map(section =>
-                <Tab key={section.label} label={<Box sx={{ p: 2 }}>{section.label}</Box>} />)}
+            <SectionNav sections={sections} activeTab={activeTab} onChange={setActiveTab}>
               <Tools resumeData={resumeData} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-            </Tabs>
+            </SectionNav>
           ) : (
             <MobileMenuBar
               sectionLabels={sections.map(s => s.label)}
@@ -188,11 +186,10 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
               setDarkTheme={setDarkTheme}
             />
           )}
-          <Paper sx={{ p: 2, borderRadius: 2, boxShadow: 6 }}>
-            <PageTransition transitionKey={activeTab}>
-              {sections[activeTab].component}
-            </PageTransition>
-          </Paper>
+          <PageTransition transitionKey={activeTab}>
+            <SectionHeading variant="display" title={sections[activeTab].label} />
+            {sections[activeTab].component}
+          </PageTransition>
         </Box>
       </Grid>
     </Grid>

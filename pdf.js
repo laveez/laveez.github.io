@@ -21,7 +21,7 @@ const url = process.env.URL || 'http://localhost:5173/print';
   await page.pdf({
     path: pdfPath,
     format: 'A4',
-    scale: 0.45,
+    scale: 0.51,
     printBackground: true,
     margin: { top: '0', right: '0', bottom: '0', left: '0' },
   });

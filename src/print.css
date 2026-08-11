@@ -1,9 +1,15 @@
 @media print {
 
-    @page { margin: 5mm 0 0; }
+    @page { margin: 6mm 0 4mm; }
+
+    /* index.html paints the page dark to stop a white flash on load; undo it for print */
+    html,
+    body {
+        background-color: #fff !important;
+    }
 
     .print-container {
-        margin: 0 5% 5%;
+        margin: 0 5% 4%;
     }
 
     .print-container,
@@ -17,16 +23,54 @@
         transform: none !important;
         box-shadow: none !important;
         text-decoration: none !important;
+        /* Without this, Puppeteer captures colours mid-transition and tints the PDF */
+        transition: none !important;
+        animation: none !important;
     }
 
-    .basics-print-style {
-        margin-left: 9%;
-        margin-right: 9%;
-    }
+    /* ---- reset the screen spacing, then rebuild a deliberate print scale below ---- */
 
     .basics-print-style * {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        border-color: rgba(0, 0, 0, 0.35) !important;
+    }
+
+    /* The screen header is portrait-led; in print that avatar plus its stacked
+       24px gaps cost over a third of the block, so tighten both */
+    .basics-print-style .MuiAvatar-root {
+        width: 84px !important;
+        height: 84px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .basics-print-style section > * {
+        margin-top: 10px !important;
+    }
+
+    .basics-print-style section > *:first-child {
+        margin-top: 0 !important;
+    }
+
+    .basics-print-style h1 {
+        margin-bottom: 5px !important;
+    }
+
+    .basics-print-style h2 {
+        margin-bottom: 10px !important;
+    }
+
+    .running-header-print-style {
+        margin: 0 0 18px !important;
+        padding-bottom: 8px !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.6) !important;
+        break-inside: avoid;
+    }
+
+    /* No blanket margin reset here: MUI Stack spaces its children with margins,
+       and zeroing them collapses the profile links into each other */
+    .running-header-print-style * {
+        border: none !important;
     }
 
     .print-style * {
@@ -39,24 +83,149 @@
         padding: 0 !important;
     }
 
-    .print-style-last {
-        break-before: page;
-        margin-top: 0 !important;
-        padding-top: 0 !important;
+    /* Cards stretch to their grid row on screen; in print that leaves tall empty holes */
+    .print-style .MuiCard-root,
+    .print-style .MuiPaper-root {
+        height: auto !important;
     }
 
-    .responsive-card {
-        display: flex !important;
-        width: 100% !important;
-        align-items: flex-start !important;
-        flex-direction: row !important;
-        justify-content: left !important;
-        text-align: left !important;
+    /* Cards print without border or fill, so their inner padding is dead space */
+    .print-style .MuiCardContent-root,
+    .print-style .MuiCardContent-root:last-child {
+        padding: 0 !important;
+    }
+
+    /* ---- print spacing scale ---- */
+
+    /* Page-1 identity block. Padding (not margin) for the side inset so the rule
+       below it spans the full width, matching the running header on later pages. */
+    .basics-print-style {
+        margin: 0 0 18px !important;
+        padding: 0 9% 8px !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.6) !important;
+        break-inside: avoid;
+    }
+
+    /* One page per block. The identity/contact header stays pinned to the top;
+       only the content below it takes the remaining height and centres in it.
+       min-height (not height) so a block that outgrows the page still flows
+       instead of overflowing the page box and losing content. */
+    /* No break-inside:avoid here - the second block spans more than one page
+       and an unsatisfiable avoid is how content gets dropped rather than flowed. */
+    .print-page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        break-after: page;
+    }
+
+    .print-page:last-child {
+        break-after: auto;
+    }
+
+    /* Top-aligned with one uniform gap between every section. Neither centring nor
+       space-between works here: both redistribute leftover height into whichever
+       gaps happen to exist, so a page with few sections gets one huge gap. Any
+       leftover now sits at the bottom of the page, as in a normal document. */
+    .print-page-content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    /* Stacked grid rows (main columns, then the certificates/languages pair) would
+       otherwise butt straight into the tallest column above them */
+    .print-page-content > .MuiGrid-container + .MuiGrid-container {
+        margin-top: 26px !important;
+    }
+
+    .print-style section {
+        margin-bottom: 26px !important;
+    }
+
+    .print-style section:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* The gap goes on the row, not the text: the text is a flex child beside the
+       icon, so a margin on it inflates its flex box and knocks centring off */
+    .print-container .section-heading-row {
+        margin-bottom: 10px !important;
+    }
+
+    .print-container .section-heading {
+        font-size: 1.35rem !important;
+        letter-spacing: 0 !important;
+    }
+
+    /* The ghost line is invisible on white - force it solid */
+    .heading-ghost {
+        color: rgba(0, 0, 0, 0.87) !important;
+    }
+
+    .experience,
+    .publication {
+        padding: 9px 0 !important;
+    }
+
+    .project {
+        margin-bottom: 12px !important;
+    }
+
+    .project-group {
+        margin-bottom: 16px !important;
+        break-inside: auto;
+    }
+
+    /* Never slice a card or row across a page boundary */
+    .project,
+    .experience,
+    .publication {
+        break-inside: avoid;
+    }
+
+    /* ---- keyword tags ----
+       A 1px border becomes a sub-point hairline at the PDF's render scale: the curved
+       caps survive but the straight top/bottom strokes drop out, so bordered pills print
+       as "( React )". Solid fills raster reliably at any scale, so tags are filled here. */
+    .chip-row-print-style {
+        gap: 4px !important;
+        margin-top: 7px !important;
+    }
+
+    .chip-print-style {
+        height: auto !important;
+        border: none !important;
+        border-radius: 3px !important;
+        background-color: #ececec !important;
+    }
+
+    .chip-print-style .MuiChip-label {
+        padding: 1px 5px !important;
+        background-color: transparent !important;
+    }
+
+    /* Logo tiles print as bare artwork, no plate */
+    .print-style img,
+    .experience img,
+    .publication img {
+        border: none !important;
+        padding: 0 !important;
     }
 
     .link-print-style {
         display: flex !important;
         align-items: center !important;
+        gap: 5px !important;
+        width: auto !important;
+        height: auto !important;
+        border: none !important;
+    }
+
+    /* Explicit, so both the page-1 block and the running header space these the same */
+    .link-print-style + .link-print-style {
+        margin-left: 16px !important;
     }
 
     .link-print-style * {
