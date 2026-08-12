@@ -6,7 +6,7 @@
     "email": "",
     "phone": "",
     "url": "https://laveez.github.io/",
-    "summary": "Developer with a deep passion for quality code and technology-driven leading of development teams. Proven track record of working on comprehensive software solutions, ranging from database management and infrastructure maintenance to user interface development and design.",
+    "summary": "Developer with a deep passion for quality code and technology-driven leading of development teams.\nProven track record of working on comprehensive software solutions, ranging from database management and infrastructure maintenance to user interface development and design.",
     "location": {
       "countryCode": "FI",
       "city": "Helsinki",
@@ -55,7 +55,7 @@
       "startDate": "2025-03-01",
       "endDate": "",
       "highlights": [],
-      "summary": "Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Utilized multiple techonolgies, e.g. Android, Kotlin, XML, TypeScript and React to implement and test the IFE on resource-constrained hardware running legacy Android versions. Management of a shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
+      "summary": "Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Utilized multiple technologies, e.g. Android, Kotlin, XML, TypeScript and React to implement and test the IFE on resource-constrained hardware running legacy Android versions. Management of a shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
       "url": "https://www.reaktor.com/",
       "location": "Helsinki, Finland",
       "logoUrl": "/assets/reaktor-logo-colored.png"
@@ -125,7 +125,7 @@
       "position": "Volunteer, Web Developer",
       "startDate": "2025-02-01",
       "endDate": "",
-      "summary": "I volunteered at the Disobey 2025 event at Kaapelitehdas, Helsinki, providing other volunteers with supplies during the event and participating in the teardown afterwards. Following the event, I joined the organizers of Disobey 2026 as a web developer, contributing to the open-source development and ongoing maintenance of disobey.fi. The website features speaker profiles, workshop and program schedules, CTF competition information, ticket sales, and community resources for one of the largest hacker conferences in the Nordics.",
+      "summary": "I volunteered at the Disobey 2025 event at Kaapelitehdas, Helsinki, providing other volunteers with supplies during the event and participating in the teardown afterwards. Following the event, I joined the organizers as a web developer, contributing to the open-source development and ongoing maintenance of disobey.fi across the 2026 and 2027 editions. The website features speaker profiles, workshop and program schedules, CTF competition information, ticket sales, and community resources for one of the largest hacker conferences in the Nordics.",
       "highlights": [],
       "url": "https://disobey.fi/",
       "logoUrl": "/assets/disobey-logo.png"
@@ -135,7 +135,7 @@
       "position": "Mentor",
       "startDate": "2023-01-01",
       "endDate": "2023-12-31",
-      "summary": "As a mentor for the board of the student association Linkki, I shared my past knowledge by providing guidance, advice and information of best practices, historical conventions and past experiences with the new board members. I also handled the basic introduction and education of association laws and activities to the new board members. After  being with the association for multiple years at this point, I got an honorary mention for my work for the association at the 18th anniversary party which was held in 2024.",
+      "summary": "As a mentor for the board of the student association Linkki, I shared my past knowledge by providing guidance, advice and information of best practices, historical conventions and past experiences with the new board members. I also handled the basic introduction and education of association laws and activities to the new board members. After being with the association for multiple years at this point, I got an honorary mention for my work for the association at the 18th anniversary party which was held in 2024.",
       "highlights": [],
       "url": "https://linkkijkl.fi/",
       "logoUrl": "/assets/linkkijkl-logo.png"
@@ -191,7 +191,7 @@
       "startDate": "2015",
       "endDate": "2016",
       "url": "https://www.lut.fi/",
-      "summary": "University courses on electronics, energy technologies, chemistry, mathematics ja physics.",
+      "summary": "University courses on electronics, energy technologies, chemistry, mathematics and physics.",
       "score": "",
       "courses": [],
       "logoUrl": "/assets/lut-logo.png"
@@ -441,67 +441,135 @@
   ],
   "projects": [
     {
-      "name": "OLED Screensaver (olsvr)",
-      "description": "Wayland screensaver that prevents OLED burn-in with a fade-animated clock on pure black. GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live FMI Open Data, quadrant-aware repositioning, an interactive setup wizard, and systemd integration.",
+      "name": "Timelines",
+      "description": "Renders people-and-period CSVs as standalone HTML and SVG timelines. A zero-dependency Python CLI with week or day scales, WCAG-aware per-bar contrast, and automatic colour interpolation. The browser companion runs the same script client-side via Pyodide with live HTML, SVG and PNG output.",
       "highlights": [],
-      "keywords": ["Rust", "Wayland", "wgpu", "glyphon", "D-Bus", "GitHub Actions"],
+      "keywords": [
+        "Python",
+        "Pyodide",
+        "SVG",
+        "WebAssembly",
+        "GitHub Pages",
+        "GitHub Actions"
+      ],
+      "startDate": "2026-04-21",
+      "endDate": "",
+      "urls": [
+        "https://laveez.github.io/timelines/",
+        "https://github.com/laveez/timelines"
+      ],
+      "roles": [
+        "Developer",
+        "Designer"
+      ],
+      "entity": "",
+      "type": "CLI tool",
+      "icon": "TIMELINE",
+      "category": "personal"
+    },
+    {
+      "name": "OLED Screensaver (olsvr)",
+      "description": "Screensaver that prevents OLED burn-in with a fade-animated clock on pure black. GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live FMI Open Data, quadrant-aware repositioning, an interactive setup wizard, and systemd integration. Wayland-native, with a macOS port in progress.",
+      "highlights": [],
+      "keywords": [
+        "Rust",
+        "Wayland",
+        "wgpu",
+        "glyphon",
+        "D-Bus",
+        "GitHub Actions"
+      ],
       "startDate": "2026-02-21",
       "endDate": "",
       "urls": [
         "https://github.com/laveez/olsvr"
       ],
-      "roles": ["Developer"],
+      "roles": [
+        "Developer"
+      ],
       "entity": "",
       "type": "Screensaver",
-      "icon": "TV"
+      "icon": "TV",
+      "category": "personal"
     },
     {
       "name": "Ammus",
       "description": "Ammunition price comparison tool for Finnish online retailers. Scrapes prices from 25 stores across 5 calibers using Playwright, detects non-toxic ammunition, and displays results in a filterable, sortable table. Prices are updated automatically via GitHub Actions.",
       "highlights": [],
-      "keywords": ["React", "TypeScript", "Vite", "Playwright", "GitHub Actions", "GitHub Pages"],
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Playwright",
+        "GitHub Actions",
+        "GitHub Pages"
+      ],
       "startDate": "2026-02-01",
       "endDate": "",
       "urls": [
         "https://laveez.github.io/ammus/",
         "https://github.com/laveez/ammus"
       ],
-      "roles": ["Developer", "Designer"],
+      "roles": [
+        "Developer",
+        "Designer"
+      ],
       "entity": "",
       "type": "Web application",
-      "icon": "GPS_FIXED"
+      "icon": "GPS_FIXED",
+      "category": "personal"
     },
     {
       "name": "Splitr",
       "description": "Receipt splitting web app with a Tinder-like swipe interface. Upload a receipt image or PDF, extract items via client-side OCR (Tesseract.js) or PDF text extraction, then swipe to categorize items between two people. Optimized for Finnish grocery receipts with automatic item detection.",
       "highlights": [],
-      "keywords": ["React", "TypeScript", "Vite", "Tailwind CSS", "Tesseract.js", "Playwright"],
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Tesseract.js",
+        "Playwright"
+      ],
       "startDate": "2026-02-01",
       "endDate": "",
       "urls": [
         "https://laveez.github.io/splitr/",
         "https://github.com/laveez/splitr"
       ],
-      "roles": ["Developer", "Designer"],
+      "roles": [
+        "Developer",
+        "Designer"
+      ],
       "entity": "",
       "type": "Web application",
-      "icon": "CONTENT_CUT"
+      "icon": "CONTENT_CUT",
+      "category": "personal"
     },
     {
       "name": "Claude Code Statusline (ccsl)",
       "description": "A rich, information-dense statusline for Claude Code terminal sessions. Renders real-time session metrics including token usage, cost tracking, model info, and task progress in a compact, color-coded terminal bar. Adapts to terminal width automatically. Published as an npm package.",
       "highlights": [],
-      "keywords": ["TypeScript", "Node.js", "npm", "Claude Code", "Terminal UI"],
+      "keywords": [
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "Claude Code",
+        "Terminal UI"
+      ],
       "startDate": "2026-02-01",
       "endDate": "",
       "urls": [
         "https://www.npmjs.com/package/ccsl",
         "https://github.com/laveez/ccsl"
       ],
-      "roles": ["Developer"],
+      "roles": [
+        "Developer"
+      ],
       "entity": "",
       "type": "CLI tool",
-      "icon": "SMART_TOY"
+      "icon": "SMART_TOY",
+      "category": "personal"
     },
     {
       "name": "In-Flight Entertainment (IFE) system",
@@ -517,31 +585,45 @@
       "startDate": "2025-03-01",
       "endDate": "",
       "urls": [],
-      "roles": [ "Developer" ],
+      "roles": [
+        "Developer"
+      ],
       "entity": "",
       "type": "IFE system",
-      "icon": "FLIGHT"
+      "icon": "FLIGHT",
+      "category": "work"
     },
     {
       "name": "Disobey.fi Website",
-      "description": "Open-source website for Disobey, one of the largest hacker and cybersecurity conferences in the Nordics, held annually in Helsinki. Features speaker profiles, workshop schedules, CTF competition details, and ticket integration. Contributions include development environment setup, PHP refactoring, and responsive UI/UX improvements.",
+      "description": "Open-source website for Disobey, one of the largest hacker and cybersecurity conferences in the Nordics, held annually in Helsinki. Features speaker profiles, workshop schedules, CTF details, and ticket integration. Contributions across the 2026 and 2027 editions include PHP refactoring, responsive UI/UX work, and an automated GitHub Actions deploy pipeline.",
       "highlights": [],
-      "keywords": ["PHP", "HTML", "JavaScript", "CSS", "SCSS", "Open Source"],
+      "keywords": [
+        "PHP",
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "SCSS",
+        "Open Source"
+      ],
       "startDate": "2025-03-01",
       "endDate": "",
       "urls": [
         "https://disobey.fi/",
         "https://github.com/disobeyfi/public-www"
       ],
-      "roles": ["Developer", "Maintainer"],
+      "roles": [
+        "Developer",
+        "Maintainer"
+      ],
       "entity": "",
       "type": "website",
-      "icon": "BUG_REPORT"
+      "icon": "BUG_REPORT",
+      "category": "volunteer"
     },
     {
       "name": "React resume",
       "description": "You are looking at it! A React application that renders a JSON Resume into a polished, responsive portfolio with custom layouts for desktop and mobile. Automatically generates a downloadable PDF via Puppeteer in the GitHub Pages deployment pipeline. Built with Vite for fast development.",
-      "highlights": [ ],
+      "highlights": [],
       "keywords": [
         "React",
         "Vite",
@@ -554,21 +636,24 @@
         "Puppeteer"
       ],
       "startDate": "2024-11-01",
-      "endDate": "2024-11-30",
+      "endDate": "",
       "urls": [
         "https://github.com/laveez/laveez.github.io"
       ],
       "roles": [
-        "Developer", "Designer", "Architect"
+        "Developer",
+        "Designer",
+        "Architect"
       ],
       "entity": "",
       "type": "website",
-      "icon": "CONTACT_PAGE"
+      "icon": "CONTACT_PAGE",
+      "category": "personal"
     },
     {
       "name": "Parking solution, private company",
       "description": "Full-stack parking platform spanning mobile apps, web dashboards, and on-site kiosks. Supports automatic license plate recognition, semi-automatic, and manual parking flows for consumers, housing companies, and facility landlords. React frontends, Spring Boot microservices, deployed on AWS with Kubernetes.",
-      "highlights": [ ],
+      "highlights": [],
       "keywords": [
         "React",
         "Javascript",
@@ -588,19 +673,20 @@
       ],
       "startDate": "2021-11-01",
       "endDate": "2025-02-28",
-      "urls": [ ],
+      "urls": [],
       "roles": [
         "Lead Developer",
         "Full Stack Developer"
       ],
       "entity": "",
       "type": "Web application",
-      "icon": "PARKING"
+      "icon": "PARKING",
+      "category": "work"
     },
     {
       "name": "Event screen for student associations",
       "description": "Digital signage for the student space Kattila, shared by student associations Linkki Jyväskylä ry and Algo ry. Displays upcoming events, daily lunch menus, and sponsor logos. Automatically aggregates data from multiple sources requiring zero ongoing maintenance. React frontend with an Express/Node.js backend.",
-      "highlights": [ ],
+      "highlights": [],
       "keywords": [
         "React",
         "Javascript",
@@ -618,16 +704,19 @@
         "https://github.com/laveez/linkkijkl-event-screen-api"
       ],
       "roles": [
-        "Developer", "Designer", "Architect"
+        "Developer",
+        "Designer",
+        "Architect"
       ],
       "entity": "",
       "type": "website",
-      "icon": "TV"
+      "icon": "TV",
+      "category": "volunteer"
     },
     {
       "name": "Jyväsmetro website",
       "description": "Refactored and redesigned the website for a large student event Jyväsmetro, which is held annually in Jyväskylä. The website includes information about the event, the program, the location, and the sponsors.",
-      "highlights": [ ],
+      "highlights": [],
       "keywords": [
         "Javascript",
         "HTML",
@@ -640,16 +729,18 @@
         "https://jyvasmetro.fi/"
       ],
       "roles": [
-        "Developer", "Designer"
+        "Developer",
+        "Designer"
       ],
       "entity": "",
       "type": "website",
-      "icon": "SUBWAY"
+      "icon": "SUBWAY",
+      "category": "volunteer"
     },
     {
       "name": "Once® By Pinja, Oncenet® By Pinja",
       "description": "Once by Pinja is a browser-based SaaS service model system used for real-time management of the supply chains of energy companies with the help of a single system. Once distributes data created in the supply chain in real time to all stakeholders involved in the chain. The system is scalable for supply chain management in case of small individual plants and groups involving several plants alike.",
-      "highlights": [ ],
+      "highlights": [],
       "keywords": [
         "PHP",
         "Yii",
@@ -670,12 +761,13 @@
       ],
       "entity": "",
       "type": "SaaS application",
-      "icon": "FACTORY"
+      "icon": "FACTORY",
+      "category": "work"
     },
     {
       "name": "Home server, mail camera",
       "description": "Home web server setup on an old computer to host a restricted-access public website. The server functioned as a mailbox webcam, detecting motion, capturing incoming mail, and notifying a mobile phone—useful for checking important mail while away for the summer. Also developed web pages and features like automatic data retrieval (internet usage, quota) for remote access. Later, migrated these functions to a Raspberry Pi, adding a home \"information display\" with news, weather, and time.",
-      "highlights": [ ],
+      "highlights": [],
       "keywords": [
         "HTML",
         "CSS",
@@ -695,7 +787,8 @@
       ],
       "entity": "",
       "type": "Website",
-      "icon": "CAMERA"
+      "icon": "CAMERA",
+      "category": "personal"
     }
   ]
 }

@@ -38,7 +38,7 @@ const SataTehtavaa = () => {
             </Grid>
           ))}
         </Grid>
-        <Box display="flex" alignItems="center" marginTop="20px" className="no-display-on-print">
+        <Box sx={{ display: 'flex', alignItems: 'center', mt: 2.5 }} className="no-display-on-print">
           <Typography>Summa</Typography>
           <TextField
             value={checkedCount}

@@ -5,7 +5,7 @@ import TextIcon from './common/TextIcon.jsx';
 
 const MotionStack = motion.create(Stack);
 
-const KeySkills = ({ skills, direction = 'column', spacing = 0.25 }) => {
+const KeySkills = ({ skills, direction = 'column', spacing = 1 }) => {
   if (!skills || skills.length === 0) return null;
 
   return (
@@ -15,22 +15,19 @@ const KeySkills = ({ skills, direction = 'column', spacing = 0.25 }) => {
       variants={staggerContainerFast}
       initial="hidden"
       animate="visible"
-      sx={{ pt: 2, justifyContent: 'center' }}
+      sx={{ mt: 3, justifyContent: 'center', flexWrap: direction === 'row' ? 'wrap' : 'nowrap' }}
     >
       {skills.map(skill => (
         <motion.div key={skill.text} variants={staggerItem}>
           <Stack
             direction="row"
-            spacing={1}
-            sx={{
-              alignItems: 'flex-start',
-              justifyContent: 'center',
-              textAlign: 'left',
-              p: 0.5,
-            }}
+            spacing={1.25}
+            sx={{ alignItems: 'center', justifyContent: 'center', textAlign: 'left' }}
           >
-            <TextIcon name={skill.icon} />
-            <Typography variant="body1">
+            <Stack sx={{ 'color': 'accentText', '& svg': { fontSize: 18, display: 'block' } }}>
+              <TextIcon name={skill.icon} />
+            </Stack>
+            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
               {skill.text}
             </Typography>
           </Stack>

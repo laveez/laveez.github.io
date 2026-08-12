@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import PlaceIcon from '@mui/icons-material/Place';
 import { Avatar, Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { DISPLAY_SX } from '../theme.js';
 import { avatarReveal, staggerContainer, textReveal } from './animations/variants.js';
 import ProfileLinks from './common/ProfileLinks.jsx';
 import KeySkills from './KeySkills.jsx';
@@ -15,7 +16,7 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
 
   if (!basics) return null;
 
-  const avatarSize = isLargeScreen ? 160 : 120;
+  const avatarSize = isLargeScreen ? 150 : 116;
 
   return (
     <MotionBox
@@ -23,49 +24,51 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
       variants={staggerContainer}
       initial="hidden"
       animate="visible"
-      sx={{ textAlign: 'center', p: 5 }}
+      sx={{ textAlign: 'center', p: { xs: 3, lg: 4 } }}
     >
-      <Box sx={{ pb: 3 }}>
-        {basics.image && (
-          <MotionAvatar
-            src={basics.image}
-            alt={`${basics.name}'s profile`}
-            variants={avatarReveal}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: `0 0 40px ${theme.palette.primary.main}80`,
-            }}
-            sx={{
-              width: avatarSize,
-              height: avatarSize,
-              mx: 'auto',
-              border: `4px solid ${theme.palette.primary.main}`,
-              boxShadow: `0 0 20px ${theme.palette.primary.main}40`,
-              cursor: 'pointer',
-            }}
-          />
-        )}
-      </Box>
+      {basics.image && (
+        <MotionAvatar
+          src={basics.image}
+          alt={`${basics.name}'s profile`}
+          variants={avatarReveal}
+          whileHover={{ scale: 1.04 }}
+          sx={{
+            width: avatarSize,
+            height: avatarSize,
+            mx: 'auto',
+            mb: 3,
+            border: `3px solid ${theme.palette.primary.main}`,
+            boxShadow: `0 0 0 8px ${theme.palette.primary.main}12`,
+            cursor: 'pointer',
+          }}
+        />
+      )}
       <MotionTypography
-        variant="h4"
         component="h1"
-        gutterBottom
         variants={textReveal}
+        sx={{ ...DISPLAY_SX, fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', mb: 1.5 }}
       >
         {basics.name}
       </MotionTypography>
       <MotionTypography
-        variant="h6"
         component="h2"
-        gutterBottom
         variants={textReveal}
+        sx={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontSize: '0.72rem',
+          fontWeight: 700,
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: 'accentText',
+          mb: 2.5,
+        }}
       >
         {basics.label}
       </MotionTypography>
       <MotionTypography
-        variant="body1"
-        gutterBottom
+        variant="body2"
         variants={textReveal}
+        sx={{ color: 'text.secondary', lineHeight: 1.7, whiteSpace: 'pre-line' }}
       >
         {basics.summary}
       </MotionTypography>
@@ -74,12 +77,26 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
         direction={keySKillDirection}
         spacing={keySkillSpacing}
       />
-      <MotionBox sx={{ pt: 5 }} variants={textReveal}>
-        <Typography fontSize="large">
-          <PlaceIcon fontSize="small" /> {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
+      <MotionBox
+        variants={textReveal}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 0.75,
+          mt: 3,
+          color: 'text.secondary',
+        }}
+      >
+        <PlaceIcon sx={{ fontSize: 18, color: 'accentText' }} />
+        <Typography variant="body2">
+          {basics.location.city}, {basics.location.region}, {basics.location.countryCode}
         </Typography>
       </MotionBox>
-      <MotionBox sx={{ pt: 5, display: 'inline-block' }} variants={textReveal}>
+      <MotionBox
+        variants={textReveal}
+        sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}
+      >
         <ProfileLinks profiles={basics.profiles} />
       </MotionBox>
     </MotionBox>

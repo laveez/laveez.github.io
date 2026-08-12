@@ -5,11 +5,14 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import PrintIcon from '@mui/icons-material/Print';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
-import { Button, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/material';
+import { IconButton, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/material';
 import { hoverButton } from './animations/variants.js';
 import PrintView from './PrintView.jsx';
 
-const MotionButton = motion.create(Button);
+const MotionIconButton = motion.create(IconButton);
+
+// Written to dist/ by `npm run pdf`; vite.config.js serves it in dev too
+const RESUME_PDF = '/niko-muukkonen-laveez-resume.pdf';
 
 const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ anchorEl, setAnchorEl ] = useState(null);
@@ -26,23 +29,25 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   const handleDownload = () => {
     handleMenuClose();
     const link = document.createElement('a');
-    link.href = '/niko-muukkonen-laveez-resume.pdf';
-    link.download = 'niko-muukkonen-laveez-resume.pdf';
+    link.href = RESUME_PDF;
+    link.download = RESUME_PDF.slice(1);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handlePrint = () => {
-    window.open('/niko-muukkonen-laveez-resume.pdf', '_blank').print();
     handleMenuClose();
+    const win = window.open(RESUME_PDF, '_blank');
+    if (!win) return; // popup blocked
+    win.addEventListener('load', () => win.print(), { once: true });
   };
 
   const menuItems = [
-    { icon: <DownloadIcon fontSize="large" />, text: 'Download', onClick: handleDownload },
-    { icon: <PrintIcon fontSize="large" />, text: 'Print', onClick: handlePrint },
+    { icon: <DownloadIcon />, text: 'Download', onClick: handleDownload },
+    { icon: <PrintIcon />, text: 'Print', onClick: handlePrint },
     {
-      icon: darkTheme ? <ToggleOnIcon fontSize="large" /> : <ToggleOffIcon fontSize="large" />,
+      icon: darkTheme ? <ToggleOnIcon /> : <ToggleOffIcon />,
       text: darkTheme ? 'Light mode' : 'Dark mode',
       onClick: () => {
         setDarkTheme(!darkTheme);
@@ -52,20 +57,18 @@ const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   ];
 
   return (
-    <Stack direction="row" alignItems="center">
-      <MotionButton
-        variant="text"
-        size="large"
-        color="neutral"
+    <Stack direction="row" sx={{ alignItems: 'center' }}>
+      <MotionIconButton
         onClick={handleMenuClick}
+        aria-label="Resume tools"
         variants={hoverButton}
         initial="rest"
         whileHover="hover"
         whileTap="tap"
-        sx={{ maxWidth: 20, minWidth: 40 }}
+        sx={{ color: 'text.secondary' }}
       >
-        <MoreVertIcon fontSize="medium" />
-      </MotionButton>
+        <MoreVertIcon fontSize="small" />
+      </MotionIconButton>
       <Menu
         anchorEl={anchorEl}
         open={open}
