@@ -128,8 +128,7 @@
       "summary": "I volunteered at the Disobey 2025 event at Kaapelitehdas, Helsinki, providing other volunteers with supplies during the event and participating in the teardown afterwards. Following the event, I joined the organizers of Disobey 2026 as a web developer, contributing to the open-source development and ongoing maintenance of disobey.fi. The website features speaker profiles, workshop and program schedules, CTF competition information, ticket sales, and community resources for one of the largest hacker conferences in the Nordics.",
       "highlights": [],
       "url": "https://disobey.fi/",
-      "logoUrl": "/assets/disobey-logo.png",
-      "dateStringOverride": "02/2025 - present"
+      "logoUrl": "/assets/disobey-logo.png"
     },
     {
       "organization": "Linkki Jyväskylä ry",
