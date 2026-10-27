@@ -35,31 +35,31 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",
     "@fontsource/open-sans": "^5.3.0",
-    "@mui/icons-material": "^9.3.1",
-    "@mui/material": "^9.3.1",
-    "framer-motion": "^13.1.0",
-    "puppeteer": "^25.6.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2"
+    "@mui/icons-material": "^9.5.0",
+    "@mui/material": "^9.5.0",
+    "framer-motion": "^14.7.1",
+    "puppeteer": "^25.16.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
-    "@vitejs/plugin-react": "^6.0.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
     "eslint": "^9.39.5",
-    "eslint-plugin-jsdoc": "^64.1.0",
+    "eslint-plugin-jsdoc": "^65.4.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.4",
+    "eslint-plugin-react-refresh": "^0.5.7",
     "eslint-plugin-simple-import-sort": "^14.0.0",
-    "globals": "^17.10.0",
-    "npm-check-updates": "^23.0.2",
-    "vite": "^8.2.1"
+    "globals": "^17.13.0",
+    "npm-check-updates": "^23.1.1",
+    "vite": "^8.3.5"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0"
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1"
   }
 }
