@@ -469,11 +469,12 @@
     },
     {
       "name": "OLED Screensaver (olsvr)",
-      "description": "Screensaver that prevents OLED burn-in with a fade-animated clock on pure black. GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live FMI Open Data, quadrant-aware repositioning, an interactive setup wizard, and systemd integration. Wayland-native, with a macOS port in progress.",
+      "description": "Screensaver that prevents OLED burn-in with a fade-animated clock on pure black. GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live FMI Open Data, quadrant-aware repositioning, an interactive setup wizard, and systemd integration. Native on Wayland and macOS.",
       "highlights": [],
       "keywords": [
         "Rust",
         "Wayland",
+        "macOS",
         "wgpu",
         "glyphon",
         "D-Bus",
