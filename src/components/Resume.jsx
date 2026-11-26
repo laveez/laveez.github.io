@@ -94,6 +94,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
     languages,
     interests,
     projects,
+    projectNotes,
     certificates,
   } = resumeData;
 
@@ -129,7 +130,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
     {
       label: 'Projects',
       icon: 'FOLDER',
-      component: <Projects projects={projects} hideHeading />,
+      component: <Projects projects={projects} notes={projectNotes} hideHeading />,
     },
   ];
 

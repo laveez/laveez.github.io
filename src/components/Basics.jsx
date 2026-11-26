@@ -70,7 +70,7 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
         variants={textReveal}
         sx={{ color: 'text.secondary', lineHeight: 1.7, whiteSpace: 'pre-line' }}
       >
-        {basics.summary}
+        {[ basics.summary, basics.tagline ].filter(Boolean).join(' ')}
       </MotionTypography>
       <KeySkills
         skills={basics.keySkills}

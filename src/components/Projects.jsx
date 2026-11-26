@@ -16,6 +16,19 @@ const GROUPS = [
 
 const shortenUrl = url => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 
+const ProjectLink = ({ url }) => (
+  <Link
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    variant="body2"
+    sx={{ display: 'flex', alignItems: 'center', gap: 0.4, fontSize: '0.75rem' }}
+  >
+    <ArrowOutwardIcon className="project-arrow" sx={{ fontSize: 13 }} />
+    {shortenUrl(url)}
+  </Link>
+);
+
 const ProjectCard = ({ project, stretch = false }) => {
   const full = stretch ? '100%' : undefined;
 
@@ -80,19 +93,7 @@ const ProjectCard = ({ project, stretch = false }) => {
 
             {project.urls && project.urls.length > 0 && (
               <Box sx={{ display: 'flex', flexWrap: 'wrap', columnGap: 1.5, rowGap: 0.25, mt: 1.25 }}>
-                {project.urls.map(url => (
-                  <Link
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="body2"
-                    sx={{ display: 'flex', alignItems: 'center', gap: 0.4, fontSize: '0.75rem' }}
-                  >
-                    <ArrowOutwardIcon className="project-arrow" sx={{ fontSize: 13 }} />
-                    {shortenUrl(url)}
-                  </Link>
-                ))}
+                {project.urls.map(url => <ProjectLink key={url} url={url} />)}
               </Box>
             )}
           </CardContent>
@@ -131,11 +132,11 @@ const ProjectGrid = ({ projects, dualColumns }) => {
   );
 };
 
-const Projects = ({ projects, dualColumns = false, hideHeading = false }) => {
+const Projects = ({ projects, notes, dualColumns = false, hideHeading = false }) => {
   if (!projects || projects.length === 0) return null;
 
   const groups = GROUPS
-    .map(group => ({ ...group, items: projects.filter(p => p.category === group.key) }))
+    .map(group => ({ ...group, items: projects.filter(p => p.category === group.key), note: notes?.[group.key] }))
     .filter(group => group.items.length > 0);
 
   // Anything with an unrecognised category is still shown rather than silently dropped
@@ -150,6 +151,16 @@ const Projects = ({ projects, dualColumns = false, hideHeading = false }) => {
           <Box key={group.key} className="project-group" sx={{ mb: 3 }}>
             <SectionHeading title={group.title} icon={group.icon} />
             <ProjectGrid projects={group.items} dualColumns={dualColumns} />
+            {group.note && (
+              <Box
+                sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', columnGap: 1.5, rowGap: 0.25, mt: 2 }}
+              >
+                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                  {group.note.text}
+                </Typography>
+                {group.note.url && <ProjectLink url={group.note.url} />}
+              </Box>
+            )}
           </Box>
         ))}
       </StaggerContainer>

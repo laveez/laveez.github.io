@@ -21,6 +21,8 @@
         color: rgba(0, 0, 0, 0.87) !important;
         opacity: 1 !important;
         transform: none !important;
+        /* textReveal leaves filter: blur(0px) behind, and Chrome prints filtered text as a bitmap */
+        filter: none !important;
         box-shadow: none !important;
         text-decoration: none !important;
         /* Without this, Puppeteer captures colours mid-transition and tints the PDF */
@@ -34,6 +36,14 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         border-color: rgba(0, 0, 0, 0.35) !important;
+    }
+
+    /* The card's own side padding stacks on this block's 9% inset; with it the
+       key-skill row is too narrow for five items and the last one wraps alone.
+       Keep in sync with the padding Basics.jsx sets at print width (p: 4). */
+    .basics-print-style section > .MuiStack-root {
+        margin-left: -32px !important;
+        margin-right: -32px !important;
     }
 
     /* The screen header is portrait-led; in print that avatar plus its stacked
@@ -169,6 +179,11 @@
         padding: 9px 0 !important;
     }
 
+    /* The blanket margin reset would glue the paragraphs of one entry back together */
+    .experience .experience-paragraph + .experience-paragraph {
+        margin-top: 6px !important;
+    }
+
     .project {
         margin-bottom: 12px !important;
     }
@@ -176,6 +191,11 @@
     .project-group {
         margin-bottom: 16px !important;
         break-inside: auto;
+    }
+
+    /* Would stack on the section gap now that Interests follows Projects */
+    .project-group:last-child {
+        margin-bottom: 0 !important;
     }
 
     /* Never slice a card or row across a page boundary */

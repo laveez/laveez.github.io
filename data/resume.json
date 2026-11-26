@@ -6,7 +6,8 @@
     "email": "",
     "phone": "",
     "url": "https://laveez.github.io/",
-    "summary": "Developer with a deep passion for quality code and technology-driven leading of development teams.\nProven track record of working on comprehensive software solutions, ranging from database management and infrastructure maintenance to user interface development and design.",
+    "summary": "End-to-end experience in designing, developing and delivering web and mobile software. Leading development teams and consulting the agile way, with Scrum and Kanban, from small companies to multinational multi-vendor projects. Working with the latest LLM and agentic AI tooling and methods across client projects, open source, volunteer work and personal tools.",
+    "tagline": "Love building things that solve real problems.",
     "location": {
       "countryCode": "FI",
       "city": "Helsinki",
@@ -32,19 +33,23 @@
     "keySkills": [
       {
         "icon": "WEB",
-        "text": "React, Angular, JS & TS"
+        "text": "React, TypeScript & Kotlin"
       },
       {
         "icon": "TERMINAL",
         "text": "Java, C#, PHP & SQL"
       },
       {
+        "icon": "SMART_TOY",
+        "text": "Agentic AI & LLM tooling (Claude, Copilot)"
+      },
+      {
         "icon": "CLOUD",
-        "text": "AWS, Docker & Kubernetes"
+        "text": "Cloud, CI/CD & infrastructure"
       },
       {
         "icon": "DIVERSITY",
-        "text": "Leadership & Teamwork"
+        "text": "Agile Leadership & Teamwork"
       }
     ]
   },
@@ -55,7 +60,7 @@
       "startDate": "2025-03-01",
       "endDate": "",
       "highlights": [],
-      "summary": "Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Utilized multiple technologies, e.g. Android, Kotlin, XML, TypeScript and React to implement and test the IFE on resource-constrained hardware running legacy Android versions. Management of a shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
+      "summary": "Full-stack development and consulting for client projects and in-house tools. Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually: Android, Kotlin, XML, TypeScript and React on resource-constrained hardware running legacy Android versions, in a shared codebase for a multi-client solution with platform differences and airline-specific requirements. An internal booking tool built with React, TypeScript, Express and PostgreSQL. Throughout, extensive hands-on work with modern agentic AI tooling in day-to-day development, from implementation and code review to automated testing and verification.",
       "url": "https://www.reaktor.com/",
       "location": "Helsinki, Finland",
       "logoUrl": "/assets/reaktor-logo-colored.png"
@@ -112,7 +117,7 @@
       "startDate": "",
       "endDate": "",
       "highlights": [],
-      "summary": "Analysis of features and properties of the document management and storage system SharePoint\nand the security risks of internal communications and the field of suppliers. Computer and software installations, archiving & factory environment maintenance.",
+      "summary": "Analysis of features and properties of the document management and storage system SharePoint and the security risks of internal communications and the field of suppliers. Computer and software installations, archiving & factory environment maintenance.",
       "url": "https://www.andritz.com/pulp-and-paper-en/locations/savonlinna-works-oy/savonlinna-works-oy-fi",
       "location": "Savonlinna, Finland",
       "logoUrl": "/assets/andritz-logo.png",
@@ -122,10 +127,10 @@
   "volunteer": [
     {
       "organization": "Disobey - The Nordic security event",
-      "position": "Volunteer, Web Developer",
+      "position": "Web Lead, Web Developer, Volunteer",
       "startDate": "2025-02-01",
       "endDate": "",
-      "summary": "I volunteered at the Disobey 2025 event at Kaapelitehdas, Helsinki, providing other volunteers with supplies during the event and participating in the teardown afterwards. Following the event, I joined the organizers as a web developer, contributing to the open-source development and ongoing maintenance of disobey.fi across the 2026 and 2027 editions. The website features speaker profiles, workshop and program schedules, CTF competition information, ticket sales, and community resources for one of the largest hacker conferences in the Nordics.",
+      "summary": "2027 - Leading the development of public and non-public websites associated with the event (disobey.fi). The website features speaker profiles, workshop and program schedules, CTF competition information, ticket sales, and community resources for one of the largest hacker conferences in the Nordics.\n2026 - Joined the organizers of Disobey 2026 as a web developer, contributing to the open-source development and ongoing maintenance of disobey.fi.\n2025 - Volunteered for the first time at the event at Kaapelitehdas, Helsinki, providing other volunteers with supplies during the event and participating in the teardown afterwards.",
       "highlights": [],
       "url": "https://disobey.fi/",
       "logoUrl": "/assets/disobey-logo.png"
@@ -211,6 +216,14 @@
   ],
   "certificates": [
     {
+      "name": "Certified Scrum Product Owner®",
+      "issuer": "Scrum Alliance",
+      "issueDate": "2026-11-25",
+      "category": "Scrum & Agile",
+      "url": "https://bcert.me/v0zbdnate",
+      "logoUrl": "/assets/cspo-logo.png"
+    },
+    {
       "name": "Certified Scrum Master®",
       "issuer": "Scrum Alliance",
       "issueDate": "2025-05-01",
@@ -254,6 +267,8 @@
       "keywords": [
         "React",
         "React Native",
+        "Kotlin",
+        "Android",
         "JavaScript",
         "TypeScript",
         "HTML",
@@ -269,6 +284,7 @@
         "Styled Components",
         "Sass",
         "React Query",
+        "React Router",
         "Create-React-App",
         "Vite",
         "Webpack",
@@ -289,12 +305,14 @@
         "Spring Boot",
         "Node.js",
         "Express",
+        "Drizzle ORM",
         "PHP",
         "Yii",
         "C# / .NET Core",
         "Rest API",
         "MongoDB",
         "MySQL",
+        "PostgreSQL",
         "Database Design",
         "MariaDB",
         "NoSQL",
@@ -338,7 +356,8 @@
         "Git (GitHub, GitLab, GitFlow)",
         "IntelliJ (IDEA, Webstorm, Rider, PhpStorm, DataGrip)",
         "Visual Studio Code",
-        "Claude Code",
+        "Claude (Code, Skills, MCP)",
+        "Codex",
         "GitHub Copilot",
         "ChatGPT",
         "Agentic AI",
@@ -441,33 +460,6 @@
   ],
   "projects": [
     {
-      "name": "Timelines",
-      "description": "Renders people-and-period CSVs as standalone HTML and SVG timelines. A zero-dependency Python CLI with week or day scales, WCAG-aware per-bar contrast, and automatic colour interpolation. The browser companion runs the same script client-side via Pyodide with live HTML, SVG and PNG output.",
-      "highlights": [],
-      "keywords": [
-        "Python",
-        "Pyodide",
-        "SVG",
-        "WebAssembly",
-        "GitHub Pages",
-        "GitHub Actions"
-      ],
-      "startDate": "2026-04-21",
-      "endDate": "",
-      "urls": [
-        "https://laveez.github.io/timelines/",
-        "https://github.com/laveez/timelines"
-      ],
-      "roles": [
-        "Developer",
-        "Designer"
-      ],
-      "entity": "",
-      "type": "CLI tool",
-      "icon": "TIMELINE",
-      "category": "personal"
-    },
-    {
       "name": "OLED Screensaver (olsvr)",
       "description": "Screensaver that prevents OLED burn-in with a fade-animated clock on pure black. GPU-accelerated rendering via wgpu, colored Nerd Font weather icons with live FMI Open Data, quadrant-aware repositioning, an interactive setup wizard, and systemd integration. Native on Wayland and macOS.",
       "highlights": [],
@@ -491,60 +483,6 @@
       "entity": "",
       "type": "Screensaver",
       "icon": "TV",
-      "category": "personal"
-    },
-    {
-      "name": "Ammus",
-      "description": "Ammunition price comparison tool for Finnish online retailers. Scrapes prices from 25 stores across 5 calibers using Playwright, detects non-toxic ammunition, and displays results in a filterable, sortable table. Prices are updated automatically via GitHub Actions.",
-      "highlights": [],
-      "keywords": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Playwright",
-        "GitHub Actions",
-        "GitHub Pages"
-      ],
-      "startDate": "2026-02-01",
-      "endDate": "",
-      "urls": [
-        "https://laveez.github.io/ammus/",
-        "https://github.com/laveez/ammus"
-      ],
-      "roles": [
-        "Developer",
-        "Designer"
-      ],
-      "entity": "",
-      "type": "Web application",
-      "icon": "GPS_FIXED",
-      "category": "personal"
-    },
-    {
-      "name": "Splitr",
-      "description": "Receipt splitting web app with a Tinder-like swipe interface. Upload a receipt image or PDF, extract items via client-side OCR (Tesseract.js) or PDF text extraction, then swipe to categorize items between two people. Optimized for Finnish grocery receipts with automatic item detection.",
-      "highlights": [],
-      "keywords": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Tailwind CSS",
-        "Tesseract.js",
-        "Playwright"
-      ],
-      "startDate": "2026-02-01",
-      "endDate": "",
-      "urls": [
-        "https://laveez.github.io/splitr/",
-        "https://github.com/laveez/splitr"
-      ],
-      "roles": [
-        "Developer",
-        "Designer"
-      ],
-      "entity": "",
-      "type": "Web application",
-      "icon": "CONTENT_CUT",
       "category": "personal"
     },
     {
@@ -573,15 +511,49 @@
       "category": "personal"
     },
     {
+      "name": "Sauna booking app, internal tool",
+      "description": "Internal web application for booking the office sauna. Full-stack TypeScript: React and Tailwind CSS front end, Express API with Drizzle ORM and PostgreSQL, unit and Playwright end-to-end tests, CI/CD with GitHub Actions. Responsive redesign implemented from Figma designs. Built with agentic AI tooling (Claude Code) across implementation, code review and browser-driven verification.",
+      "highlights": [],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "React Router",
+        "Tailwind CSS",
+        "Vite",
+        "Node.js",
+        "Express",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "Vitest",
+        "Playwright",
+        "GitHub Actions",
+        "Claude Code",
+        "Agentic AI"
+      ],
+      "startDate": "2026-10-29",
+      "endDate": "",
+      "urls": [],
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "entity": "",
+      "type": "Web application",
+      "icon": "HOT_TUB",
+      "category": "work"
+    },
+    {
       "name": "In-Flight Entertainment (IFE) system",
-      "description": "In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Resource-constrained hardware running legacy Android versions. Shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
+      "description": "In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Resource-constrained hardware running legacy Android versions. Shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements. Developed with modern agentic AI tooling as part of the daily workflow.",
       "highlights": [],
       "keywords": [
         "Android",
         "Kotlin",
         "XML",
         "TypeScript",
-        "React"
+        "React",
+        "GitHub Actions",
+        "Claude Code",
+        "Agentic AI"
       ],
       "startDate": "2025-03-01",
       "endDate": "2026-10-31",
@@ -791,5 +763,11 @@
       "icon": "CAMERA",
       "category": "personal"
     }
-  ]
+  ],
+  "projectNotes": {
+    "personal": {
+      "text": "Alongside these, I work on several other personal projects.",
+      "url": "https://github.com/laveez"
+    }
+  }
 }
