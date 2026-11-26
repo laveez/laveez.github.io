@@ -59,7 +59,7 @@ const SitePill = ({ url, sx }) => (
 // For link previews, where nothing else shows who this is
 const Card = ({ basics }) => (
   <Box
-    data-profile-card
+    data-profile-card="card"
     sx={{ ...CARD_SIZE, ...frameSx, display: 'flex', alignItems: 'center', gap: '72px', px: '88px' }}
   >
     <Avatar
@@ -88,7 +88,7 @@ const Card = ({ basics }) => (
 // For a README: no photo, since the profile page around it already shows one
 const Banner = ({ basics }) => (
   <Box
-    data-profile-card
+    data-profile-card="banner"
     sx={{ ...BANNER_SIZE, ...frameSx, display: 'flex', flexDirection: 'column', justifyContent: 'center', px: '72px' }}
   >
     <Typography component="h1" sx={{ ...DISPLAY_SX, fontSize: 78 }}>

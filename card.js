@@ -24,8 +24,9 @@ try {
       url.searchParams.set('shape', name);
       url.searchParams.set('theme', theme);
       await page.goto(url.href, { waitUntil: 'networkidle0' });
-      // Fails the run when anything but the card came back: an error page, another route, a script file
-      await page.waitForSelector('[data-profile-card]', { timeout: 10_000 });
+      // Fails the run when anything but this shape came back: an error page, another route, a script
+      // file, or the card where the banner was asked for (a server from before the banner existed)
+      await page.waitForSelector(`[data-profile-card="${name}"]`, { timeout: 10_000 });
       await page.evaluate(() => document.fonts.ready);
 
       const imagePath = path.join(distDir, `${name}-${theme}.png`);
