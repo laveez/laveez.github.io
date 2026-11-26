@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Navigate, Route, Routes, useLocation, useNavigationType,
+} from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import resumeData from '../data/resume.json';
 import { PRINT_TYPE } from './components/common/enums.js';
@@ -17,13 +19,15 @@ import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/800.css';
 import '@fontsource/open-sans';
 
-// Client-side navigation keeps the scroll offset of the page it came from
+// Following a link keeps the scroll offset of the page it came from. Reload, back and
+// forward (all POP) are left alone: there the browser restores the reader's place itself
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+  const navigationType = useNavigationType();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [ pathname ]);
+    if (navigationType !== 'POP') window.scrollTo(0, 0);
+  }, [ pathname, navigationType ]);
 
   return null;
 };
@@ -63,6 +67,7 @@ const App = () => {
             path="/card"
             element={<ProfileCard basics={resumeData.basics} welcome={resumeData.welcome} />}
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer profiles={resumeData.basics.profiles} />
       </Router>
