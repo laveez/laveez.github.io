@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
-  BrowserRouter as Router, Navigate, Route, Routes, useLocation, useNavigationType,
+  BrowserRouter as Router, Navigate, Outlet, Route, Routes, useLocation, useNavigationType,
 } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import resumeData from '../data/resume.json';
@@ -32,6 +32,14 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Every page but the welcome page ends in the footer: there its profile links are already on screen
+const WithFooter = () => (
+  <>
+    <Outlet />
+    <Footer profiles={resumeData.basics.profiles} />
+  </>
+);
+
 const App = () => {
   const [ darkTheme, setDarkTheme ] = useState(true);
 
@@ -51,24 +59,28 @@ const App = () => {
               setDarkTheme={setDarkTheme}
             />}
           />
-          <Route
-            path="/cv"
-            element={<Resume
-              resumeData={resumeData}
-              darkTheme={darkTheme}
-              setDarkTheme={setDarkTheme}
-            />}
-          />
-          <Route path="/print" element={<PrintView resumeData={resumeData} />} />
-          <Route path="/print-cover" element={<PrintView resumeData={resumeData} type={PRINT_TYPE.COVER_LETTER}/>} />
-          <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
-          <Route
-            path="/profile-card"
-            element={<ProfileCard basics={resumeData.basics} />}
-          />
+          <Route element={<WithFooter />}>
+            <Route
+              path="/cv"
+              element={<Resume
+                resumeData={resumeData}
+                darkTheme={darkTheme}
+                setDarkTheme={setDarkTheme}
+              />}
+            />
+            <Route path="/print" element={<PrintView resumeData={resumeData} />} />
+            <Route
+              path="/print-cover"
+              element={<PrintView resumeData={resumeData} type={PRINT_TYPE.COVER_LETTER} />}
+            />
+            <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
+            <Route
+              path="/profile-card"
+              element={<ProfileCard basics={resumeData.basics} />}
+            />
+          </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <Footer profiles={resumeData.basics.profiles} />
       </Router>
     </ThemeProvider>
   );
