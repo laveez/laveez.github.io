@@ -1,3 +1,4 @@
+import { Link as RouterLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -29,7 +30,7 @@ const ProfileLinks = ({ profiles, showHome = false }) => (
   <StaggerContainer fast>
     <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
       {showHome && (
-        <MotionLink href="/" target="_self" aria-label="Home" sx={linkSx}>
+        <MotionLink component={RouterLink} to="/" target="_self" aria-label="Home" sx={linkSx}>
           <HomeIcon sx={{ fontSize: 20 }} />
         </MotionLink>
       )}
