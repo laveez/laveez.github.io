@@ -9,6 +9,7 @@ import FactoryIcon from '@mui/icons-material/Factory';
 import FlightIcon from '@mui/icons-material/Flight';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import HotTubIcon from '@mui/icons-material/HotTub';
 import InterestsIcon from '@mui/icons-material/Interests';
 import LinkedCameraIcon from '@mui/icons-material/LinkedCamera';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
@@ -40,6 +41,7 @@ const TEXT_TO_ICON_MAP = {
   'FLIGHT': <FlightIcon />,
   'FOLDER': <FolderOpenIcon />,
   'GPS_FIXED': <GpsFixedIcon />,
+  'HOT_TUB': <HotTubIcon />,
   'INTERESTS': <InterestsIcon />,
   'LANGUAGES': <TranslateIcon />,
   'PARKING': <LocalParkingIcon />,

@@ -32,19 +32,23 @@
     "keySkills": [
       {
         "icon": "WEB",
-        "text": "React, Angular, JS & TS"
+        "text": "React, TypeScript & Kotlin"
       },
       {
         "icon": "TERMINAL",
         "text": "Java, C#, PHP & SQL"
       },
       {
+        "icon": "SMART_TOY",
+        "text": "Claude Code, Codex & GitHub Copilot"
+      },
+      {
         "icon": "CLOUD",
-        "text": "AWS, Docker & Kubernetes"
+        "text": "Cloud, CI/CD & infrastructure"
       },
       {
         "icon": "DIVERSITY",
-        "text": "Leadership & Teamwork"
+        "text": "Agile Leadership & Teamwork"
       }
     ]
   },
@@ -55,7 +59,7 @@
       "startDate": "2025-03-01",
       "endDate": "",
       "highlights": [],
-      "summary": "Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Utilized multiple technologies, e.g. Android, Kotlin, XML, TypeScript and React to implement and test the IFE on resource-constrained hardware running legacy Android versions. Management of a shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
+      "summary": "Development of an In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Utilized multiple technologies, e.g. Android, Kotlin, XML, TypeScript and React to implement and test the IFE on resource-constrained hardware running legacy Android versions. Management of a shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements. Throughout, extensive hands-on work with modern agentic AI tooling in day-to-day development, from implementation and code review to automated testing and verification.",
       "url": "https://www.reaktor.com/",
       "location": "Helsinki, Finland",
       "logoUrl": "/assets/reaktor-logo-colored.png"
@@ -346,7 +350,8 @@
         "Git (GitHub, GitLab, GitFlow)",
         "IntelliJ (IDEA, Webstorm, Rider, PhpStorm, DataGrip)",
         "Visual Studio Code",
-        "Claude Code",
+        "Claude (Code, Skills, MCP)",
+        "Codex",
         "GitHub Copilot",
         "ChatGPT",
         "Agentic AI",
@@ -500,15 +505,47 @@
       "category": "personal"
     },
     {
+      "name": "Sauna booking app, internal tool",
+      "description": "Internal web application for booking the office sauna. Full-stack TypeScript: React and Tailwind CSS front end, Express API with Drizzle ORM and PostgreSQL, unit and Playwright end-to-end tests, CI/CD with GitHub Actions. Responsive redesign implemented from Figma designs. Built with agentic AI tooling (Claude Code) across implementation, code review and browser-driven verification.",
+      "highlights": [],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "React Router",
+        "Tailwind CSS",
+        "Vite",
+        "Node.js",
+        "Express",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "Vitest",
+        "Playwright",
+        "GitHub Actions",
+        "Claude Code",
+        "Agentic AI"
+      ],
+      "startDate": "2026-10-29",
+      "endDate": "",
+      "urls": [],
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "entity": "",
+      "type": "Web application",
+      "icon": "HOT_TUB",
+      "category": "work"
+    },
+    {
       "name": "In-Flight Entertainment (IFE) system",
-      "description": "In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Resource-constrained hardware running legacy Android versions. Shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements.",
+      "description": "In-Flight Entertainment (IFE) system for a major airline serving over 60 million passengers annually. Resource-constrained hardware running legacy Android versions. Shared codebase to support multi-client solution, navigating the complexities of platform differences and airline-specific requirements. Developed with modern agentic AI tooling as part of the daily workflow.",
       "highlights": [],
       "keywords": [
         "Android",
         "Kotlin",
         "XML",
         "TypeScript",
-        "React"
+        "React",
+        "Agentic AI"
       ],
       "startDate": "2025-03-01",
       "endDate": "2026-10-31",

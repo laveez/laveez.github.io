@@ -36,6 +36,14 @@
         border-color: rgba(0, 0, 0, 0.35) !important;
     }
 
+    /* The card's own side padding stacks on this block's 9% inset; with it the
+       key-skill row is too narrow for five items and the last one wraps alone.
+       Keep in sync with the padding Basics.jsx sets at print width (p: 4). */
+    .basics-print-style section > .MuiStack-root {
+        margin-left: -32px !important;
+        margin-right: -32px !important;
+    }
+
     /* The screen header is portrait-led; in print that avatar plus its stacked
        24px gaps cost over a third of the block, so tighten both */
     .basics-print-style .MuiAvatar-root {
