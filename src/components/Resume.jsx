@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Grid, IconButton, Menu, MenuItem, Paper, useMediaQuery } from '@mui/material';
@@ -83,6 +83,23 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ activeTab, setActiveTab ] = useState(0);
   const isLargeScreen = useMediaQuery('(min-width:1200px)');
   const contentRef = useRef(null);
+  const cardRef = useRef(null);
+  const [ cardTop, setCardTop ] = useState(0);
+
+  // A card taller than the window would keep its lower part (the profile links) below the
+  // fold for the whole page; a negative top lets it scroll until its bottom edge shows, then stick
+  useEffect(() => {
+    const card = cardRef.current;
+    const update = () => setCardTop(Math.min(0, window.innerHeight - card.offsetHeight));
+    const observer = new ResizeObserver(update);
+    observer.observe(card);
+    window.addEventListener('resize', update);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', update);
+    };
+  }, []);
 
   const {
     basics,
@@ -147,12 +164,13 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
     <Grid container spacing={0} sx={{ maxWidth: 1600, mx: 'auto' }}>
       <Grid size={{ xs: 12, lg: 4 }}>
         <Box
+          ref={cardRef}
           sx={{
             p: { xs: 2, lg: 3 },
             pr: { lg: 1.5 },
             pt: { xs: 9, lg: 3 },
             position: isLargeScreen ? 'sticky' : 'static',
-            top: 0,
+            top: cardTop,
           }}
         >
           <Paper
