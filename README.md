@@ -28,7 +28,7 @@ React + Material-UI resume with animated sections, dark/light theme, and automat
 - **Animated sections** — Framer Motion entrance animations and hover effects
 - **Dynamic data** — resume content driven by a single JSON file
 - **PDF generation** — Puppeteer renders a print-optimized view to PDF
-- **Link preview card** — Puppeteer screenshots the `/profile-card` route into `card-dark.png` and `card-light.png`
+- **Link preview card** — Puppeteer screenshots the `/profile-card` route into `card-dark.png` and `card-light.png`, plus a photo-less `banner-dark.png` and `banner-light.png` for READMEs
 - **CI/CD** — GitHub Actions lint, build, and deploy to GitHub Pages
 
 ## Quick Start
