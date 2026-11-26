@@ -46,7 +46,7 @@ Opens at [localhost:5173](http://localhost:5173).
 | Command | Description |
 |---|---|
 | `npm run dev` | Start dev server |
-| `npm run build` | Production build (copies 404.html for SPA routing and cv/index.html so `/cv` answers 200) |
+| `npm run build` | Production build (copies 404.html for SPA routing and cv/index.html so `/cv` is a real page, not the 404 fallback) |
 | `npm run lint` | Run ESLint |
 | `npm run lint:fix` | Run ESLint with auto-fix |
 | `npm run pdf` | Generate resume PDF via Puppeteer |

@@ -18,7 +18,8 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing, linkHome = false }
   if (!basics) return null;
 
   const avatarSize = isLargeScreen ? 150 : 116;
-  const homeLink = linkHome ? { 'component': RouterLink, 'to': '/', 'aria-label': 'Home' } : {};
+  // The name below is the link people and screen readers use; the photo is a second, pointer-only way in
+  const homeLink = linkHome ? { 'component': RouterLink, 'to': '/', 'tabIndex': -1, 'aria-hidden': true } : {};
 
   return (
     <MotionBox
