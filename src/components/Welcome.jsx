@@ -87,7 +87,7 @@ const Welcome = ({ basics, welcome, darkTheme, setDarkTheme }) => {
           variants={textReveal}
           sx={{ maxWidth: 640, color: 'text.secondary', fontSize: { xs: '1rem', lg: '1.1rem' }, lineHeight: 1.7 }}
         >
-          {welcome.intro}
+          {welcome.intro} {welcome.tagline}
         </MotionTypography>
         <MotionBox
           variants={textReveal}

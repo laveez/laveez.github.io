@@ -763,6 +763,7 @@
     }
   },
   "welcome": {
-    "intro": "I build web and mobile software end to end, and lead the teams doing it when needed. I work with the latest LLM and agentic AI tooling and methods on client projects, in open source and volunteer work, and on whatever I need for my own work and free time. I like building things that solve real problems."
+    "intro": "I build web and mobile software end to end, and lead the teams doing it when needed. I work with the latest LLM and agentic AI tooling and methods on client projects, in open source and volunteer work, and on whatever I need for my own work and free time.",
+    "tagline": "I like building things that solve real problems."
   }
 }

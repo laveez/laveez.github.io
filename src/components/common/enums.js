@@ -10,3 +10,6 @@ export const PRINT_TYPE = {
 
 // Written to dist/ by `npm run pdf`; vite.config.js serves it in dev too
 export const RESUME_PDF = '/niko-muukkonen-laveez-resume.pdf';
+
+// The size link previews expect; card.js and vite.config.js read it too
+export const CARD_SIZE = { width: 1200, height: 630 };

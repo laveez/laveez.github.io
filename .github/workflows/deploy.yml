@@ -57,6 +57,9 @@ jobs:
       - name: Generate PDF
         run: npm run pdf
 
+      - name: Generate card images
+        run: npm run card
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

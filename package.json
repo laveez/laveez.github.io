@@ -30,6 +30,7 @@
     "preview": "vite preview",
     "pdf": "node pdf.js",
     "pdf:cover": "URL=http://localhost:5173/print-cover node pdf.js",
+    "card": "node card.js",
     "update-and-build": "node scripts/update-and-build.mjs"
   },
   "dependencies": {
