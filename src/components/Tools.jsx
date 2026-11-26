@@ -7,12 +7,10 @@ import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import { IconButton, ListItemIcon, ListItemText, Menu, MenuItem, Stack } from '@mui/material';
 import { hoverButton } from './animations/variants.js';
+import { RESUME_PDF } from './common/enums.js';
 import PrintView from './PrintView.jsx';
 
 const MotionIconButton = motion.create(IconButton);
-
-// Written to dist/ by `npm run pdf`; vite.config.js serves it in dev too
-const RESUME_PDF = '/niko-muukkonen-laveez-resume.pdf';
 
 const Tools = ({ resumeData, darkTheme, setDarkTheme }) => {
   const [ anchorEl, setAnchorEl ] = useState(null);

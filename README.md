@@ -23,6 +23,7 @@ React + Material-UI resume with animated sections, dark/light theme, and automat
 
 ## Features
 
+- **Welcome page** — front page with links to the CV and the PDF; the CV lives at `/cv`
 - **Responsive design** — dark/light theme toggle, custom mobile layout
 - **Animated sections** — Framer Motion entrance animations and hover effects
 - **Dynamic data** — resume content driven by a single JSON file
@@ -45,7 +46,7 @@ Opens at [localhost:5173](http://localhost:5173).
 | Command | Description |
 |---|---|
 | `npm run dev` | Start dev server |
-| `npm run build` | Production build (copies 404.html for SPA routing) |
+| `npm run build` | Production build (copies 404.html for SPA routing and cv/index.html so `/cv` answers 200) |
 | `npm run lint` | Run ESLint |
 | `npm run lint:fix` | Run ESLint with auto-fix |
 | `npm run pdf` | Generate resume PDF via Puppeteer |

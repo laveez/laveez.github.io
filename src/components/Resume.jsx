@@ -161,7 +161,7 @@ const Resume = ({ resumeData, darkTheme, setDarkTheme }) => {
               border: theme => `1px solid ${theme.palette.line}`,
             }}
           >
-            <Basics basics={basics} />
+            <Basics basics={basics} linkHome />
           </Paper>
         </Box>
       </Grid>
