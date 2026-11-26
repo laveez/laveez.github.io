@@ -46,7 +46,6 @@ const App = () => {
             path=""
             element={<Welcome
               basics={resumeData.basics}
-              welcome={resumeData.welcome}
               darkTheme={darkTheme}
               setDarkTheme={setDarkTheme}
             />}
