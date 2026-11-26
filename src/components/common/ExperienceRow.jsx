@@ -77,14 +77,16 @@ const ExperienceRow = ({ experience, isLast, titleComponent = 'h4' }) => {
           <Typography variant="body2" sx={{ color: 'inkFaint', mt: 0.25 }}>
             <DateLine experience={experience} />
           </Typography>
-          {experience.summary && (
+          {experience.summary?.split('\n').map((paragraph, index) => (
             <Typography
+              key={paragraph}
               variant="body2"
-              sx={{ color: 'text.secondary', mt: 1.25, lineHeight: 1.65, whiteSpace: 'pre-line' }}
+              className="experience-paragraph"
+              sx={{ color: 'text.secondary', mt: index === 0 ? 1.25 : 1, lineHeight: 1.65 }}
             >
-              {experience.summary}
+              {paragraph}
             </Typography>
-          )}
+          ))}
         </Box>
         {experience.url && (
           <Link

@@ -179,6 +179,11 @@
         padding: 9px 0 !important;
     }
 
+    /* The blanket margin reset would glue the paragraphs of one entry back together */
+    .experience .experience-paragraph + .experience-paragraph {
+        margin-top: 6px !important;
+    }
+
     .project {
         margin-bottom: 12px !important;
     }
