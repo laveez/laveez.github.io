@@ -8,6 +8,7 @@ import { PRINT_TYPE } from './components/common/enums.js';
 import Footer from './components/common/Footer.jsx';
 import SataTehtavaa from './components/other/SataTehtavaa.jsx';
 import PrintView from './components/PrintView.jsx';
+import ProfileCard from './components/ProfileCard.jsx';
 import Resume from './components/Resume.jsx';
 import Welcome from './components/Welcome.jsx';
 import createAppTheme from './theme.js';
@@ -61,6 +62,10 @@ const App = () => {
           <Route path="/print" element={<PrintView resumeData={resumeData} />} />
           <Route path="/print-cover" element={<PrintView resumeData={resumeData} type={PRINT_TYPE.COVER_LETTER}/>} />
           <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
+          <Route
+            path="/profile-card"
+            element={<ProfileCard basics={resumeData.basics} />}
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer profiles={resumeData.basics.profiles} />
