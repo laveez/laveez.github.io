@@ -63,7 +63,7 @@ const App = () => {
           <Route path="/print-cover" element={<PrintView resumeData={resumeData} type={PRINT_TYPE.COVER_LETTER}/>} />
           <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
           <Route
-            path="/card"
+            path="/profile-card"
             element={<ProfileCard basics={resumeData.basics} />}
           />
           <Route path="*" element={<Navigate to="/" replace />} />

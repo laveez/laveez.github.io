@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Avatar, Box, ThemeProvider, Typography } from '@mui/material';
 import createAppTheme, { DISPLAY_SX, RADIUS } from '../theme.js';
-import { CARD_SIZE } from './common/enums.js';
+import { CARD_SIZE } from './common/cardSize.js';
 
 // Never linked from the site: card.js screenshots this route into the link-preview
 // and README images, so every size here is in fixed pixels
@@ -13,6 +13,7 @@ const ProfileCard = ({ basics }) => {
   return (
     <ThemeProvider theme={theme}>
       <Box
+        data-profile-card
         sx={{
           ...CARD_SIZE,
           display: 'flex',
@@ -68,6 +69,7 @@ const ProfileCard = ({ basics }) => {
               borderRadius: `${RADIUS.pill}px`,
               backgroundColor: 'primary.main',
               color: 'primary.contrastText',
+              fontFamily: 'Montserrat, sans-serif',
               fontSize: 25,
               fontWeight: 600,
             }}
