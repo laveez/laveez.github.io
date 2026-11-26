@@ -3,12 +3,14 @@ const calculateDuration = (startDate, endDate) => {
   const end = endDate ? new Date(endDate) : new Date(); // If no end date, assume ongoing
 
   // Check if start date is the 1st and end date is within the same month
-  const startIsFullMonth = start.getDate() === 1;
-  const endIsFullMonth = end.getDate() === new Date(end.getFullYear(), end.getMonth() + 1, 0).getDate() ||
-    end.getMonth() === start.getMonth();
+  // UTC throughout: the dates come from date-only strings, which parse as UTC midnight
+  const lastDayOfEndMonth = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() + 1, 0)).getUTCDate();
+  const startIsFullMonth = start.getUTCDate() === 1;
+  const endIsFullMonth = end.getUTCDate() === lastDayOfEndMonth ||
+    end.getUTCMonth() === start.getUTCMonth();
 
-  let years = end.getFullYear() - start.getFullYear();
-  let months = end.getMonth() - start.getMonth();
+  let years = end.getUTCFullYear() - start.getUTCFullYear();
+  let months = end.getUTCMonth() - start.getUTCMonth();
 
   // Adjust for full month counts based on day of start and end dates
   if (startIsFullMonth && endIsFullMonth) {
