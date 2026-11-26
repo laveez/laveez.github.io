@@ -7,3 +7,6 @@ export const PRINT_TYPE = {
   RESUME: 'RESUME',
   COVER_LETTER: 'COVER_LETTER',
 };
+
+// Written to dist/ by `npm run pdf`; vite.config.js serves it in dev too
+export const RESUME_PDF = '/niko-muukkonen-laveez-resume.pdf';

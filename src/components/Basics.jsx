@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import { Link as RouterLink } from 'react-router-dom';
 import PlaceIcon from '@mui/icons-material/Place';
-import { Avatar, Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Avatar, Box, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { DISPLAY_SX } from '../theme.js';
 import { avatarReveal, staggerContainer, textReveal } from './animations/variants.js';
 import ProfileLinks from './common/ProfileLinks.jsx';
@@ -10,13 +11,14 @@ const MotionAvatar = motion.create(Avatar);
 const MotionBox = motion.create(Box);
 const MotionTypography = motion.create(Typography);
 
-const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
+const Basics = ({ basics, keySKillDirection, keySkillSpacing, linkHome = false }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery('(min-width:1200px)');
 
   if (!basics) return null;
 
   const avatarSize = isLargeScreen ? 150 : 116;
+  const homeLink = linkHome ? { 'component': RouterLink, 'to': '/', 'aria-label': 'Home' } : {};
 
   return (
     <MotionBox
@@ -31,6 +33,7 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
           src={basics.image}
           alt={`${basics.name}'s profile`}
           variants={avatarReveal}
+          {...homeLink}
           whileHover={{ scale: 1.04 }}
           sx={{
             width: avatarSize,
@@ -48,7 +51,9 @@ const Basics = ({ basics, keySKillDirection, keySkillSpacing }) => {
         variants={textReveal}
         sx={{ ...DISPLAY_SX, fontSize: 'clamp(1.6rem, 2.4vw, 2.1rem)', mb: 1.5 }}
       >
-        {basics.name}
+        {linkHome ?
+          <Link component={RouterLink} to="/" underline="none" sx={{ color: 'inherit' }}>{basics.name}</Link> :
+          basics.name}
       </MotionTypography>
       <MotionTypography
         component="h2"
