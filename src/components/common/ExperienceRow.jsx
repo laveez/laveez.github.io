@@ -78,7 +78,10 @@ const ExperienceRow = ({ experience, isLast, titleComponent = 'h4' }) => {
             <DateLine experience={experience} />
           </Typography>
           {experience.summary && (
-            <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1.25, lineHeight: 1.65 }}>
+            <Typography
+              variant="body2"
+              sx={{ color: 'text.secondary', mt: 1.25, lineHeight: 1.65, whiteSpace: 'pre-line' }}
+            >
               {experience.summary}
             </Typography>
           )}
