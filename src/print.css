@@ -99,6 +99,12 @@
         height: auto !important;
     }
 
+    /* ...and their rounded corners would only clip text that sits at the card's edge:
+       the first letters of each line in Languages */
+    .print-style .MuiCard-root {
+        border-radius: 0 !important;
+    }
+
     /* Cards print without border or fill, so their inner padding is dead space */
     .print-style .MuiCardContent-root,
     .print-style .MuiCardContent-root:last-child {
