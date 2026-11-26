@@ -211,6 +211,14 @@
   ],
   "certificates": [
     {
+      "name": "Certified Scrum Product Owner®",
+      "issuer": "Scrum Alliance",
+      "issueDate": "2026-11-25",
+      "category": "Scrum & Agile",
+      "url": "https://bcert.me/v0zbdnate",
+      "logoUrl": "/assets/cspo-logo.png"
+    },
+    {
       "name": "Certified Scrum Master®",
       "issuer": "Scrum Alliance",
       "issueDate": "2025-05-01",
