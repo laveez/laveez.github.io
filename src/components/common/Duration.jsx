@@ -6,8 +6,8 @@ const calculateDuration = (startDate, endDate) => {
   // UTC throughout: the dates come from date-only strings, which parse as UTC midnight
   const lastDayOfEndMonth = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() + 1, 0)).getUTCDate();
   const startIsFullMonth = start.getUTCDate() === 1;
-  const endIsFullMonth = end.getUTCDate() === lastDayOfEndMonth ||
-    end.getUTCMonth() === start.getUTCMonth();
+  const sameMonth = end.getUTCFullYear() === start.getUTCFullYear() && end.getUTCMonth() === start.getUTCMonth();
+  const endIsFullMonth = end.getUTCDate() === lastDayOfEndMonth || sameMonth;
 
   let years = end.getUTCFullYear() - start.getUTCFullYear();
   let months = end.getUTCMonth() - start.getUTCMonth();
