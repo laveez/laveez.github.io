@@ -21,6 +21,7 @@ const PrintView = ({ resumeData, type = PRINT_TYPE.RESUME }) => {
     languages,
     interests,
     projects,
+    projectNotes,
     certificates,
   } = resumeData;
 
@@ -90,7 +91,7 @@ const PrintView = ({ resumeData, type = PRINT_TYPE.RESUME }) => {
         </Box>
         <Box className="print-style print-page-content">
           <Skills skills={skills} sizeOverride={6} overrideMarginBottom={0} />
-          <Projects projects={projects} dualColumns={true} />
+          <Projects projects={projects} notes={projectNotes} dualColumns={true} />
           <Interests interests={interests} sizeOverride={6} />
         </Box>
       </Box>
