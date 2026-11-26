@@ -21,6 +21,8 @@
         color: rgba(0, 0, 0, 0.87) !important;
         opacity: 1 !important;
         transform: none !important;
+        /* textReveal leaves filter: blur(0px) behind, and Chrome prints filtered text as a bitmap */
+        filter: none !important;
         box-shadow: none !important;
         text-decoration: none !important;
         /* Without this, Puppeteer captures colours mid-transition and tints the PDF */
@@ -184,6 +186,11 @@
     .project-group {
         margin-bottom: 16px !important;
         break-inside: auto;
+    }
+
+    /* Would stack on the section gap now that Interests follows Projects */
+    .project-group:last-child {
+        margin-bottom: 0 !important;
     }
 
     /* Never slice a card or row across a page boundary */

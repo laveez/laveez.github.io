@@ -3,12 +3,10 @@ import CloudIcon from '@mui/icons-material/Cloud';
 import ComputerIcon from '@mui/icons-material/Computer';
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import ContentCutIcon from '@mui/icons-material/ContentCut';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import FactoryIcon from '@mui/icons-material/Factory';
 import FlightIcon from '@mui/icons-material/Flight';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
-import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import HotTubIcon from '@mui/icons-material/HotTub';
 import InterestsIcon from '@mui/icons-material/Interests';
 import LinkedCameraIcon from '@mui/icons-material/LinkedCamera';
@@ -21,7 +19,6 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import SpeakerIcon from '@mui/icons-material/Speaker';
 import SubwayIcon from '@mui/icons-material/Subway';
 import TerminalIcon from '@mui/icons-material/Terminal';
-import TimelineIcon from '@mui/icons-material/Timeline';
 import TranslateIcon from '@mui/icons-material/Translate';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import WebIcon from '@mui/icons-material/Web';
@@ -32,7 +29,6 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 const TEXT_TO_ICON_MAP = {
   'BUG_REPORT': <BugReportIcon />,
   'CLOUD': <CloudIcon />,
-  'CONTENT_CUT': <ContentCutIcon />,
   'DIVERSITY': <Diversity1Icon />,
   'CAMERA': <LinkedCameraIcon />,
   'COMPUTER': <ComputerIcon />,
@@ -40,7 +36,6 @@ const TEXT_TO_ICON_MAP = {
   'FACTORY': <FactoryIcon />,
   'FLIGHT': <FlightIcon />,
   'FOLDER': <FolderOpenIcon />,
-  'GPS_FIXED': <GpsFixedIcon />,
   'HOT_TUB': <HotTubIcon />,
   'INTERESTS': <InterestsIcon />,
   'LANGUAGES': <TranslateIcon />,
@@ -53,7 +48,6 @@ const TEXT_TO_ICON_MAP = {
   'SPEAKER': <SpeakerIcon />,
   'SUBWAY': <SubwayIcon />,
   'TERMINAL': <TerminalIcon />,
-  'TIMELINE': <TimelineIcon />,
   'TV': <ConnectedTvIcon />,
   'VOLUNTEER': <VolunteerActivismIcon />,
   'WEB': <WebIcon />,
