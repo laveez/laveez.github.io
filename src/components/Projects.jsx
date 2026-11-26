@@ -132,11 +132,11 @@ const ProjectGrid = ({ projects, dualColumns }) => {
   );
 };
 
-const Projects = ({ projects, notes = {}, dualColumns = false, hideHeading = false }) => {
+const Projects = ({ projects, notes, dualColumns = false, hideHeading = false }) => {
   if (!projects || projects.length === 0) return null;
 
   const groups = GROUPS
-    .map(group => ({ ...group, items: projects.filter(p => p.category === group.key), note: notes[group.key] }))
+    .map(group => ({ ...group, items: projects.filter(p => p.category === group.key), note: notes?.[group.key] }))
     .filter(group => group.items.length > 0);
 
   // Anything with an unrecognised category is still shown rather than silently dropped
@@ -158,7 +158,7 @@ const Projects = ({ projects, notes = {}, dualColumns = false, hideHeading = fal
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                   {group.note.text}
                 </Typography>
-                <ProjectLink url={group.note.url} />
+                {group.note.url && <ProjectLink url={group.note.url} />}
               </Box>
             )}
           </Box>
