@@ -6,7 +6,7 @@ import { CARD_SIZE } from './common/enums.js';
 
 // Never linked from the site: card.js screenshots this route into the link-preview
 // and README images, so every size here is in fixed pixels
-const ProfileCard = ({ basics, welcome }) => {
+const ProfileCard = ({ basics }) => {
   const { search } = useLocation();
   const theme = createAppTheme(new URLSearchParams(search).get('theme') !== 'light');
 
@@ -55,7 +55,7 @@ const ProfileCard = ({ basics, welcome }) => {
             {basics.label}
           </Typography>
           <Typography sx={{ color: 'text.secondary', fontSize: 29, lineHeight: 1.35, mt: '20px' }}>
-            {welcome.tagline}
+            {basics.tagline}
           </Typography>
           <Box
             sx={{

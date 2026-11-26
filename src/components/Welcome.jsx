@@ -17,7 +17,7 @@ const MotionTypography = motion.create(Typography);
 
 const actionSx = { borderRadius: `${RADIUS.pill}px`, px: 3.5, py: 1.25, fontSize: '1rem' };
 
-const Welcome = ({ basics, welcome, darkTheme, setDarkTheme }) => {
+const Welcome = ({ basics, darkTheme, setDarkTheme }) => {
   const theme = useTheme();
 
   if (!basics) return null;
@@ -87,12 +87,12 @@ const Welcome = ({ basics, welcome, darkTheme, setDarkTheme }) => {
           >
             {basics.label}
           </MotionTypography>
-          {welcome?.intro && (
+          {basics.summary && (
             <MotionTypography
               variants={textReveal}
               sx={{ maxWidth: 640, color: 'text.secondary', fontSize: { xs: '1rem', lg: '1.1rem' }, lineHeight: 1.7 }}
             >
-              {welcome.intro} {welcome.tagline}
+              {[ basics.summary, basics.tagline ].filter(Boolean).join(' ')}
             </MotionTypography>
           )}
           <MotionBox

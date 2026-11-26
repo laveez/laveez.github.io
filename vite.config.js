@@ -33,8 +33,8 @@ const profileMeta = () => ({
   name: 'profile-meta',
   transformIndexHtml() {
     const resumePath = path.resolve(import.meta.dirname, 'data', 'resume.json');
-    const { basics, welcome } = JSON.parse(fs.readFileSync(resumePath, 'utf8'));
-    const description = `${basics.label}. ${welcome.tagline}`;
+    const { basics } = JSON.parse(fs.readFileSync(resumePath, 'utf8'));
+    const description = `${basics.label}. ${basics.tagline}`;
     const named = (name, content) => ({ tag: 'meta', attrs: { name, content }, injectTo: 'head' });
     const property = (name, content) => ({ tag: 'meta', attrs: { property: name, content }, injectTo: 'head' });
 

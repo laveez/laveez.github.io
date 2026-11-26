@@ -47,7 +47,6 @@ const App = () => {
             path=""
             element={<Welcome
               basics={resumeData.basics}
-              welcome={resumeData.welcome}
               darkTheme={darkTheme}
               setDarkTheme={setDarkTheme}
             />}
@@ -65,7 +64,7 @@ const App = () => {
           <Route path="/100-tehtavaa" element={<SataTehtavaa />} />
           <Route
             path="/card"
-            element={<ProfileCard basics={resumeData.basics} welcome={resumeData.welcome} />}
+            element={<ProfileCard basics={resumeData.basics} />}
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
